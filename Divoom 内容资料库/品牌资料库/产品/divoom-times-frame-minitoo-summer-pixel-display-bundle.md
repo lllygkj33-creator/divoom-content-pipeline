@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Times Frame + MiniToo Summer Pixel Display Bundle"
-短名: "Times"
+短名: "Times Frame + MiniToo Summer Pixel Display Bundle"
 产品键: "divoom-times-frame-minitoo-summer-pixel-display-bundle"
 分类: "像素显示屏"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-times-frame-minitoo-summer-pixel-di
 包装清单: []
 能力小节: []
 话题关键词: ["Big Summer Sale", "MiniToo", "Pixel Display Bundle", "Summer Bundle", "Times Frame"]
-锚文本候选: ["Divoom Times Frame + MiniToo Summer Pixel Display Bundle", "Times Frame + MiniToo Summer Pixel Display Bundle", "Times"]
+锚文本候选: ["Divoom Times Frame + MiniToo Summer Pixel Display Bundle", "Times Frame + MiniToo Summer Pixel Display Bundle"]
 ---
 
 # Divoom Times Frame + MiniToo Summer Pixel Display Bundle

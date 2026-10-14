@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Ditoo Plus & Pixoo M LED Backpack Pixel Art Bundle"
-短名: "Ditoo"
+短名: "Ditoo Plus & Pixoo M LED Backpack Pixel Art Bundle"
 产品键: "divoom-ditoo-plus-pixoo-m-backpack"
 分类: "像素背包"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-ditoo-plus-pixoo-m-backpack"
 包装清单: []
 能力小节: []
 话题关键词: ["Bluetooth Speaker", "Bundle", "Creative Gift", "Ditoo Plus", "Divoom Ditoo", "Gaming Room Decor", "LED Backpack", "Pixel Art Backpack", "Pixel Art Speaker", "Pixoo M", "Retro Speaker", "School Bag"]
-锚文本候选: ["Divoom Ditoo Plus & Pixoo M LED Backpack Pixel Art Bundle", "Ditoo Plus & Pixoo M LED Backpack Pixel Art Bundle", "Ditoo"]
+锚文本候选: ["Divoom Ditoo Plus & Pixoo M LED Backpack Pixel Art Bundle", "Ditoo Plus & Pixoo M LED Backpack Pixel Art Bundle"]
 ---
 
 # Divoom Ditoo Plus & Pixoo M LED Backpack Pixel Art Bundle

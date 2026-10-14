@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Emodo Pixel Badge + FlowToo Bundle"
-短名: "Emodo"
+短名: "Emodo Pixel Badge + FlowToo Bundle"
 产品键: "divoom-emodo-pixel-badge-flowtoo-bundle"
 分类: "套装"
 官方分类: "Bundle"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-emodo-pixel-badge-flowtoo-bundle"
 包装清单: []
 能力小节: []
 话题关键词: ["anime", "Audio Display Bundle", "bundle", "Bundle Deal", "desk setup", "Emodo Badge", "FlowToo", "geek", "gift", "pixel art"]
-锚文本候选: ["Divoom Emodo Pixel Badge + FlowToo Bundle", "Emodo Pixel Badge + FlowToo Bundle", "Emodo"]
+锚文本候选: ["Divoom Emodo Pixel Badge + FlowToo Bundle", "Emodo Pixel Badge + FlowToo Bundle"]
 ---
 
 # Divoom Emodo Pixel Badge + FlowToo Bundle

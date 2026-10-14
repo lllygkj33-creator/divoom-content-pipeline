@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Pixoo64Ⅱ & Pixoo Pixel Art Display Bundle"
-短名: "Pixoo64Ⅱ"
+短名: "Pixoo64Ⅱ & Pixoo Pixel Art Display Bundle"
 产品键: "divoom-pixoo64-pixoo"
 分类: "套装"
 官方分类: "Bundle"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-pixoo64-pixoo"
 包装清单: []
 能力小节: []
 话题关键词: ["Bundle", "Desk Decor", "Gaming Room Decor", "Pixel Art Display", "Pixel Art Gift", "Pixoo", "Pixoo64", "Smart Display", "Social Media Counter", "WiFi Display"]
-锚文本候选: ["Divoom Pixoo64Ⅱ & Pixoo Pixel Art Display Bundle", "Pixoo64Ⅱ & Pixoo Pixel Art Display Bundle", "Pixoo64Ⅱ"]
+锚文本候选: ["Divoom Pixoo64Ⅱ & Pixoo Pixel Art Display Bundle", "Pixoo64Ⅱ & Pixoo Pixel Art Display Bundle"]
 ---
 
 # Divoom Pixoo64Ⅱ & Pixoo Pixel Art Display Bundle

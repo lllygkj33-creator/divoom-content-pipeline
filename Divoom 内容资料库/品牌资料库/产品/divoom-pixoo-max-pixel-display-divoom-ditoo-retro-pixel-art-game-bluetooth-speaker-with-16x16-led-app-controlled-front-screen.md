@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Pixoo-Max & Ditoo Pro Pixel Display Bluetooth Speaker Bundle"
-短名: "Pixoo-Max"
+短名: "Pixoo-Max & Ditoo Pro Pixel Display Bluetooth Speaker Bundle"
 产品键: "divoom-pixoo-max-pixel-display-divoom-ditoo-retro-pixel-art-game-bluetooth-speaker-with-16x16-led-app-controlled-front-screen"
 分类: "套装"
 官方分类: "Bundle"
@@ -14,8 +14,8 @@ PDP_URL: "https://divoom.com/products/divoom-pixoo-max-pixel-display-divoom-dito
 手册文件: ""
 包装清单: []
 能力小节: []
-话题关键词: ["32x32 LED Display", "Bluetooth Speaker", "Bundle", "Desk Setup", "Ditoo Pro", "Gaming Room Decor", "Pixel Art Display", "Pixel Art Gift", "Retro Speaker"]
-锚文本候选: ["Divoom Pixoo-Max & Ditoo Pro Pixel Display Bluetooth Speaker Bundle", "Pixoo-Max & Ditoo Pro Pixel Display Bluetooth Speaker Bundle", "Pixoo-Max"]
+话题关键词: ["32x32 LED Display", "Bluetooth Speaker", "Bundle", "Desk Setup", "Ditoo Pro", "Gaming Room Decor", "Pixel Art Display", "Pixel Art Gift", "Pixoo-Max", "Retro Speaker"]
+锚文本候选: ["Divoom Pixoo-Max & Ditoo Pro Pixel Display Bluetooth Speaker Bundle", "Pixoo-Max & Ditoo Pro Pixel Display Bluetooth Speaker Bundle"]
 ---
 
 # Divoom Pixoo-Max & Ditoo Pro Pixel Display Bluetooth Speaker Bundle

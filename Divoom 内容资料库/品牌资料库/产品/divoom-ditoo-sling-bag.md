@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Ditoo Pro & Pixel Sling Bag Portable Pixel Art Speaker Bundle"
-短名: "Ditoo"
+短名: "Ditoo Pro & Pixel Sling Bag Portable Pixel Art Speaker Bundle"
 产品键: "divoom-ditoo-sling-bag"
 分类: "像素背包"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-ditoo-sling-bag"
 包装清单: []
 能力小节: []
 话题关键词: ["Bluetooth Speaker", "Bundle", "Ditoo Pro", "Festival Gear", "Gaming Room Decor", "LED Bag", "Music Gift", "Pixel Art", "Pixel Sling Bag", "Portable Speaker"]
-锚文本候选: ["Divoom Ditoo Pro & Pixel Sling Bag Portable Pixel Art Speaker Bundle", "Ditoo Pro & Pixel Sling Bag Portable Pixel Art Speaker Bundle", "Ditoo"]
+锚文本候选: ["Divoom Ditoo Pro & Pixel Sling Bag Portable Pixel Art Speaker Bundle", "Ditoo Pro & Pixel Sling Bag Portable Pixel Art Speaker Bundle"]
 ---
 
 # Divoom Ditoo Pro & Pixel Sling Bag Portable Pixel Art Speaker Bundle

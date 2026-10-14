@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Times Gate & Ditoo Pro Smart Pixel Display Speaker Bundle"
-短名: "Times"
+短名: "Times Gate & Ditoo Pro Smart Pixel Display Speaker Bundle"
 产品键: "divoom-times-gate-ditoo-pro"
 分类: "像素音箱"
 官方分类: "Bluetooth speaker display"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-times-gate-ditoo-pro"
 包装清单: []
 能力小节: []
 话题关键词: ["Bluetooth Speaker", "Bundle", "Creator Desk", "Desk Setup", "Ditoo Pro", "Gaming Room Decor", "Pixel Clock", "Smart Pixel Display", "Tech Gift", "Times Gate", "Bluetooth speaker display"]
-锚文本候选: ["Divoom Times Gate & Ditoo Pro Smart Pixel Display Speaker Bundle", "Times Gate & Ditoo Pro Smart Pixel Display Speaker Bundle", "Times"]
+锚文本候选: ["Divoom Times Gate & Ditoo Pro Smart Pixel Display Speaker Bundle", "Times Gate & Ditoo Pro Smart Pixel Display Speaker Bundle"]
 ---
 
 # Divoom Times Gate & Ditoo Pro Smart Pixel Display Speaker Bundle

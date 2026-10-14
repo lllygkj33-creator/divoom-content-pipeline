@@ -1,6 +1,6 @@
 ---
 产品名: "Divooo the Divoom Mascot Surprise Gift"
-短名: "the"
+短名: "the Divoom Mascot Surprise Gift"
 产品键: "divo-the-divoom-mascot-surprise-gift-35-value"
 分类: "未分类"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divo-the-divoom-mascot-surprise-gift-35-va
 包装清单: []
 能力小节: []
 话题关键词: ["Collectible Gift", "Creative Decor", "Cute Gift", "Desk Decor", "Divoom Gift", "Divoom Mascot", "Divooo", "Surprise Gift"]
-锚文本候选: ["Divooo the Divoom Mascot Surprise Gift", "the"]
+锚文本候选: ["Divooo the Divoom Mascot Surprise Gift", "the Divoom Mascot Surprise Gift"]
 ---
 
 # Divooo the Divoom Mascot Surprise Gift

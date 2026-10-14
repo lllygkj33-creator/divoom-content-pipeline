@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Times Gate & Pixoo64Ⅱ Smart Pixel Display Bundle"
-短名: "Times"
+短名: "Times Gate & Pixoo64Ⅱ Smart Pixel Display Bundle"
 产品键: "divoom-times-gate-pixoo64"
 分类: "像素显示屏"
 官方分类: "Pixel art display"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-times-gate-pixoo64"
 包装清单: []
 能力小节: []
 话题关键词: ["Bundle", "Creator Desk", "Gaming Room Decor", "Pixel Art Display", "Pixel Clock", "Pixoo64", "Smart Pixel Display", "Streaming Setup", "Times Gate", "WiFi Display"]
-锚文本候选: ["Divoom Times Gate & Pixoo64Ⅱ Smart Pixel Display Bundle", "Times Gate & Pixoo64Ⅱ Smart Pixel Display Bundle", "Times"]
+锚文本候选: ["Divoom Times Gate & Pixoo64Ⅱ Smart Pixel Display Bundle", "Times Gate & Pixoo64Ⅱ Smart Pixel Display Bundle"]
 ---
 
 # Divoom Times Gate & Pixoo64Ⅱ Smart Pixel Display Bundle

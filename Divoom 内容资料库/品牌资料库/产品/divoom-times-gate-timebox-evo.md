@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Times Gate & Timebox-Evo Smart Pixel Display Speaker Bundle"
-短名: "Times"
+短名: "Times Gate & Timebox-Evo Smart Pixel Display Speaker Bundle"
 产品键: "divoom-times-gate-timebox-evo"
 分类: "像素显示屏"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-times-gate-timebox-evo"
 包装清单: []
 能力小节: []
 话题关键词: ["App Controlled", "Bluetooth Speaker", "Bundle", "Crypto Tracker", "Desk Decor", "Gaming Setup", "Pixel Art Speaker", "Pixel Clock", "Smart Display", "Tech Gift", "Timebox Evo", "Times Gate"]
-锚文本候选: ["Divoom Times Gate & Timebox-Evo Smart Pixel Display Speaker Bundle", "Times Gate & Timebox-Evo Smart Pixel Display Speaker Bundle", "Times"]
+锚文本候选: ["Divoom Times Gate & Timebox-Evo Smart Pixel Display Speaker Bundle", "Times Gate & Timebox-Evo Smart Pixel Display Speaker Bundle"]
 ---
 
 # Divoom Times Gate & Timebox-Evo Smart Pixel Display Speaker Bundle

@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom USB Type-C Charging Cable for Divoom Devices"
-短名: "USB"
+短名: "USB Type-C Charging Cable for Divoom Devices"
 产品键: "divoom-usb-type-c-charging-power-cord"
 分类: "充电器"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-usb-type-c-charging-power-cord"
 包装清单: []
 能力小节: []
 话题关键词: ["Charging Cable", "Ditoo Pro", "Divoom Accessories", "MiniToo", "Pixoo", "Pixoo Max", "Pixoo64", "Replacement Cable", "Timebox Evo", "USB Type-C"]
-锚文本候选: ["Divoom USB Type-C Charging Cable for Divoom Devices", "Divoom USB Type-C Charging Cable", "USB Type-C Charging Cable for Divoom Devices", "USB"]
+锚文本候选: ["Divoom USB Type-C Charging Cable for Divoom Devices", "Divoom USB Type-C Charging Cable", "USB Type-C Charging Cable for Divoom Devices"]
 ---
 
 # Divoom USB Type-C Charging Cable for Divoom Devices

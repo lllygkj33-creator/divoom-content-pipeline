@@ -216,7 +216,9 @@ def main() -> None:
         p = prods.get(h, {})
         m = man_by_handle.get(h, {})
         title = p.get("title") or m.get("name") or h
-        short = m.get("name") or (title.split()[1] if len(title.split()) > 1 else title)
+        # 短名回退：去掉品牌前缀，而不是取标题第二个词
+        # （"Divooo the Divoom Mascot …".split()[1] == "the"，会污染锚文本候选）
+        short = m.get("name") or re.sub(r"^Div\w*\s+", "", title, flags=re.I).strip() or title
         cat = m.get("category", "")
         catlabel = m.get("categoryLabel", "") or p.get("product_type", "")
         prices = [float(v["price"]) for v in p.get("variants", []) if v.get("price")]

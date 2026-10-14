@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Backpack-S Smart LED Pixel Art Backpack"
-短名: "Backpack-S"
+短名: "Backpack-S Smart LED Pixel Art Backpack"
 产品键: "divoom-backpack-s"
 分类: "像素背包"
 官方分类: ""
@@ -14,8 +14,8 @@ PDP_URL: "https://divoom.com/products/divoom-backpack-s"
 手册文件: ""
 包装清单: []
 能力小节: []
-话题关键词: ["App Controlled", "Divoom Backpack", "Festival Gear", "LED Backpack", "Pixel Art", "Pixel Art Backpack", "School Bag", "Smart Backpack", "Travel Gear", "Wearable Display", "Youth Backpack"]
-锚文本候选: ["Divoom Backpack-S Smart LED Pixel Art Backpack", "Backpack-S Smart LED Pixel Art Backpack", "Backpack-S"]
+话题关键词: ["App Controlled", "Backpack-S", "Divoom Backpack", "Festival Gear", "LED Backpack", "Pixel Art", "Pixel Art Backpack", "School Bag", "Smart Backpack", "Travel Gear", "Wearable Display", "Youth Backpack"]
+锚文本候选: ["Divoom Backpack-S Smart LED Pixel Art Backpack", "Backpack-S Smart LED Pixel Art Backpack"]
 ---
 
 # Divoom Backpack-S Smart LED Pixel Art Backpack

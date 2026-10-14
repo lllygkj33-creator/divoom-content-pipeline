@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Times Frame + Times Gate Summer Smart Display Bundle"
-短名: "Times"
+短名: "Times Frame + Times Gate Summer Smart Display Bundle"
 产品键: "divoom-times-frame-times-gate-summer-smart-display-bundle"
 分类: "像素显示屏"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-times-frame-times-gate-summer-smart
 包装清单: []
 能力小节: []
 话题关键词: ["Big Summer Sale", "Smart Display Bundle", "Summer Bundle", "Times Frame", "Times Gate"]
-锚文本候选: ["Divoom Times Frame + Times Gate Summer Smart Display Bundle", "Times Frame + Times Gate Summer Smart Display Bundle", "Times"]
+锚文本候选: ["Divoom Times Frame + Times Gate Summer Smart Display Bundle", "Times Frame + Times Gate Summer Smart Display Bundle"]
 ---
 
 # Divoom Times Frame + Times Gate Summer Smart Display Bundle

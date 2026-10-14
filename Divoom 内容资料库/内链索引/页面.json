@@ -1,0 +1,212 @@
+[
+ {
+  "类型": "集合",
+  "名称": "all",
+  "用途": "促销",
+  "URL": "https://divoom.com/collections/all",
+  "产品数": 59,
+  "锚文本候选": [
+   "All"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "big-summer-sale",
+  "用途": "促销",
+  "URL": "https://divoom.com/collections/big-summer-sale",
+  "产品数": 13,
+  "锚文本候选": [
+   "Big Summer Sale"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "bluetooth-speakers",
+  "用途": "品类",
+  "URL": "https://divoom.com/collections/bluetooth-speakers",
+  "产品数": 5,
+  "锚文本候选": [
+   "Bluetooth Speakers"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "bundle-sale",
+  "用途": "促销",
+  "URL": "https://divoom.com/collections/bundle-sale",
+  "产品数": 14,
+  "锚文本候选": [
+   "Bundle Sale"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "charger",
+  "用途": "品类",
+  "URL": "https://divoom.com/collections/charger",
+  "产品数": 3,
+  "锚文本候选": [
+   "Charger"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "christmas-gift",
+  "用途": "促销",
+  "URL": "https://divoom.com/collections/christmas-gift",
+  "产品数": 15,
+  "锚文本候选": [
+   "Christmas Gift"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "digital-photo-frames-1",
+  "用途": "品类",
+  "URL": "https://divoom.com/collections/digital-photo-frames-1",
+  "产品数": 5,
+  "锚文本候选": [
+   "Digital Photo Frames 1"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "divoom-sale",
+  "用途": "促销",
+  "URL": "https://divoom.com/collections/divoom-sale",
+  "产品数": 23,
+  "锚文本候选": [
+   "Divoom Sale"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "featured-products",
+  "用途": "促销",
+  "URL": "https://divoom.com/collections/featured-products",
+  "产品数": 8,
+  "锚文本候选": [
+   "Featured Products"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "karaoke",
+  "用途": "品类",
+  "URL": "https://divoom.com/collections/karaoke",
+  "产品数": 7,
+  "锚文本候选": [
+   "Karaoke"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "kol-bundles",
+  "用途": "促销",
+  "URL": "https://divoom.com/collections/kol-bundles",
+  "产品数": 23,
+  "锚文本候选": [
+   "Kol Bundles"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "kol-single-products",
+  "用途": "促销",
+  "URL": "https://divoom.com/collections/kol-single-products",
+  "产品数": 28,
+  "锚文本候选": [
+   "Kol Single Products"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "new-product",
+  "用途": "促销",
+  "URL": "https://divoom.com/collections/new-product",
+  "产品数": 10,
+  "锚文本候选": [
+   "New Product"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "pixel-backpack",
+  "用途": "品类",
+  "URL": "https://divoom.com/collections/pixel-backpack",
+  "产品数": 5,
+  "锚文本候选": [
+   "Pixel Backpack"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "pixel-display",
+  "用途": "品类",
+  "URL": "https://divoom.com/collections/pixel-display",
+  "产品数": 8,
+  "锚文本候选": [
+   "Pixel Display"
+  ]
+ },
+ {
+  "类型": "集合",
+  "名称": "smart-pixel-speaker",
+  "用途": "品类",
+  "URL": "https://divoom.com/collections/smart-pixel-speaker",
+  "产品数": 5,
+  "锚文本候选": [
+   "Smart Pixel Speaker"
+  ]
+ },
+ {
+  "类型": "场景页",
+  "名称": "desk-setup-essentials",
+  "用途": "品类",
+  "URL": "https://divoom.com/pages/desk-setup-essentials",
+  "产品数": null,
+  "锚文本候选": [
+   "Desk Setup Essentials"
+  ]
+ },
+ {
+  "类型": "场景页",
+  "名称": "gaming-streaming-setup",
+  "用途": "品类",
+  "URL": "https://divoom.com/pages/gaming-streaming-setup",
+  "产品数": null,
+  "锚文本候选": [
+   "Gaming Streaming Setup"
+  ]
+ },
+ {
+  "类型": "场景页",
+  "名称": "gifts-for-every-moment",
+  "用途": "品类",
+  "URL": "https://divoom.com/pages/gifts-for-every-moment",
+  "产品数": null,
+  "锚文本候选": [
+   "Gifts For Every Moment"
+  ]
+ },
+ {
+  "类型": "场景页",
+  "名称": "shop-divoom-by-scene",
+  "用途": "品类",
+  "URL": "https://divoom.com/pages/shop-divoom-by-scene",
+  "产品数": null,
+  "锚文本候选": [
+   "Shop Divoom By Scene"
+  ]
+ },
+ {
+  "类型": "场景页",
+  "名称": "sleep-relaxation-essentials",
+  "用途": "品类",
+  "URL": "https://divoom.com/pages/sleep-relaxation-essentials",
+  "产品数": null,
+  "锚文本候选": [
+   "Sleep Relaxation Essentials"
+  ]
+ }
+]

@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Times Gate + Tiivoo-2 Summer Desk Setup Bundle"
-短名: "Times"
+短名: "Times Gate + Tiivoo-2 Summer Desk Setup Bundle"
 产品键: "divoom-times-gate-tiivoo-2-summer-desk-setup-bundle"
 分类: "像素显示屏"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-times-gate-tiivoo-2-summer-desk-set
 包装清单: []
 能力小节: []
 话题关键词: []
-锚文本候选: ["Divoom Times Gate + Tiivoo-2 Summer Desk Setup Bundle", "Times Gate + Tiivoo-2 Summer Desk Setup Bundle", "Times"]
+锚文本候选: ["Divoom Times Gate + Tiivoo-2 Summer Desk Setup Bundle", "Times Gate + Tiivoo-2 Summer Desk Setup Bundle"]
 ---
 
 # Divoom Times Gate + Tiivoo-2 Summer Desk Setup Bundle

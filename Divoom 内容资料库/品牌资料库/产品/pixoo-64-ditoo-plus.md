@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Pixoo64Ⅱ & Ditoo Pro Pixel Display Bluetooth Speaker Bundle"
-短名: "Pixoo64Ⅱ"
+短名: "Pixoo64Ⅱ & Ditoo Pro Pixel Display Bluetooth Speaker Bundle"
 产品键: "pixoo-64-ditoo-plus"
 分类: "套装"
 官方分类: "Bundle"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/pixoo-64-ditoo-plus"
 包装清单: []
 能力小节: []
 话题关键词: ["Bluetooth Speaker", "Bundle", "Desk Setup", "Ditoo Pro", "Gaming Room Decor", "Pixel Art Display", "Pixel Art Gift", "Pixoo64", "Retro Speaker", "WiFi Display"]
-锚文本候选: ["Divoom Pixoo64Ⅱ & Ditoo Pro Pixel Display Bluetooth Speaker Bundle", "Pixoo64Ⅱ & Ditoo Pro Pixel Display Bluetooth Speaker Bundle", "Pixoo64Ⅱ"]
+锚文本候选: ["Divoom Pixoo64Ⅱ & Ditoo Pro Pixel Display Bluetooth Speaker Bundle", "Pixoo64Ⅱ & Ditoo Pro Pixel Display Bluetooth Speaker Bundle"]
 ---
 
 # Divoom Pixoo64Ⅱ & Ditoo Pro Pixel Display Bluetooth Speaker Bundle

@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Pixoo, Pixoo-Max & Timebox-Evo Pixel Art Display Speaker Bundle"
-短名: "Pixoo,"
+短名: "Pixoo, Pixoo-Max & Timebox-Evo Pixel Art Display Speaker Bundle"
 产品键: "divoom-pixoo-pixoo-max-timebox-evo"
 分类: "套装"
 官方分类: "Bundle"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-pixoo-pixoo-max-timebox-evo"
 包装清单: []
 能力小节: []
 话题关键词: ["Bluetooth Speaker", "Bundle", "Christmas Gift", "Desk Decor", "Gaming Room Decor", "Pixel Art Display", "Pixoo", "Pixoo-Max", "Timebox Evo"]
-锚文本候选: ["Divoom Pixoo, Pixoo-Max & Timebox-Evo Pixel Art Display Speaker Bundle", "Pixoo, Pixoo-Max & Timebox-Evo Pixel Art Display Speaker Bundle", "Pixoo,"]
+锚文本候选: ["Divoom Pixoo, Pixoo-Max & Timebox-Evo Pixel Art Display Speaker Bundle", "Pixoo, Pixoo-Max & Timebox-Evo Pixel Art Display Speaker Bundle"]
 ---
 
 # Divoom Pixoo, Pixoo-Max & Timebox-Evo Pixel Art Display Speaker Bundle

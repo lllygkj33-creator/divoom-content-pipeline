@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Emodo Pixel Badge + Times Gate Bundle"
-短名: "Emodo"
+短名: "Emodo Pixel Badge + Times Gate Bundle"
 产品键: "divoom-emodo-pixel-badge-times-gate-bundle"
 分类: "套装"
 官方分类: "Bundle"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-emodo-pixel-badge-times-gate-bundle
 包装清单: []
 能力小节: []
 话题关键词: ["anime", "bundle", "Bundle Deal", "desk setup", "Emodo Badge", "geek", "gift", "pixel art", "Smart Display Bundle", "Times Gate"]
-锚文本候选: ["Divoom Emodo Pixel Badge + Times Gate Bundle", "Emodo Pixel Badge + Times Gate Bundle", "Emodo"]
+锚文本候选: ["Divoom Emodo Pixel Badge + Times Gate Bundle", "Emodo Pixel Badge + Times Gate Bundle"]
 ---
 
 # Divoom Emodo Pixel Badge + Times Gate Bundle

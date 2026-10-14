@@ -43,17 +43,19 @@ divoom/
 │   │
 │   ├── 实体库/                     Divoom 实体变量库（14 组 / 567 词）
 │   ├── 品牌资料库/                 官方集合/PDP/场景/手册（62 产品 / 16 集合 / 26 手册）
+│   ├── 内链索引/                   ★ 给 agent 的 JSON：博客 256 / 产品 62 / 页面 21
 │   ├── <栏目>/                     5 个栏目：科技与信息 / 帮助与提示 / 产品对比 / 购买指南 / 设置与使用
 │   │   ├── 标题与大纲规范.md        FX 主表 + H1 公式 + H2 箭头逻辑
 │   │   ├── 正文写作规范.md          栏目专属的正文推进规范
 │   │   ├── 锚文本规范.md
 │   │   └── 实例.base               竞品范文基线（Bases 视图）
-│   ├── 发布与链接记录/             已发布文章台账（256 篇，内链唯一来源）+ 待补内链
+│   ├── 发布与链接记录/             已发布文章台账（256 篇，人类可读版）+ 待补内链
 │   └── work/runs/                  ★ 跑通样例（run-105918 是完整的一次）
 │
 ├── fetch_fc.py                     正文抓取（Firecrawl）
 ├── fetch_brand.py                  品牌资料抓取（集合/PDP/场景/手册）
 ├── build_brand_library.py          品牌资料库组装
+├── build_link_index.py             ★ 内链索引生成（agent 加内链读这个）
 ├── build_published_ledger.py       从官方 sitemap 生成发布台账
 ├── build_instance_notes.py         竞品实例 → Obsidian 笔记 + Bases
 └── analyze_*.py                    语料分析（正文节奏 / 产品提及 / 标题需求）

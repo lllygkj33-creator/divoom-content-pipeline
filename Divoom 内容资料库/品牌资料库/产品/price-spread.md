@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Gift Card for Pixel Art and Audio Gifts"
-短名: "Gift"
+短名: "Gift Card for Pixel Art and Audio Gifts"
 产品键: "price-spread"
 分类: "礼品卡"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/price-spread"
 包装清单: []
 能力小节: []
 话题关键词: ["Creator Gift", "Divoom Gift", "Gamer Gift", "Gift Card", "Holiday Gift", "Music Gift", "Pixel Art Gift", "Tech Gift"]
-锚文本候选: ["Divoom Gift Card for Pixel Art and Audio Gifts", "Divoom Gift Card", "Gift Card for Pixel Art and Audio Gifts", "Gift"]
+锚文本候选: ["Divoom Gift Card for Pixel Art and Audio Gifts", "Divoom Gift Card", "Gift Card for Pixel Art and Audio Gifts"]
 ---
 
 # Divoom Gift Card for Pixel Art and Audio Gifts

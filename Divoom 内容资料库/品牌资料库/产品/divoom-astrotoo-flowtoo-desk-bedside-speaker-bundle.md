@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Astrotoo + FlowToo – Desk & Bedside Speaker Bundle"
-短名: "Astrotoo"
+短名: "Astrotoo + FlowToo – Desk & Bedside Speaker Bundle"
 产品键: "divoom-astrotoo-flowtoo-desk-bedside-speaker-bundle"
 分类: "像素音箱"
 官方分类: "Bluetooth speaker display"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-astrotoo-flowtoo-desk-bedside-speak
 包装清单: []
 能力小节: []
 话题关键词: ["Bluetooth speaker display"]
-锚文本候选: ["Divoom Astrotoo + FlowToo – Desk & Bedside Speaker Bundle", "Divoom Astrotoo + FlowToo", "Astrotoo + FlowToo – Desk & Bedside Speaker Bundle", "Astrotoo"]
+锚文本候选: ["Divoom Astrotoo + FlowToo – Desk & Bedside Speaker Bundle", "Divoom Astrotoo + FlowToo", "Astrotoo + FlowToo – Desk & Bedside Speaker Bundle"]
 ---
 
 # Divoom Astrotoo + FlowToo – Desk & Bedside Speaker Bundle

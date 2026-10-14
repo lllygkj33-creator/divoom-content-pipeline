@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Pixoo, Pixoo-Max & Pixoo64ⅡLED Pixel Display Gift Pack"
-短名: "Pixoo,"
+短名: "Pixoo, Pixoo-Max & Pixoo64ⅡLED Pixel Display Gift Pack"
 产品键: "pixoo-pixoomax-pixoo64"
 分类: "套装"
 官方分类: "Bundle"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/pixoo-pixoomax-pixoo64"
 包装清单: []
 能力小节: []
 话题关键词: ["Bundle", "Desk Decor", "Gaming Room Decor", "LED Pixel Display", "Pixel Art Display", "Pixel Art Gift", "Pixoo", "Pixoo-Max", "Pixoo64", "WiFi Display"]
-锚文本候选: ["Divoom Pixoo, Pixoo-Max & Pixoo64ⅡLED Pixel Display Gift Pack", "Pixoo, Pixoo-Max & Pixoo64ⅡLED Pixel Display Gift Pack", "Pixoo,"]
+锚文本候选: ["Divoom Pixoo, Pixoo-Max & Pixoo64ⅡLED Pixel Display Gift Pack", "Pixoo, Pixoo-Max & Pixoo64ⅡLED Pixel Display Gift Pack"]
 ---
 
 # Divoom Pixoo, Pixoo-Max & Pixoo64ⅡLED Pixel Display Gift Pack

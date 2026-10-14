@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Sling Bag-V Smart LED Pixel Art Sling Bag"
-短名: "Sling"
+短名: "Sling Bag-V Smart LED Pixel Art Sling Bag"
 产品键: "divoom-slingbag-v"
 分类: "像素背包"
 官方分类: "Backpack"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-slingbag-v"
 包装清单: []
 能力小节: []
 话题关键词: ["App Controlled", "Crossbody Bag", "Divoom Sling Bag", "Festival Gear", "LED Backpack", "LED Sling Bag", "Pixel Art Gift", "Pixel Art Sling Bag", "Sling Bag-V", "Streetwear", "Travel Bag", "Wearable Display", "Backpack"]
-锚文本候选: ["Divoom Sling Bag-V Smart LED Pixel Art Sling Bag", "Sling Bag-V Smart LED Pixel Art Sling Bag", "Sling"]
+锚文本候选: ["Divoom Sling Bag-V Smart LED Pixel Art Sling Bag", "Sling Bag-V Smart LED Pixel Art Sling Bag"]
 ---
 
 # Divoom Sling Bag-V Smart LED Pixel Art Sling Bag

@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Times Gate & Pixoo Smart Pixel Display Bundle"
-短名: "Times"
+短名: "Times Gate & Pixoo Smart Pixel Display Bundle"
 产品键: "divoom-times-gate-pixoo"
 分类: "像素显示屏"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-times-gate-pixoo"
 包装清单: []
 能力小节: []
 话题关键词: ["App Controlled", "Bundle", "Crypto Tracker", "Desk Decor", "Gaming Setup", "Pixel Art Display", "Pixel Clock", "Pixoo", "Room Decor", "Smart Display", "Tech Gift", "Times Gate"]
-锚文本候选: ["Divoom Times Gate & Pixoo Smart Pixel Display Bundle", "Times Gate & Pixoo Smart Pixel Display Bundle", "Times"]
+锚文本候选: ["Divoom Times Gate & Pixoo Smart Pixel Display Bundle", "Times Gate & Pixoo Smart Pixel Display Bundle"]
 ---
 
 # Divoom Times Gate & Pixoo Smart Pixel Display Bundle

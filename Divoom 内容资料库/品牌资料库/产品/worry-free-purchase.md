@@ -1,6 +1,6 @@
 ---
 产品名: "Worry-Free Purchase"
-短名: "Purchase"
+短名: "Worry-Free Purchase"
 产品键: "worry-free-purchase"
 分类: "服务"
 官方分类: "SEEL-WFP"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/worry-free-purchase"
 包装清单: []
 能力小节: []
 话题关键词: ["SEEL-WFP"]
-锚文本候选: ["Worry-Free Purchase", "Purchase"]
+锚文本候选: ["Worry-Free Purchase"]
 ---
 
 # Worry-Free Purchase

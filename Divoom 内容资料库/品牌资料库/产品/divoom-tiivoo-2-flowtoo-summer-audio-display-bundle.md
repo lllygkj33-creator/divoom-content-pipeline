@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Tiivoo-2 + FlowToo Summer Audio Display Bundle"
-短名: "Tiivoo-2"
+短名: "Tiivoo-2 + FlowToo Summer Audio Display Bundle"
 产品键: "divoom-tiivoo-2-flowtoo-summer-audio-display-bundle"
 分类: "未分类"
 官方分类: ""
@@ -14,8 +14,8 @@ PDP_URL: "https://divoom.com/products/divoom-tiivoo-2-flowtoo-summer-audio-displ
 手册文件: ""
 包装清单: []
 能力小节: []
-话题关键词: ["Audio Display Bundle", "Big Summer Sale", "FlowToo", "Summer Bundle"]
-锚文本候选: ["Divoom Tiivoo-2 + FlowToo Summer Audio Display Bundle", "Tiivoo-2 + FlowToo Summer Audio Display Bundle", "Tiivoo-2"]
+话题关键词: ["Audio Display Bundle", "Big Summer Sale", "FlowToo", "Summer Bundle", "Tiivoo-2"]
+锚文本候选: ["Divoom Tiivoo-2 + FlowToo Summer Audio Display Bundle", "Tiivoo-2 + FlowToo Summer Audio Display Bundle"]
 ---
 
 # Divoom Tiivoo-2 + FlowToo Summer Audio Display Bundle

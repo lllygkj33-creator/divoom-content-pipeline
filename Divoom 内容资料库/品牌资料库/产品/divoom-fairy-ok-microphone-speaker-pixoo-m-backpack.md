@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Fairy-OK Karaoke Speaker & Pixoo M LED Backpack Bundle"
-短名: "Fairy-OK"
+短名: "Fairy-OK Karaoke Speaker & Pixoo M LED Backpack Bundle"
 产品键: "divoom-fairy-ok-microphone-speaker-pixoo-m-backpack"
 分类: "套装"
 官方分类: "Bundle"
@@ -14,8 +14,8 @@ PDP_URL: "https://divoom.com/products/divoom-fairy-ok-microphone-speaker-pixoo-m
 手册文件: ""
 包装清单: []
 能力小节: []
-话题关键词: ["Bluetooth Microphone", "Bundle", "Creative Gift", "Divoom Backpack", "Karaoke Speaker", "Kids Karaoke", "LED Backpack", "Pixel Art Backpack", "Pixoo M", "Portable Karaoke", "School Bag"]
-锚文本候选: ["Divoom Fairy-OK Karaoke Speaker & Pixoo M LED Backpack Bundle", "Fairy-OK Karaoke Speaker & Pixoo M LED Backpack Bundle", "Fairy-OK"]
+话题关键词: ["Bluetooth Microphone", "Bundle", "Creative Gift", "Divoom Backpack", "Fairy-OK", "Karaoke Speaker", "Kids Karaoke", "LED Backpack", "Pixel Art Backpack", "Pixoo M", "Portable Karaoke", "School Bag"]
+锚文本候选: ["Divoom Fairy-OK Karaoke Speaker & Pixoo M LED Backpack Bundle", "Fairy-OK Karaoke Speaker & Pixoo M LED Backpack Bundle"]
 ---
 
 # Divoom Fairy-OK Karaoke Speaker & Pixoo M LED Backpack Bundle

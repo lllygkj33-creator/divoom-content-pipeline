@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom MiniToo + Ditoo-Pro Summer Pixel Art Bundle"
-短名: "MiniToo"
+短名: "MiniToo + Ditoo-Pro Summer Pixel Art Bundle"
 产品键: "divoom-minitoo-ditoo-pro-summer-pixel-art-bundle"
 分类: "套装"
 官方分类: "Bundle"
@@ -14,8 +14,8 @@ PDP_URL: "https://divoom.com/products/divoom-minitoo-ditoo-pro-summer-pixel-art-
 手册文件: ""
 包装清单: []
 能力小节: []
-话题关键词: ["Big Summer Sale", "Ditoo-Pro", "Pixel Art Bundle", "Summer Bundle", "Bundle"]
-锚文本候选: ["Divoom MiniToo + Ditoo-Pro Summer Pixel Art Bundle", "MiniToo + Ditoo-Pro Summer Pixel Art Bundle", "MiniToo"]
+话题关键词: ["Big Summer Sale", "Ditoo-Pro", "MiniToo", "Pixel Art Bundle", "Summer Bundle", "Bundle"]
+锚文本候选: ["Divoom MiniToo + Ditoo-Pro Summer Pixel Art Bundle", "MiniToo + Ditoo-Pro Summer Pixel Art Bundle"]
 ---
 
 # Divoom MiniToo + Ditoo-Pro Summer Pixel Art Bundle

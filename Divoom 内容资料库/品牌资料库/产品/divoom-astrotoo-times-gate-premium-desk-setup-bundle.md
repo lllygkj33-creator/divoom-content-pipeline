@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Astrotoo + Times Gate – Premium Desk Setup Bundle"
-短名: "Astrotoo"
+短名: "Astrotoo + Times Gate – Premium Desk Setup Bundle"
 产品键: "divoom-astrotoo-times-gate-premium-desk-setup-bundle"
 分类: "像素音箱"
 官方分类: "Bluetooth speaker display"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-astrotoo-times-gate-premium-desk-se
 包装清单: []
 能力小节: []
 话题关键词: ["Bluetooth speaker display"]
-锚文本候选: ["Divoom Astrotoo + Times Gate – Premium Desk Setup Bundle", "Divoom Astrotoo + Times Gate", "Astrotoo + Times Gate – Premium Desk Setup Bundle", "Astrotoo"]
+锚文本候选: ["Divoom Astrotoo + Times Gate – Premium Desk Setup Bundle", "Divoom Astrotoo + Times Gate", "Astrotoo + Times Gate – Premium Desk Setup Bundle"]
 ---
 
 # Divoom Astrotoo + Times Gate – Premium Desk Setup Bundle

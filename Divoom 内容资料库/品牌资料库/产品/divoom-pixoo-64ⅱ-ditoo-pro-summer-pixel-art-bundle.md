@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Pixoo-64Ⅱ + Ditoo-Pro Summer Pixel Art Bundle"
-短名: "Pixoo-64Ⅱ"
+短名: "Pixoo-64Ⅱ + Ditoo-Pro Summer Pixel Art Bundle"
 产品键: "divoom-pixoo-64ⅱ-ditoo-pro-summer-pixel-art-bundle"
 分类: "像素显示屏"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-pixoo-64ⅱ-ditoo-pro-summer-pixel-
 包装清单: []
 能力小节: []
 话题关键词: []
-锚文本候选: ["Divoom Pixoo-64Ⅱ + Ditoo-Pro Summer Pixel Art Bundle", "Pixoo-64Ⅱ + Ditoo-Pro Summer Pixel Art Bundle", "Pixoo-64Ⅱ"]
+锚文本候选: ["Divoom Pixoo-64Ⅱ + Ditoo-Pro Summer Pixel Art Bundle", "Pixoo-64Ⅱ + Ditoo-Pro Summer Pixel Art Bundle"]
 ---
 
 # Divoom Pixoo-64Ⅱ + Ditoo-Pro Summer Pixel Art Bundle

@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Pixoo Backpack-M Smart LED Backpack with Pixel Art Display"
-短名: "Pixoo"
+短名: "Pixoo Backpack-M Smart LED Backpack with Pixel Art Display"
 产品键: "divoom-backpack"
 分类: "像素背包"
 官方分类: "Backpack"
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-backpack"
 包装清单: []
 能力小节: []
 话题关键词: ["App Controlled", "Creative Gift", "Gaming Backpack", "Laptop Backpack", "LED Backpack", "Pixel Art Backpack", "Pixel Art Display", "Pixoo Backpack-M", "School Backpack", "Smart Backpack", "Tech Fashion", "Wearable LED", "Backpack"]
-锚文本候选: ["Divoom Pixoo Backpack-M Smart LED Backpack with Pixel Art Display", "Divoom Pixoo Backpack-M Smart LED Backpack", "Pixoo Backpack-M Smart LED Backpack with Pixel Art Display", "Pixoo"]
+锚文本候选: ["Divoom Pixoo Backpack-M Smart LED Backpack with Pixel Art Display", "Divoom Pixoo Backpack-M Smart LED Backpack", "Pixoo Backpack-M Smart LED Backpack with Pixel Art Display"]
 ---
 
 # Divoom Pixoo Backpack-M Smart LED Backpack with Pixel Art Display

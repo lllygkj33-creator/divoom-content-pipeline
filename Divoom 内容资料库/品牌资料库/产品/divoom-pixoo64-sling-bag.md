@@ -1,6 +1,6 @@
 ---
 产品名: "Divoom Pixoo64Ⅱ & Pixel Sling Bag LED Display Bundle"
-短名: "Pixoo64Ⅱ"
+短名: "Pixoo64Ⅱ & Pixel Sling Bag LED Display Bundle"
 产品键: "divoom-pixoo64-sling-bag"
 分类: "像素背包"
 官方分类: ""
@@ -15,7 +15,7 @@ PDP_URL: "https://divoom.com/products/divoom-pixoo64-sling-bag"
 包装清单: []
 能力小节: []
 话题关键词: ["Bundle", "Festival Gear", "Gaming Room Decor", "LED Bag", "Pixel Art Display", "Pixel Art Gift", "Pixel Sling Bag", "Pixoo64", "Travel Gear", "Wearable Display"]
-锚文本候选: ["Divoom Pixoo64Ⅱ & Pixel Sling Bag LED Display Bundle", "Pixoo64Ⅱ & Pixel Sling Bag LED Display Bundle", "Pixoo64Ⅱ"]
+锚文本候选: ["Divoom Pixoo64Ⅱ & Pixel Sling Bag LED Display Bundle", "Pixoo64Ⅱ & Pixel Sling Bag LED Display Bundle"]
 ---
 
 # Divoom Pixoo64Ⅱ & Pixel Sling Bag LED Display Bundle
