@@ -1,0 +1,118 @@
+---
+group: "任务与工作流"
+english: Task & workflow
+order: 6
+values:
+  - "创作像素画 (pixel art)"
+  - "展示像素画 (pixel art display)"
+  - "聆听音乐 (everyday listening)"
+  - "在家办演唱会 (concert at home)"
+  - "合唱与群体演唱 (group singing)"
+  - "布置书桌 (desk setup)"
+  - "搭建完整桌面 (complete desk setup)"
+  - "给设备充电 (charging)"
+  - "替换充电线 (replacement cable)"
+  - "显示照片 (photos)"
+  - "展示个人媒体 (personal media)"
+  - "对比品类 (compare categories)"
+  - "按使用角色选购 (right role)"
+  - "查看规格与库存 (current availability)"
+  - "分享像素画作品 (share pixel art)"
+  - "个性表达 (self-expression)"
+  - "收纳15英寸笔记本 (15-inch laptop)"
+  - "晨间与睡前例行 (morning routine / evening wind-down)"
+  - "挂墙展示 (wall)"
+  - "通勤 (commuting)"
+  - "旅行 (travel)"
+  - "学习 (study)"
+  - "学习 (studying)"
+  - "日常携带 (everyday carry)"
+  - "日常充电 (everyday charging)"
+  - "唱歌 (singing)"
+  - "家庭卡拉OK (home karaoke)"
+  - "音乐播放 (music playback)"
+  - "工作 (work)"
+  - "游戏 (gaming)"
+  - "拍摄短视频 (short videos)"
+  - "日常社交分享 (daily social sharing)"
+  - "睡眠 (sleep)"
+  - "日常作息 (daily routines)"
+  - "卡拉OK (karaoke)"
+  - "对唱 (duets)"
+  - "直播 (livestreaming)"
+  - "录音 (recording)"
+  - "跟唱 (sing-alongs)"
+  - "像素艺术创作 (Pixel Art Creation)"
+  - "绘制像素 (draw pixels)"
+  - "便携音乐制作 (portable music production)"
+  - "唱歌练习 (singing practice)"
+  - "主持活动 (hosting)"
+  - "派对游戏 (party games)"
+  - "团队建设 (team-building)"
+  - "徒步 (hiking)"
+  - "骑行 (cycling)"
+  - "游泳 (swimming)"
+  - "遛狗 (walk the dog)"
+  - "跑腿办事 (running errands)"
+  - "做饭 (cook)"
+  - "送礼 (gifting)"
+  - "时间管理 (time management)"
+---
+# 任务与工作流 (Task & workflow)
+
+54 个词条。
+
+- 创作像素画 (pixel art)
+- 展示像素画 (pixel art display)
+- 聆听音乐 (everyday listening)
+- 在家办演唱会 (concert at home)
+- 合唱与群体演唱 (group singing)
+- 布置书桌 (desk setup)
+- 搭建完整桌面 (complete desk setup)
+- 给设备充电 (charging)
+- 替换充电线 (replacement cable)
+- 显示照片 (photos)
+- 展示个人媒体 (personal media)
+- 对比品类 (compare categories)
+- 按使用角色选购 (right role)
+- 查看规格与库存 (current availability)
+- 分享像素画作品 (share pixel art)
+- 个性表达 (self-expression)
+- 收纳15英寸笔记本 (15-inch laptop)
+- 晨间与睡前例行 (morning routine / evening wind-down)
+- 挂墙展示 (wall)
+- 通勤 (commuting)
+- 旅行 (travel)
+- 学习 (study)
+- 学习 (studying)
+- 日常携带 (everyday carry)
+- 日常充电 (everyday charging)
+- 唱歌 (singing)
+- 家庭卡拉OK (home karaoke)
+- 音乐播放 (music playback)
+- 工作 (work)
+- 游戏 (gaming)
+- 拍摄短视频 (short videos)
+- 日常社交分享 (daily social sharing)
+- 睡眠 (sleep)
+- 日常作息 (daily routines)
+- 卡拉OK (karaoke)
+- 对唱 (duets)
+- 直播 (livestreaming)
+- 录音 (recording)
+- 跟唱 (sing-alongs)
+- 像素艺术创作 (Pixel Art Creation)
+- 绘制像素 (draw pixels)
+- 便携音乐制作 (portable music production)
+- 唱歌练习 (singing practice)
+- 主持活动 (hosting)
+- 派对游戏 (party games)
+- 团队建设 (team-building)
+- 徒步 (hiking)
+- 骑行 (cycling)
+- 游泳 (swimming)
+- 遛狗 (walk the dog)
+- 跑腿办事 (running errands)
+- 做饭 (cook)
+- 送礼 (gifting)
+- 时间管理 (time management)

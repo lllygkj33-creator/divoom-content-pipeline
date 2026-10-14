@@ -1,0 +1,16 @@
+properties:
+  集合名:
+    displayName: 集合
+  产品数:
+    displayName: 产品数
+  集合URL:
+    displayName: URL
+views:
+  - type: table
+    name: 集合总表
+    filters:
+      and:
+        - 'file.inFolder("集合")'
+    order:
+      - 集合名
+      - 产品数

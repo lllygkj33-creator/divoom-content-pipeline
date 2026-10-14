@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Divoom 流水线进度看板</title>
+<style>
+  :root{
+    --bg:#0f1115; --layer:#171a21; --layer2:#1e222b; --border:#2a2f3a;
+    --ink:#e6e9ef; --ink2:#9aa4b2; --brand:#4f8cff; --ok:#3fb950; --run:#d29922; --fail:#f85149;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:14px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:22px}
+
+  /* ── 输入区 ── */
+  .input-bar{display:flex;gap:10px;background:var(--layer);border:1px solid var(--border);
+             border-radius:12px;padding:12px}
+  .input-bar input{flex:1;background:var(--layer2);border:1px solid var(--border);border-radius:8px;
+                   padding:11px 13px;color:var(--ink);font-size:14px}
+  .input-bar input:focus{outline:none;border-color:var(--brand)}
+  .input-bar button{background:var(--brand);border:0;border-radius:8px;color:#fff;
+                    padding:0 20px;font-size:14px;font-weight:600;cursor:pointer}
+  .input-bar button:disabled{opacity:.45;cursor:not-allowed}
+
+  /* ── 总进度 ── */
+  .overall{margin-top:18px;background:var(--layer);border:1px solid var(--border);
+           border-radius:12px;padding:16px 18px}
+  .overall-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+  .overall-head b{font-size:16px}
+  .pct{font-size:22px;font-weight:700;color:var(--brand);font-variant-numeric:tabular-nums}
+  .bar{height:12px;background:var(--layer2);border-radius:99px;overflow:hidden}
+  .bar>i{display:block;height:100%;width:0;border-radius:99px;
+         background:linear-gradient(90deg,var(--brand),#7bb0ff);transition:width .5s ease}
+  .now{margin-top:10px;color:var(--ink2);font-size:13px}
+  .now b{color:var(--run)}
+
+  /* ── 阶段轨 ── */
+  .stage{margin-top:14px;display:flex;gap:6px;flex-wrap:wrap}
+  .stage span{font-size:12px;padding:3px 10px;border-radius:99px;border:1px solid var(--border);
+              color:var(--ink2)}
+  .stage span.on{background:var(--brand);border-color:var(--brand);color:#fff}
+  .stage span.done{background:rgba(63,185,80,.16);border-color:rgba(63,185,80,.5);color:var(--ok)}
+
+  /* ── 卡片 ── */
+  .cards{margin-top:18px;display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+  .card{background:var(--layer);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+  .card.run{border-color:var(--run);box-shadow:0 0 0 1px rgba(210,153,34,.25)}
+  .card.ok{border-color:rgba(63,185,80,.55)}
+  .card.fail{border-color:var(--fail)}
+  .card-h{display:flex;justify-content:space-between;align-items:center;
+          padding:11px 14px;background:var(--layer2);border-bottom:1px solid var(--border)}
+  .card-h b{font-size:14px}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:2px 9px;
+         border-radius:99px;border:1px solid var(--border);color:var(--ink2)}
+  .badge.ok{color:var(--ok);border-color:rgba(63,185,80,.5);background:rgba(63,185,80,.12)}
+  .badge.run{color:var(--run);border-color:rgba(210,153,34,.5);background:rgba(210,153,34,.12)}
+  .badge.fail{color:var(--fail);border-color:rgba(248,81,73,.5);background:rgba(248,81,73,.12)}
+  .ev{list-style:none;margin:0;padding:6px 0}
+  .ev li{display:flex;gap:9px;align-items:flex-start;padding:6px 14px;font-size:13px}
+  .ev li .n{color:var(--ink2);font-variant-numeric:tabular-nums;min-width:14px}
+  .ev li .t{flex:1}
+  .ev li .tm{color:var(--ink2);font-size:11px;font-variant-numeric:tabular-nums}
+  .ev li.run .t{color:var(--run);font-weight:600}
+  .ev li.ok .t{color:var(--ink2)}
+  .ev li.fail .t{color:var(--fail)}
+  .ev li .note{display:block;color:var(--ink2);font-size:11px;margin-top:1px}
+  /* SVG 状态图标 */
+  .ico{width:15px;height:15px;flex:none;margin-top:3px}
+  .ico.ok{color:var(--ok)} .ico.run{color:var(--run)} .ico.wait{color:#5a6270} .ico.fail{color:var(--fail)}
+  .ico.run .spin{transform-origin:50% 50%;animation:sp 1s linear infinite}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  .foot{margin-top:20px;color:var(--ink2);font-size:12px;text-align:center}
+
+  /* ── 审核回环（编辑 ⇄ 审核官）── */
+  .loopbar{margin-top:10px;padding:9px 12px;border-radius:9px;font-size:12.5px;
+           background:rgba(210,153,34,.10);border:1px solid rgba(210,153,34,.4);color:var(--run)}
+  .loopbar b{color:#e3b341}
+  .loopbar.idle{background:transparent;border-color:var(--border);color:var(--ink2)}
+  .card.loop{border-color:var(--run);box-shadow:0 0 0 1px rgba(210,153,34,.35)}
+  .round{font-size:11px;padding:1px 7px;border-radius:99px;margin-left:7px;flex:none;
+         background:rgba(210,153,34,.18);color:var(--run);border:1px solid rgba(210,153,34,.45)}
+  .backline{margin-top:2px;padding:5px 14px 7px;font-size:11.5px;color:var(--run);
+            border-top:1px dashed rgba(210,153,34,.35)}
+
+  /* ── 灰色占位卡片（如「视觉师」，待后续补充）── */
+  .card.ghost{opacity:.42;filter:grayscale(1)}
+  .ev li.empty{padding:10px 14px;color:#5a6270;font-size:12px}
+
+  /* ── 命令板块（折叠；供 Codex / 人接手时直接复制）── */
+  .cmds{border-top:1px solid var(--border);padding:0}
+  .cmds>summary{cursor:pointer;list-style:none;padding:8px 14px;font-size:11.5px;
+                color:var(--ink2);letter-spacing:.03em;user-select:none}
+  .cmds>summary::-webkit-details-marker{display:none}
+  .cmds>summary::before{content:'▸ ';color:var(--brand)}
+  .cmds[open]>summary::before{content:'▾ '}
+  .cmds>summary:hover{color:var(--ink)}
+  .cmd{padding:8px 14px 10px;background:rgba(79,140,255,.05)}
+  .cmd-row{display:flex;gap:8px;align-items:flex-start;margin:5px 0}
+  .cmd-row code{flex:1;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;
+                line-height:1.5;color:#9fb4d0;background:var(--bg);border:1px solid var(--border);
+                border-radius:6px;padding:5px 8px;white-space:pre-wrap;word-break:break-all}
+  .cmd-row button{flex:none;background:transparent;border:1px solid var(--border);color:var(--ink2);
+                  border-radius:6px;padding:4px 9px;font-size:11px;cursor:pointer}
+  .cmd-row button:hover{border-color:var(--brand);color:var(--brand)}
+  .cmd-label{font-size:11px;color:var(--ink2);margin:8px 0 2px}
+
+  /* ── 阶段性交付（产物）── */
+  .art{border-top:1px solid var(--border);padding:8px 14px 10px;background:rgba(79,140,255,.05)}
+  .art-h{font-size:11px;color:var(--ink2);letter-spacing:.04em;margin-bottom:4px}
+  .art ul{list-style:none;margin:0;padding:0}
+  .art li{display:flex;align-items:center;gap:7px;padding:3px 0;font-size:12px;cursor:pointer;
+          color:var(--brand)}
+  .art li:hover{text-decoration:underline}
+  .art li .ver{color:var(--ink2);font-size:11px;margin-left:auto;flex:none}
+  .art li .sum{color:var(--ink2);font-weight:400}
+  .art .none{font-size:12px;color:#5a6270;padding:3px 0}
+
+  /* ── 产物查看弹窗 ── */
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.62);display:none;
+         align-items:center;justify-content:center;padding:40px;z-index:50}
+  .modal.on{display:flex}
+  .modal-box{background:var(--layer);border:1px solid var(--border);border-radius:12px;
+             width:min(900px,100%);max-height:100%;display:flex;flex-direction:column;overflow:hidden}
+  .modal-h{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;
+           background:var(--layer2);border-bottom:1px solid var(--border);font-size:13px}
+  .modal-h span.p{color:var(--ink2);font-size:11px;margin-left:10px}
+  .modal-h button{background:transparent;border:1px solid var(--border);color:var(--ink2);
+                  border-radius:7px;padding:3px 11px;cursor:pointer;font-size:12px}
+  .modal pre{margin:0;padding:16px;overflow:auto;font-size:12.5px;line-height:1.65;
+             font-family:ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;word-break:break-word}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="input-bar">
+    <input id="title" placeholder="输入本轮标题（可一行一个标题，第一行作为本轮选题）…">
+    <button id="go">启动</button>
+  </div>
+
+  <div class="overall">
+    <div class="overall-head">
+      <b id="stageName">待启动</b>
+      <span class="pct" id="pct">0%</span>
+    </div>
+    <div class="bar"><i id="barFill"></i></div>
+    <div class="now" id="now">等待输入标题</div>
+    <div class="stage" id="stages"></div>
+    <div id="loop"></div>
+  </div>
+
+  <div class="cards" id="cards"></div>
+  <div class="foot" id="foot"></div>
+</div>
+
+<!-- 产物查看弹窗 -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <div class="modal-h">
+      <div><b id="mTitle">产物</b><span class="p" id="mPath"></span></div>
+      <button onclick="closeModal()">关闭</button>
+    </div>
+    <pre id="mBody">加载中…</pre>
+  </div>
+</div>
+
+<script>
+// ── SVG 状态图标（完成 / 处理中 / 待命 / 失败）────────────────────────────
+const ICONS = {
+  ok:   '<svg class="ico ok" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="7"/><path d="M5 8.4l2.1 2.1L11 6.5"/></svg>',
+  run:  '<svg class="ico run" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><g class="spin"><path d="M8 1.6a6.4 6.4 0 1 1-6.4 6.4"/></g></svg>',
+  wait: '<svg class="ico wait" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.2" stroke-dasharray="2.4 2.4"/></svg>',
+  fail: '<svg class="ico fail" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="7"/><path d="M5.6 5.6l4.8 4.8M10.4 5.6l-4.8 4.8"/></svg>'
+}
+const MAP = { '完成':'ok', '处理中':'run', '待命':'wait', '待补充':'wait', '失败':'fail' }
+const STAGES = ['待启动','第一轮 · 并行','门禁 1 · 标题大纲','第二轮 · 并行','门禁 2 · 审核','交付']
+const ico = s => ICONS[MAP[s] || 'wait']
+
+function render(d){
+  document.getElementById('stageName').textContent = d.阶段 || '待启动'
+  const pct = Math.round((d.总进度 || 0) * 100)
+  document.getElementById('pct').textContent = pct + '%'
+  document.getElementById('barFill').style.width = pct + '%'
+  const cur = d.当前 || {}
+  document.getElementById('now').innerHTML = cur.agent
+    ? `当前：<b>${cur.agent}</b> · 关键事件 ${cur.事件}　${cur.说明 || ''}`
+    : (cur.说明 || '等待输入标题')
+
+  // 阶段轨：只做粗略高亮（按当前阶段名匹配）
+  const si = STAGES.indexOf(d.阶段 || '')
+  document.getElementById('stages').innerHTML = STAGES.map((s,i)=>{
+    const cls = si < 0 ? '' : (i < si ? 'done' : (i === si ? 'on' : ''))
+    return `<span class="${cls}">${s}</span>`
+  }).join('')
+
+  // 审核回环：编辑 ⇄ 审核官（第 N 轮 / 最大轮次 / 退回给谁 / 原因）
+  const lp = d.回环 || {}
+  const round = lp.轮次 || 1, maxRound = lp.最大轮次 || 2
+  const active = round > 1 || !!lp.退回给
+  document.getElementById('loop').innerHTML = active
+    ? `<div class="loopbar">↩ <b>审核回环</b>　第 <b>${round}</b> / ${maxRound} 轮　·
+         退回给 <b>${lp.退回给 || '—'}</b>${lp.原因 ? `　·　原因：${lp.原因}` : ''}</div>`
+    : `<div class="loopbar idle">↩ 审核回环　第 ${round} / ${maxRound} 轮　（审核不通过时退回「编辑」重写，最多 ${maxRound} 轮）</div>`
+
+  document.getElementById('cards').innerHTML = (d.agents || []).map(a=>{
+    const st = a.状态 || '待命'
+    const ghost = a.占位 === true
+    // 被退回的编辑轮次 / 正在退回别人的审核官 → 高亮回环
+    const isLoopBack = !!lp.退回给 && a.id === lp.退回给
+    const cls = ghost ? 'ghost'
+      : isLoopBack ? 'loop'
+      : st === '完成' ? 'ok' : st === '处理中' ? 'run' : st === '失败' ? 'fail' : ''
+    const evs = (a.事件 && a.事件.length)
+      ? a.事件.map(e=>{
+          const c = MAP[e.状态] || 'wait'
+          // 关键事件一行显示；读取来源放进悬停提示，不占行
+          const tip = (e.读 && e.读 !== '—') ? ` title="读取：${e.读}"` : ''
+          const note = e.备注 ? `<span class="note">${e.备注}</span>` : ''
+          return `<li class="${c}"${tip}>${ico(e.状态)}
+            <span class="n">${e.n}</span>
+            <span class="t">${e.名}${note}</span>
+            <span class="tm">${(e.时间||'').slice(11,19)}</span></li>`
+        }).join('')
+      : `<li class="empty">先占位，内容待补充</li>`
+    // 阶段性交付：点开即看内容，供你判断该调哪个 skill / prompt
+    const arts = (a.产物 && a.产物.length)
+      ? `<div class="art"><div class="art-h">阶段性交付（点击查看）</div><ul>` +
+        a.产物.map(x => `<li data-p="${x.路径 || ''}" data-n="${x.名 || ''}"
+             onclick="openArt(this.dataset.p,this.dataset.n)">
+          <span>📄</span><span>${x.名 || x.路径}${x.摘要 ? ` <span class="sum">${x.摘要}</span>` : ''}</span>
+          <span class="ver">${x.版本 || ''}</span></li>`).join('') + `</ul></div>`
+      : (ghost ? '' : `<div class="art"><div class="art-h">阶段性交付</div><div class="none">尚无产物</div></div>`)
+    // 回环可视化：编辑卡显示「↩ 第 N 轮（审核退回）」；审核官卡显示它退回了谁
+    const roundBadge = a.轮次 ? `<span class="round">第 ${a.轮次} 轮</span>` : ''
+    const backline = isLoopBack
+      ? `<div class="backline">↩ 由「审核官」退回，进入第 ${round} 轮重写${lp.原因 ? `　·　${lp.原因}` : ''}</div>`
+      : (a.id === '审核官' && lp.退回给
+          ? `<div class="backline">↩ 已退回给「${lp.退回给}」（第 ${round} 轮）</div>` : '')
+    // 命令板块：供 Codex / 人接手时直接复制（角色契约、事件数、上报与登记命令）
+    const arts2 = (a.产物 || []).map(x => x.路径).filter(Boolean)
+    const outPath = arts2[0] || ('work/runs/' + (d.runId || '<runId>') + '/<产物文件>')
+    const cmds = [
+      ['① 读角色契约', `cat "skills/${a.id}/SKILL.md"`],
+      ['② 事件开始 / 完成（共 ' + (a.事件 || []).length + ' 个事件）',
+       `python3 进度看板/上报.py 事件 --agent "${a.id}" --n 1 --状态 处理中\n` +
+       `python3 进度看板/上报.py 事件 --agent "${a.id}" --n 1 --状态 完成 --备注 "一句话结论"`],
+      ['③ 登记阶段性交付', `python3 进度看板/上报.py 产物 --agent "${a.id}" --名 "<产物名>" --路径 "${outPath}" --摘要 "一句话说明"`],
+      ['④ 本角色收工', `python3 进度看板/上报.py 完成 --agent "${a.id}"`],
+    ]
+    const cmdBlock = ghost ? '' : `<details class="cmds"><summary>命令（复制即可执行）</summary><div class="cmd">` +
+      cmds.map(([label, code]) =>
+        `<div class="cmd-label">${label}</div><div class="cmd-row"><code>${code}</code>` +
+        `<button onclick="copyCmd(this)">复制</button></div>`).join('') + `</div></details>`
+    return `<div class="card ${cls}">
+      <div class="card-h"><b>${a.id}</b>${roundBadge}
+        <span class="badge ${cls}">${ico(st)}<span>${st}</span></span></div>
+      <ul class="ev">${evs}</ul>${arts}${backline}${cmdBlock}</div>`
+  }).join('')
+
+  const t = d.标题 ? d.标题.slice(0,70) : '（未设置标题）'
+  document.getElementById('foot').textContent =
+    `runId ${d.runId || '—'}　·　${t}` + (d.开始时间 ? `　·　开始 ${d.开始时间.slice(11,19)}` : '')
+}
+
+// ── 产物查看 ────────────────────────────────────────────────────────────
+async function openArt(path, name){
+  if (!path) return
+  document.getElementById('mTitle').textContent = name || '产物'
+  document.getElementById('mPath').textContent = path
+  document.getElementById('mBody').textContent = '加载中…'
+  document.getElementById('modal').classList.add('on')
+  try{
+    const r = await fetch('产物?p=' + encodeURIComponent(path) + '&_=' + Date.now(), {cache:'no-store'})
+    document.getElementById('mBody').textContent = r.ok
+      ? await r.text()
+      : `读取失败（HTTP ${r.status}）\n${path}`
+  }catch(e){
+    document.getElementById('mBody').textContent = '读取失败：' + e
+  }
+}
+function closeModal(){ document.getElementById('modal').classList.remove('on') }
+
+// 命令复制（Codex / 人接手时用）
+function copyCmd(btn){
+  const code = btn.parentElement.querySelector('code').textContent
+  const done = () => { const o = btn.textContent; btn.textContent = '已复制';
+                       setTimeout(() => { btn.textContent = o }, 1200) }
+  if (navigator.clipboard) navigator.clipboard.writeText(code).then(done).catch(done)
+  else { const ta=document.createElement('textarea'); ta.value=code; document.body.appendChild(ta);
+         ta.select(); document.execCommand('copy'); ta.remove(); done() }
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal() })
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target.id === 'modal') closeModal()
+})
+
+async function tick(){
+  try{
+    const r = await fetch('progress.json?_=' + Date.now(), { cache:'no-store' })
+    if (r.ok) render(await r.json())
+  }catch(e){ /* 首次运行前文件可能还没生成，静默 */ }
+}
+tick(); setInterval(tick, 1500)
+
+// 启动：写回 progress.json（由 agent 侧读取「启动请求」后接管）
+document.getElementById('go').onclick = async () => {
+  const lines = document.getElementById('title').value.split('\n').map(s=>s.trim()).filter(Boolean)
+  if (!lines.length) { alert('请先输入标题'); return }
+  const btn = document.getElementById('go'); btn.disabled = true; btn.textContent = '已提交…'
+  try{
+    await fetch('submit', { method:'POST', headers:{'Content-Type':'application/json'},
+                            body: JSON.stringify({ 标题: lines[0], 标题列表: lines }) })
+  }catch(e){}
+  setTimeout(()=>{ btn.disabled = false; btn.textContent = '启动' }, 1500)
+}
+</script>
+</body>
+</html>

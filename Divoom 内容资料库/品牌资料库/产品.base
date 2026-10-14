@@ -1,0 +1,36 @@
+properties:
+  产品名:
+    displayName: 产品名
+  短名:
+    displayName: 短名
+  分类:
+    displayName: 分类
+  商品类型:
+    displayName: 类型
+  PDP_URL:
+    displayName: PDP
+  价格:
+    displayName: 价格
+  在售:
+    displayName: 在售
+  所属集合:
+    displayName: 所属集合
+  话题关键词:
+    displayName: 话题关键词
+  锚文本候选:
+    displayName: 锚文本候选
+views:
+  - type: table
+    name: 产品总表
+    filters:
+      and:
+        - 'file.inFolder("产品")'
+    order:
+      - 分类
+      - 短名
+      - 商品类型
+      - 价格
+      - 在售
+      - 所属集合
+      - 话题关键词
+      - 锚文本候选

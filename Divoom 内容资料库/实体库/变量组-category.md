@@ -1,0 +1,90 @@
+---
+group: "产品品类"
+english: Product category
+order: 2
+values:
+  - "像素画显示屏 (pixel art displays)"
+  - "像素音箱 (pixel art speakers)"
+  - "便携音箱 (portable speakers)"
+  - "卡拉OK音箱与一体机 (karaoke speakers and machines)"
+  - "LED像素背包与包袋 (LED display bags)"
+  - "充电器与桌面小配件 (desk gadgets)"
+  - "智能显示屏 (smart displays)"
+  - "桌面科技 (desk technology)"
+  - "创意配件 (creative accessories)"
+  - "桌面音箱 (desktop speaker)"
+  - "蓝牙音箱 (Bluetooth speaker)"
+  - "卡拉OK音箱 (karaoke speaker)"
+  - "卡拉OK机 (karaoke machine)"
+  - "背包 (backpack)"
+  - "智能LED背包 (smart LED backpack)"
+  - "充电器 (charger)"
+  - "床头音箱 (bedside speaker)"
+  - "睡眠时钟 (sleep clock)"
+  - "白噪音机 (white noise machine)"
+  - "闹钟 (alarm clock)"
+  - "便携式蓝牙音箱 (portable Bluetooth speaker)"
+  - "迷你蓝牙音箱 (mini Bluetooth speaker)"
+  - "夹式蓝牙音箱 (clip-on Bluetooth speaker)"
+  - "可穿戴蓝牙音箱 (wearable Bluetooth speaker)"
+  - "像素艺术LED显示屏 (pixel art LED display)"
+  - "像素艺术显示屏 (pixel art display)"
+  - "LED像素斜挎包 (LED sling bag)"
+  - "斜挎日用包 (crossbody daypack)"
+  - "数码相框 (digital picture frame)"
+  - "像素艺术数字时钟 (pixel art digital clock)"
+  - "LED时钟 (LED clock)"
+  - "桌面伴侣 (desktop companion)"
+  - "电脑音箱 (computer speaker)"
+  - "动态标牌显示屏 (dynamic signage display)"
+  - "LED标牌 (LED sign)"
+  - "智能桌面显示器 (smart desk display)"
+  - "像素艺术蓝牙音箱 (pixel art Bluetooth speaker)"
+  - "复古蓝牙音箱 (retro Bluetooth speaker)"
+  - "数字相框 (digital photo frame)"
+  - "卡拉OK麦克风音箱 (karaoke microphone speaker)"
+---
+# 产品品类 (Product category)
+
+40 个词条。
+
+- 像素画显示屏 (pixel art displays)
+- 像素音箱 (pixel art speakers)
+- 便携音箱 (portable speakers)
+- 卡拉OK音箱与一体机 (karaoke speakers and machines)
+- LED像素背包与包袋 (LED display bags)
+- 充电器与桌面小配件 (desk gadgets)
+- 智能显示屏 (smart displays)
+- 桌面科技 (desk technology)
+- 创意配件 (creative accessories)
+- 桌面音箱 (desktop speaker)
+- 蓝牙音箱 (Bluetooth speaker)
+- 卡拉OK音箱 (karaoke speaker)
+- 卡拉OK机 (karaoke machine)
+- 背包 (backpack)
+- 智能LED背包 (smart LED backpack)
+- 充电器 (charger)
+- 床头音箱 (bedside speaker)
+- 睡眠时钟 (sleep clock)
+- 白噪音机 (white noise machine)
+- 闹钟 (alarm clock)
+- 便携式蓝牙音箱 (portable Bluetooth speaker)
+- 迷你蓝牙音箱 (mini Bluetooth speaker)
+- 夹式蓝牙音箱 (clip-on Bluetooth speaker)
+- 可穿戴蓝牙音箱 (wearable Bluetooth speaker)
+- 像素艺术LED显示屏 (pixel art LED display)
+- 像素艺术显示屏 (pixel art display)
+- LED像素斜挎包 (LED sling bag)
+- 斜挎日用包 (crossbody daypack)
+- 数码相框 (digital picture frame)
+- 像素艺术数字时钟 (pixel art digital clock)
+- LED时钟 (LED clock)
+- 桌面伴侣 (desktop companion)
+- 电脑音箱 (computer speaker)
+- 动态标牌显示屏 (dynamic signage display)
+- LED标牌 (LED sign)
+- 智能桌面显示器 (smart desk display)
+- 像素艺术蓝牙音箱 (pixel art Bluetooth speaker)
+- 复古蓝牙音箱 (retro Bluetooth speaker)
+- 数字相框 (digital photo frame)
+- 卡拉OK麦克风音箱 (karaoke microphone speaker)

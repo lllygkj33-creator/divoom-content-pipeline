@@ -1,0 +1,88 @@
+---
+group: "条件与限制"
+english: Condition & constraint
+order: 9
+values:
+  - "兼容性依型号而定 (compatibility depends on the product)"
+  - "功能随型号不同 (features vary by model)"
+  - "需稳定电源 (require stable power during use)"
+  - "配件以商品页为准 (included accessories)"
+  - "需自备充电器 (need a charger)"
+  - "无WiFi的场景 (WiFi)"
+  - "桌面空间有限 (compact desks)"
+  - "兼容USB-C线缆 (compatible USB-C cable)"
+  - "设备需支持快充 (device supports fast charging)"
+  - "避免大雨 (avoid heavy rain)"
+  - "避免浸泡或水洗 (soaking or washing)"
+  - "设备与系统版本差异 (may vary by device and system version)"
+  - "购买前核对笔记本尺寸 (check your laptop size before purchase)"
+  - "非专业录音用途 (not professional studio recording)"
+  - "非专业舞台演出 (professional stage performance)"
+  - "仅在插入电源时亮屏 (screen lights only when the charger is plugged in)"
+  - "不含墙壁适配器 (wall adapter is usually not included)"
+  - "需要合适的USB墙壁适配器 (use a suitable USB wall adapter)"
+  - "需要兼容的移动电源 (needs a compatible power bank)"
+  - "不含移动电源 (mobile power supply is not included)"
+  - "需要持续USB供电 (needs continuous USB power)"
+  - "需要WiFi (WiFi is needed)"
+  - "避免需网页登录的公共WiFi (public WiFi networks that require a web login)"
+  - "不适用于极薄面料 (not for very thin fabrics)"
+  - "不适合高分辨率照片查看 (not for high-resolution photo viewing)"
+  - "不适合大容量收纳 (not large-capacity storage)"
+  - "仅限家庭娱乐而非专业舞台演出 (home entertainment rather than professional stage performance)"
+  - "功能因App版本而异 (may vary by app version)"
+  - "避免大雨与浸泡 (avoid heavy rain, soaking)"
+  - "低功率电脑USB端口供电不足 (low-power computer USB port)"
+  - "需持续供电 (requiring continuous power)"
+  - "需保持插电 (needs to stay plugged in during use)"
+  - "无内置电池 (no built-in battery)"
+  - "需WiFi连接 (a WiFi connection is required)"
+  - "仅2.4GHz WiFi (2.4GHz WiFi)"
+  - "蓝牙兼容性 (Bluetooth compatibility)"
+  - "不可充电 (not rechargeable)"
+  - "非便携使用 (not for portable use)"
+  - "需参考官方产品手册 (refer to the official product manual)"
+---
+# 条件与限制 (Condition & constraint)
+
+39 个词条。
+
+- 兼容性依型号而定 (compatibility depends on the product)
+- 功能随型号不同 (features vary by model)
+- 需稳定电源 (require stable power during use)
+- 配件以商品页为准 (included accessories)
+- 需自备充电器 (need a charger)
+- 无WiFi的场景 (WiFi)
+- 桌面空间有限 (compact desks)
+- 兼容USB-C线缆 (compatible USB-C cable)
+- 设备需支持快充 (device supports fast charging)
+- 避免大雨 (avoid heavy rain)
+- 避免浸泡或水洗 (soaking or washing)
+- 设备与系统版本差异 (may vary by device and system version)
+- 购买前核对笔记本尺寸 (check your laptop size before purchase)
+- 非专业录音用途 (not professional studio recording)
+- 非专业舞台演出 (professional stage performance)
+- 仅在插入电源时亮屏 (screen lights only when the charger is plugged in)
+- 不含墙壁适配器 (wall adapter is usually not included)
+- 需要合适的USB墙壁适配器 (use a suitable USB wall adapter)
+- 需要兼容的移动电源 (needs a compatible power bank)
+- 不含移动电源 (mobile power supply is not included)
+- 需要持续USB供电 (needs continuous USB power)
+- 需要WiFi (WiFi is needed)
+- 避免需网页登录的公共WiFi (public WiFi networks that require a web login)
+- 不适用于极薄面料 (not for very thin fabrics)
+- 不适合高分辨率照片查看 (not for high-resolution photo viewing)
+- 不适合大容量收纳 (not large-capacity storage)
+- 仅限家庭娱乐而非专业舞台演出 (home entertainment rather than professional stage performance)
+- 功能因App版本而异 (may vary by app version)
+- 避免大雨与浸泡 (avoid heavy rain, soaking)
+- 低功率电脑USB端口供电不足 (low-power computer USB port)
+- 需持续供电 (requiring continuous power)
+- 需保持插电 (needs to stay plugged in during use)
+- 无内置电池 (no built-in battery)
+- 需WiFi连接 (a WiFi connection is required)
+- 仅2.4GHz WiFi (2.4GHz WiFi)
+- 蓝牙兼容性 (Bluetooth compatibility)
+- 不可充电 (not rechargeable)
+- 非便携使用 (not for portable use)
+- 需参考官方产品手册 (refer to the official product manual)

@@ -1,0 +1,17 @@
+properties:
+  note.group:
+    displayName: 变量组
+  note.english:
+    displayName: 英文名
+  note.order:
+    displayName: "#"
+  note.values:
+    displayName: 实体组
+views:
+  - type: table
+    name: 实体变量库
+    order:
+      - order
+      - group
+      - english
+      - values

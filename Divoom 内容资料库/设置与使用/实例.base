@@ -1,0 +1,34 @@
+properties:
+  栏目:
+    displayName: 栏目
+  FX编号:
+    displayName: FX 编号
+  标题:
+    displayName: 标题
+  实例URL:
+    displayName: 实例 URL
+  来源站点:
+    displayName: 来源
+  图片数:
+    displayName: 图片
+  正文字数:
+    displayName: 正文字数
+  正文:
+    displayName: 正文（全文属性）
+  formula.正文摘要:
+    displayName: 正文摘要
+formulas:
+  正文摘要: '正文.slice(0, 220) + "…"'
+views:
+  - type: table
+    name: 设置与使用实例
+    filters:
+      and:
+        - 'file.inFolder("设置与使用/实例")'
+    order:
+      - FX编号
+      - 标题
+      - 来源站点
+      - 图片数
+      - 正文字数
+      - formula.正文摘要

@@ -1,0 +1,340 @@
+{
+ "topic": "Why a 64×64 Pixel Canvas Can Still Make Small Text Hard to Read on a Desk Display",
+ "column": "科技与信息",
+ "fx": "F1",
+ "polished_title": "Why a 64×64 Pixel Art Canvas Can Still Make Small Text Hard to Read on a Desk Display",
+ "search_demand": {
+  "head_term": "pixel art display small text",
+  "serp_check": {
+   "query": "pixel art display small text",
+   "observed_at": "2026-09-30T11:30:12+08:00",
+   "exists": true,
+   "notes": "外面有真实同题内容：SERP 前 10 条里 8 条在讨论「像素/点阵字体最小可读字号」（moonbench 逐尺寸枚举字形空间、r/PixelArt 与 r/godot 的字体尺寸帖、Google Fonts 的 5-pixel 字体 Tiny5），说明头词所在需求成立，且需求形式是「多小还可读、为什么读不出」，不是品牌词。★ divoom.com 已占位第 2 位：站内已有 setup-ideas《How to Design a Pixel Art Font for Divoom Displays》（讲 5×7 起步的设计教程），本篇必须与之区分意图——本篇是「为什么点够多仍然读不清」的根因解释（科技与信息 F1），不是字体设计教程，也不重复 5×7 这个结论作为全篇答案。实体支撑核查：实体库可支持画布侧（<指标与阈值>「显示分辨率 (16×16 / 32×32 / 64×64)」「64x64像素分辨率」「像素画布大小」「像素画布细节」）与用法侧（<功能与能力>「滚动文字」「滚动文字消息」）、场景侧（<场景与环境>「工作书桌」「桌面」）与限制侧（<条件与限制>「不适合高分辨率照片查看」）；但「小字难读」本身不是实体库条目，其机制（单字形像素预算、点阵无灰阶、点距与观看距离）只能由外部来源支撑，正文须把外部一般原理与 Divoom 规格分开写，不得把「最小字号」「点距」当作 Divoom 官方参数。若正文要写面板尺寸，官方手册只给出 Pixoo 64 为 262 × 20 × 261.4 mm；任何点距数字必须写成按官方尺寸 ÷ 64 的推算，否则删除。本地网络无法连通 reddit.com（curl/HTTP 000），user_voice 的链接来自 fsearch --ugc 的 SERP 证据，未经二次连通验证。"
+  },
+  "user_voice": [
+   {
+    "source": "reddit.com",
+    "url": "https://www.reddit.com/r/godot/comments/snqxec/screen_setup_and_resolution_for_pixel_art_game/",
+    "quote": "So a pixelart font with a height of 5 pixel is meant to be displayed at only 5 pixel height. Never scale down a pixel art font."
+   },
+   {
+    "source": "reddit.com",
+    "url": "https://www.reddit.com/r/godot/comments/90kf9z/small_pixel_fonts/",
+    "quote": "I'm working on a pixel art game (resolution 144x256) and need a pretty small font to display info. Everything I've tried so far isn't ..."
+   },
+   {
+    "source": "reddit.com",
+    "url": "https://www.reddit.com/r/PixelArt/comments/ppcd19/smallest_legible_pixel_fonts/",
+    "quote": "in a 3px high font, you can sometimes unintuitively use fewer pixels by making the characters larger. 3x5 pixel font with full ASCII support!"
+   }
+  ],
+  "volume": null
+ },
+ "outline_logic": [
+  "读者问题：64×64 到底「够」在哪里，为什么它不算低分辨率？→ 该节应得结论：64×64 是像素画布那一档里最大的规格（实体库<指标与阈值>记 16×16 / 32×32 / 64×64），一幅是 4096 个像素点，是 32×32 的四倍点数、16×16 的十六倍；「够」指的是画面总量，不等于每个字分到的预算。→ 下一步为何必要：不先把「总点数」和「单字点数」拆开，读者会以为标题自相矛盾，后面所有机制都无处安放。",
+  "读者问题：一个字至少要占多少像素才认得出？→ 该节应得结论：字形可辨有最低像素预算——外部枚举证据显示 2×2、3×2 空间里可用的独立字形不足以覆盖字母表，3×3、3×4 仍要靠挑字形凑，3×5 才「相当清楚」、5×5 才让 M/W/G/B 一类字母不再歧义；所以 64 宽的一行大约只放得下 9–13 个字符，而且点阵是开/关的 1-bit，没有灰度边缘可用来补形。→ 下一步为何必要：字数上限解释了为什么长句必须滚动（实体库<功能与能力>里的「滚动文字」正落在这一点），但还没有回答「点既然够，为什么看着还是读不出」。",
+  "读者问题：为什么在书桌距离上，点够多也还是读不清？→ 该节应得结论：决定可读性的是「每个点有多大 × 眼睛离屏多近」，不是点数本身：64×64 分摊在一块桌面尺寸的面板上，相邻点之间存在肉眼可分辨的间距，在正常用桌距离上眼睛能解析出一个一个亮点，字形就被读成离散的点而不是字母形；再叠加 1-bit 无灰阶（无法用中间调柔化笔画），这正是「面板不小、字号也不算小、却依然难读」的直接原因。→ 下一步为何必要：主因果链成立后，必须与「纯粹是像素太少」这条竞争解释分开，否则读者会把两个原因混成一个。",
+  "读者问题：究竟是分辨率不够、点距太大，还是字体没选对？→ 该节应得结论：把三条解释分轴——每字像素预算不足（画布层面）、点距与观看距离（物理层面）、字形设计取舍（字体层面）；用同一句话在更小的 16×16 / 32×32 画布上对照，说明限制只会更早出现；并排除两个表面原因：亮度与色彩不是可读性的决定项（面板可在全 RGB 下工作、亮度可调，调亮只改变对比不改变字形辨识），「屏幕坏了」也不是解释。→ 下一步为何必要：读者手里有了可分辨的变量，接下来需要能自己在桌上复现的观察信号。",
+  "读者问题：我在自己桌上怎么验证这篇的说法？→ 该节应得结论：给可观察检查——用最易混的字对（O/0、S/5、G/6、B/8）逐段前后移动，找到字母「散成点」的临界距离；测一句话在多长时被迫开始滚动；分别用短文字与整段文字对照；再换更小画布对照同一句话。→ 下一步为何必要：验证之后才能说清这条解释在什么条件下成立、什么条件下退出。",
+  "读者问题：什么情况下这篇的结论不适用？→ 该节应得结论：边界——64×64 画布适合时钟、图标、小组件、状态与短字样，不适合当长文阅读面；更小的 16×16 / 32×32 只会更早触发同一限制；换成逐点带灰阶的 LCD 面板（实体库<指标与阈值>另记 128×128 一档）后，同样观看距离下字形可以更细，那是面板类型差异而不是「字体更好」；若必须读长段文字，退出这个介质本身就是结论。该节同时是退出边界，不再引出下一节。"
+ ],
+ "reference_urls": [
+  "https://moonbench.xyz/projects/tiny-pixel-art-fonts/",
+  "https://divoom.com/blogs/setup-ideas/how-to-design-pixel-art-font-divoom-displays",
+  "https://divoom.com/products/pixoo-64"
+ ],
+ "h1": "Why a 64×64 Pixel Art Canvas Can Still Make Small Text Hard to Read on a Desk Display",
+ "body_markdown": "# Why a 64×64 Pixel Art Canvas Can Still Make Small Text Hard to Read on a Desk Display\n\nA 64×64 pixel canvas can still make small text hard to read on a desk display because canvas size and the per-character pixel budget are two different quantities. The grid sets how much picture fits on the panel; legibility is set by how many points one glyph can claim, how wide the gap is between adjacent pixels, and how close your eye is to the panel. At desk distance the eye resolves individual lit points before it resolves the letterforms they should form, so a sentence arrives as a field of dots. The same short word can sit legibly in a clock face and fail as a caption.\n\nThat holds while the message is short enough to read in a glance. It stops holding once the panel sits close enough that the dots fuse into smooth shapes, or once the display is a different panel type rather than a coarser grid. What follows separates the variables people usually merge into one complaint.\n\n## The Canvas Is Big Enough, and That Is Not a Statement About a Single Letter\n\nThe first confusion is that \"64×64\" sounds like a small number and therefore sounds like the whole answer. It is the top of the range: [pixel-art canvases across these displays](https://divoom.com/blogs/pixel-art/pixel-art-canvas-size-guide) are described as 16×16, 32×32 or 64×64, and 64×64 is recorded as the largest pixel-art canvas class, with a 64x64 pixel resolution appearing alongside a 128×128 panel and a 480 × 480 screen in the wider product family. A 64×64 grid is 4,096 addressable points — four times the points of a 32×32 grid and sixteen times those of a 16×16 one, and the step up in detail is why the catalog also lists finer canvas detail as a capability rather than a limitation.\n\nRead that as a statement about total picture area and the confusion dissolves. A canvas is a fixed budget of points that everything on screen shares: the background, the border, the icons, the row of numbers and the text. Text is a demand on the same budget with a different shape — it needs points concentrated into small, repeating, highly differentiated shapes arranged in a horizontal run. Four thousand points spread across a picture is a rich picture. Four thousand points is not what a single word gets.\n\nThe useful separation is between canvas capacity and allocation. Capacity answers \"how much can this panel show at once.\" Allocation answers \"how much did this particular thing get.\" A clock face, a weather icon or a small widget is a low-allocation element and looks excellent. A sentence is a high-allocation element and does not, even though both are drawn from the same 4,096 points.\n\n## How Many Pixels Does One Recognizable Letter Need?\n\nThe second variable comes from outside the hardware: pixel letterforms have a minimum usable pixel budget. Enumerations of [very small pixel fonts](https://divoom.com/blogs/setup-ideas/how-to-design-pixel-art-font-divoom-displays) — including [the tiny-font experiments published by moonbench](https://moonbench.xyz/projects/tiny-pixel-art-fonts/) and the small-font threads that circulate in pixel-art and game-development communities — describe the same ladder. In a 2×2 or 3×2 space the number of distinct shapes available is too small to cover an alphabet, so no font exists there. At 3×3 and 3×4, useful sets exist but the designer has to choose which characters to include and which to sacrifice. At 3×5 the result is described as fairly clear. By 5×5, letters that are otherwise ambiguous — M and W, G and B, and similar pairs — separate cleanly, and some designers deliberately use more pixels per character rather than fewer, because a larger glyph can be less ambiguous than a squeezed one.\n\nThis is a property of glyph forms, not a Divoom specification, and the distinction matters twice over. It is not a supported minimum font size for any particular display, and it is not a claim about which font a given device ships with. It is the reason a text row is expensive: a 5-pixel-wide glyph plus a one-pixel gap uses 6 of the canvas's 64 columns, so a single line holds roughly a dozen characters at a comfortable bit size. That is a label, a temperature and a time, a stock ticker, a name, or a very short message. It is not a paragraph.\n\nThe compression is also unforgiving in a way that ordinary screen text is not. These are one-bit pixels: each point is on or off. There is no intermediate tint inside the grid for edge pixels, so there is no antialiasing to soften a diagonal or to suggest where one stroke ends and the next begins. A rendered letter at 5 pixels high is not a small version of a large letter; it is a different object with fewer decision points, and every stroke you add costs the width of the line.\n\n## Why More Pixels on the Panel Does Not Mean More Pixels in the Letter\n\nThe third variable is the one that explains the title. Readability at a desk is not set by the count of points; it is set by the angle each point subtends at your eye, which depends on the physical size of one pixel and on [your viewing distance](https://divoom.com/blogs/desk-setup/pixel-display-viewing-distance-guide). The panel resolves the ambiguity in an unusual direction, because a pixel-art display is designed to be seen at a distance where the individual emitter grid is still visible — that is what makes an animation read as pixel art rather than as a soft photograph. At typical desk viewing distance, an eye that is resolving the grid is being asked to read letterforms built out of elements it can individually see. The letters therefore break into their component dots precisely when you lean in to read them.\n\nTwo consequences follow. First, distance is a legibility control in the same way that font size is: the same caption that fails at arm's length can become readable from across the room, not because anything improved but because the dots fused. Second, physical pixel pitch is the other half of the ratio, and it is a per-product number rather than a general one. Where an official manual gives a panel's physical dimensions, an approximate pitch can be worked out as that dimension divided by the pixel count — a roughly 10-inch panel carrying 64 pixels across works out to a pitch on the order of a few millimetres — but that is an arithmetic estimate from the published size, not a quoted device parameter, and no display in this family publishes an official pixel-pitch or minimum-font-size figure.\n\nThe on-or-off structure adds a second, quieter part of the answer. Because every lit point is at full intensity for its color, a small glyph has no mid-tones with which to imply a stroke. At a distance the eye averages neighbouring points and a suggestion of grey appears where the pattern is sparse, which is exactly the effect that makes a well-made small font legible on a coarse grid — and exactly the effect you destroy by moving closer. Anyone who assumes a brighter or higher-color-count panel will fix the text will be disappointed: color vocabulary governs mood and artwork, not letterform recognition. Much the same is true of brightness and color settings, which change how comfortable the panel is to look at, not how many decisions the eye has to make to classify a shape.\n\n## What Actually Decides Whether This Specific Sentence Is Readable\n\nOnce the three variables are separated, the practical question becomes which one is doing the work in front of you, and the useful move is to keep two of them fixed while you move the third. Hold the viewing distance and the sentence, and change only the canvas: the same line on a 32×32 or 16×16 grid breaks down sooner, because the per-character budget shrinks and the pitch gets coarser at the same time. That comparison isolates the canvas-side variable, and its direction is always the same — the smaller grid is never the friendlier reading surface.\n\nHold the canvas and the sentence, and change only the distance. Short labels survive close viewing because a label is a handful of large-shape characters and often benefits from being seen as glyphs; whole sentences survive far viewing, where the grid disappears, but at that range you are reading a sign rather than reading text. If a sentence is only comfortable when you are two steps back, the panel is not failing — the geometry is simply telling you which content class it supports.\n\nHold both and change the message. A fixed caption that fits the character budget behaves completely differently from a message that must be delivered in full, and that is where [the scrolling-text capability](https://divoom.com/blogs/app-guide/keep-scrolling-text-readable-pixel-display) earns its place: a short message can be moved across the canvas so it is read a few characters at a time, which removes the length limit without removing the resolution limit. Scrolling does not make small text sharp; it makes a longer message possible inside the same per-character budget, and the reader still has to catch letterforms that are only a handful of pixels wide.\n\nFinally, separate legibility from dislike. A font you find ugly, a color you would have chosen differently, a panel that is brighter or dimmer than you prefer, and a glyph you genuinely cannot identify are four different problems with four different answers. Only the last one is the mechanism described here.\n\n## How to Test It on Your Own Desk\n\nEach check below isolates one variable, and none of them needs instruments. Pick the most easily confused character pairs — O and 0, S and 5, G and 6, B and 8 — and display them together, then move slowly toward and away from the panel. Note the distance at which each pair stops being two different shapes and becomes two similar clusters of dots. That threshold is your viewing distance for this content, and it will differ between pairs, which is itself informative: the pairs that fail first are the ones your font's pixel budget cannot afford.\n\nThen watch the transition from static to scrolling. Type or paste a sentence that plainly exceeds the character budget and let it move. If the message becomes followable while individual characters remain only partly identifiable, you have confirmed that the limit is per-character resolution and not message length. If you cannot follow it at the scroll speed even from a distance where the dots fuse, the character budget is smaller than the speed allows and the content is out of scope for the format.\n\nRepeat the character-pair test on a smaller canvas. The same text on a 32×32 or 16×16 grid should fail sooner; if it does, the canvas-side variable is confirmed. Then check brightness and color settings at the fixed distance where the pairs already fail. If adjusting them changes comfort but not which characters you can tell apart, those controls are not the cause and should not be treated as a fix.\n\n## Where This Explanation Stops\n\nThe mechanism describes a reading limit, not a defect. If text is illegible at every distance and every canvas size, if a glyph is garbled rather than merely dotty, if it changes when nothing about the panel has changed, or if the image is uneven in ways that track hardware rather than content, this explanation does not cover it — that is a question about the individual unit and its official product documentation.\n\nIt also does not transfer numbers. There is [no official minimum font size](https://divoom.com/blogs/product-compare/divoom-product-specs-that-matter-most-smart-display) and no official pixel-pitch figure for these displays to quote, so a specific character ceiling computed for one panel does not carry to another. Features and specifications vary by model, and the arithmetic pitch approximation above is an estimate from a published physical dimension rather than a device parameter.\n\nIt is scoped to the panel type that produced it. A pixel grid that switches each point on or off is not the same reading surface as a finer-graded LCD panel, where per-point tonal steps can shape a stroke and the same viewing distance supports smaller letterforms; that difference is a panel-technology difference, not evidence that one font is better than another. Compare like with like before concluding that small text is simply unreadable on desk displays.\n\nMost importantly, the right conclusion is usually a content decision rather than a settings hunt. A 64×64 canvas in a work-desk setting is a strong surface for clocks, icons, small widgets, status indicators, and short scrolling messages, and a poor one for paragraphs. If what you need is a reading surface for long text, the answer is not a cleverer font on the same grid — it is a different medium. A 16×16 or 32×32 canvas will hit the same wall earlier. Within this format, the honest reading of the limit is that it is the price of the aesthetic, not a problem waiting for the right setting.",
+ "html": "<h1>Why a 64×64 Pixel Art Canvas Can Still Make Small Text Hard to Read on a Desk Display</h1>\n<p>A 64×64 pixel canvas can still make small text hard to read on a desk display because canvas size and the per-character pixel budget are two different quantities. The grid sets how much picture fits on the panel; legibility is set by how many points one glyph can claim, how wide the gap is between adjacent pixels, and how close your eye is to the panel. At desk distance the eye resolves individual lit points before it resolves the letterforms they should form, so a sentence arrives as a field of dots. The same short word can sit legibly in a clock face and fail as a caption.</p>\n<p>That holds while the message is short enough to read in a glance. It stops holding once the panel sits close enough that the dots fuse into smooth shapes, or once the display is a different panel type rather than a coarser grid. What follows separates the variables people usually merge into one complaint.</p>\n<h2>The Canvas Is Big Enough, and That Is Not a Statement About a Single Letter</h2>\n<p>The first confusion is that \"64×64\" sounds like a small number and therefore sounds like the whole answer. It is the top of the range: pixel-art canvases across these displays are described as 16×16, 32×32 or 64×64, and 64×64 is recorded as the largest pixel-art canvas class, with a 64x64 pixel resolution appearing alongside a 128×128 panel and a 480 × 480 screen in the wider product family. A 64×64 grid is 4,096 addressable points — four times the points of a 32×32 grid and sixteen times those of a 16×16 one, and the step up in detail is why the catalog also lists finer canvas detail as a capability rather than a limitation.</p>\n<p>Read that as a statement about total picture area and the confusion dissolves. A canvas is a fixed budget of points that everything on screen shares: the background, the border, the icons, the row of numbers and the text. Text is a demand on the same budget with a different shape — it needs points concentrated into small, repeating, highly differentiated shapes arranged in a horizontal run. Four thousand points spread across a picture is a rich picture. Four thousand points is not what a single word gets.</p>\n<p>The useful separation is between canvas capacity and allocation. Capacity answers \"how much can this panel show at once.\" Allocation answers \"how much did this particular thing get.\" A clock face, a weather icon or a small widget is a low-allocation element and looks excellent. A sentence is a high-allocation element and does not, even though both are drawn from the same 4,096 points.</p>\n<h2>How Many Pixels Does One Recognizable Letter Need?</h2>\n<p>The second variable comes from outside the hardware: pixel letterforms have a minimum usable pixel budget. Enumerations of very small pixel fonts — including the tiny-font experiments published by moonbench and the small-font threads that circulate in pixel-art and game-development communities — describe the same ladder. In a 2×2 or 3×2 space the number of distinct shapes available is too small to cover an alphabet, so no font exists there. At 3×3 and 3×4, useful sets exist but the designer has to choose which characters to include and which to sacrifice. At 3×5 the result is described as fairly clear. By 5×5, letters that are otherwise ambiguous — M and W, G and B, and similar pairs — separate cleanly, and some designers deliberately use more pixels per character rather than fewer, because a larger glyph can be less ambiguous than a squeezed one.</p>\n<p>This is a property of glyph forms, not a Divoom specification, and the distinction matters twice over. It is not a supported minimum font size for any particular display, and it is not a claim about which font a given device ships with. It is the reason a text row is expensive: a 5-pixel-wide glyph plus a one-pixel gap uses 6 of the canvas's 64 columns, so a single line holds roughly a dozen characters at a comfortable bit size. That is a label, a temperature and a time, a stock ticker, a name, or a very short message. It is not a paragraph.</p>\n<p>The compression is also unforgiving in a way that ordinary screen text is not. These are one-bit pixels: each point is on or off. There is no intermediate tint inside the grid for edge pixels, so there is no antialiasing to soften a diagonal or to suggest where one stroke ends and the next begins. A rendered letter at 5 pixels high is not a small version of a large letter; it is a different object with fewer decision points, and every stroke you add costs the width of the line.</p>\n<h2>Why More Pixels on the Panel Does Not Mean More Pixels in the Letter</h2>\n<p>The third variable is the one that explains the title. Readability at a desk is not set by the count of points; it is set by the angle each point subtends at your eye, which depends on the physical size of one pixel and on your viewing distance. The panel resolves the ambiguity in an unusual direction, because a pixel-art display is designed to be seen at a distance where the individual emitter grid is still visible — that is what makes an animation read as pixel art rather than as a soft photograph. At typical desk viewing distance, an eye that is resolving the grid is being asked to read letterforms built out of elements it can individually see. The letters therefore break into their component dots precisely when you lean in to read them.</p>\n<p>Two consequences follow. First, distance is a legibility control in the same way that font size is: the same caption that fails at arm's length can become readable from across the room, not because anything improved but because the dots fused. Second, physical pixel pitch is the other half of the ratio, and it is a per-product number rather than a general one. Where an official manual gives a panel's physical dimensions, an approximate pitch can be worked out as that dimension divided by the pixel count — a roughly 10-inch panel carrying 64 pixels across works out to a pitch on the order of a few millimetres — but that is an arithmetic estimate from the published size, not a quoted device parameter, and no display in this family publishes an official pixel-pitch or minimum-font-size figure.</p>\n<p>The on-or-off structure adds a second, quieter part of the answer. Because every lit point is at full intensity for its color, a small glyph has no mid-tones with which to imply a stroke. At a distance the eye averages neighbouring points and a suggestion of grey appears where the pattern is sparse, which is exactly the effect that makes a well-made small font legible on a coarse grid — and exactly the effect you destroy by moving closer. Anyone who assumes a brighter or higher-color-count panel will fix the text will be disappointed: color vocabulary governs mood and artwork, not letterform recognition. Much the same is true of brightness and color settings, which change how comfortable the panel is to look at, not how many decisions the eye has to make to classify a shape.</p>\n<h2>What Actually Decides Whether This Specific Sentence Is Readable</h2>\n<p>Once the three variables are separated, the practical question becomes which one is doing the work in front of you, and the useful move is to keep two of them fixed while you move the third. Hold the viewing distance and the sentence, and change only the canvas: the same line on a 32×32 or 16×16 grid breaks down sooner, because the per-character budget shrinks and the pitch gets coarser at the same time. That comparison isolates the canvas-side variable, and its direction is always the same — the smaller grid is never the friendlier reading surface.</p>\n<p>Hold the canvas and the sentence, and change only the distance. Short labels survive close viewing because a label is a handful of large-shape characters and often benefits from being seen as glyphs; whole sentences survive far viewing, where the grid disappears, but at that range you are reading a sign rather than reading text. If a sentence is only comfortable when you are two steps back, the panel is not failing — the geometry is simply telling you which content class it supports.</p>\n<p>Hold both and change the message. A fixed caption that fits the character budget behaves completely differently from a message that must be delivered in full, and that is where the scrolling-text capability earns its place: a short message can be moved across the canvas so it is read a few characters at a time, which removes the length limit without removing the resolution limit. Scrolling does not make small text sharp; it makes a longer message possible inside the same per-character budget, and the reader still has to catch letterforms that are only a handful of pixels wide.</p>\n<p>Finally, separate legibility from dislike. A font you find ugly, a color you would have chosen differently, a panel that is brighter or dimmer than you prefer, and a glyph you genuinely cannot identify are four different problems with four different answers. Only the last one is the mechanism described here.</p>\n<h2>How to Test It on Your Own Desk</h2>\n<p>Each check below isolates one variable, and none of them needs instruments. Pick the most easily confused character pairs — O and 0, S and 5, G and 6, B and 8 — and display them together, then move slowly toward and away from the panel. Note the distance at which each pair stops being two different shapes and becomes two similar clusters of dots. That threshold is your viewing distance for this content, and it will differ between pairs, which is itself informative: the pairs that fail first are the ones your font's pixel budget cannot afford.</p>\n<p>Then watch the transition from static to scrolling. Type or paste a sentence that plainly exceeds the character budget and let it move. If the message becomes followable while individual characters remain only partly identifiable, you have confirmed that the limit is per-character resolution and not message length. If you cannot follow it at the scroll speed even from a distance where the dots fuse, the character budget is smaller than the speed allows and the content is out of scope for the format.</p>\n<p>Repeat the character-pair test on a smaller canvas. The same text on a 32×32 or 16×16 grid should fail sooner; if it does, the canvas-side variable is confirmed. Then check brightness and color settings at the fixed distance where the pairs already fail. If adjusting them changes comfort but not which characters you can tell apart, those controls are not the cause and should not be treated as a fix.</p>\n<h2>Where This Explanation Stops</h2>\n<p>The mechanism describes a reading limit, not a defect. If text is illegible at every distance and every canvas size, if a glyph is garbled rather than merely dotty, if it changes when nothing about the panel has changed, or if the image is uneven in ways that track hardware rather than content, this explanation does not cover it — that is a question about the individual unit and its official product documentation.</p>\n<p>It also does not transfer numbers. There is no official minimum font size and no official pixel-pitch figure for these displays to quote, so a specific character ceiling computed for one panel does not carry to another. Features and specifications vary by model, and the arithmetic pitch approximation above is an estimate from a published physical dimension rather than a device parameter.</p>\n<p>It is scoped to the panel type that produced it. A pixel grid that switches each point on or off is not the same reading surface as a finer-graded LCD panel, where per-point tonal steps can shape a stroke and the same viewing distance supports smaller letterforms; that difference is a panel-technology difference, not evidence that one font is better than another. Compare like with like before concluding that small text is simply unreadable on desk displays.</p>\n<p>Most importantly, the right conclusion is usually a content decision rather than a settings hunt. A 64×64 canvas in a work-desk setting is a strong surface for clocks, icons, small widgets, status indicators, and short scrolling messages, and a poor one for paragraphs. If what you need is a reading surface for long text, the answer is not a cleverer font on the same grid — it is a different medium. A 16×16 or 32×32 canvas will hit the same wall earlier. Within this format, the honest reading of the limit is that it is the price of the aesthetic, not a problem waiting for the right setting.</p>",
+ "title": "Why a 64×64 Pixel Canvas Still Fails at Small Text on a Desk",
+ "meta_description": "A 64×64 grid packs 4,096 points, but that total is shared canvas-wide. See why per-letter budget, 1-bit pixels and desk viewing distance keep small text dotty.",
+ "summary": "A 64×64 pixel canvas can still make small text hard to read because canvas capacity and per-character allocation are different budgets. The grid holds 4,096 points, but one legible glyph needs roughly 3×5 to 5×5 of them, and each point is only on or off, so no antialiasing softens a stroke. At desk distance the eye resolves the emitter grid itself, so letterforms break into dots. The limit is a content decision, not a setting: clocks, icons and short scrolling messages work, paragraphs do not.",
+ "slug": "why-a-64x64-pixel-art-canvas-can-still-make-small-text-hard-to-read-on-a-desk-display",
+ "url": "",
+ "internal_links": [
+  {
+   "anchor": "pixel-art canvases across these displays",
+   "url": "https://divoom.com/blogs/pixel-art/pixel-art-canvas-size-guide",
+   "h2": "The Canvas Is Big Enough, and That Is Not a Statement About a Single Letter",
+   "type": "相邻意图"
+  },
+  {
+   "anchor": "very small pixel fonts",
+   "url": "https://divoom.com/blogs/setup-ideas/how-to-design-pixel-art-font-divoom-displays",
+   "h2": "How Many Pixels Does One Recognizable Letter Need?",
+   "type": "相邻意图"
+  },
+  {
+   "anchor": "your viewing distance",
+   "url": "https://divoom.com/blogs/desk-setup/pixel-display-viewing-distance-guide",
+   "h2": "Why More Pixels on the Panel Does Not Mean More Pixels in the Letter",
+   "type": "术语"
+  },
+  {
+   "anchor": "the scrolling-text capability",
+   "url": "https://divoom.com/blogs/app-guide/keep-scrolling-text-readable-pixel-display",
+   "h2": "What Actually Decides Whether This Specific Sentence Is Readable",
+   "type": "术语"
+  },
+  {
+   "anchor": "no official minimum font size",
+   "url": "https://divoom.com/blogs/product-compare/divoom-product-specs-that-matter-most-smart-display",
+   "h2": "Where This Explanation Stops",
+   "type": "相邻意图"
+  }
+ ],
+ "external_links": [
+  {
+   "anchor": "the tiny-font experiments published by moonbench",
+   "url": "https://moonbench.xyz/projects/tiny-pixel-art-fonts/",
+   "why": "该页逐尺寸枚举 1-bit 字形空间（2×2/3×2 不足、3×3 与 3×4 需取舍、3×5 较清、5×5 分辨 M/W 等），直接支撑正文「最小可用像素预算阶梯」这一句；已实测可访问（HTTP 200），非搜索摘要页。"
+  }
+ ],
+ "pending_links": [
+  {
+   "anchor_candidate": "character-pair legibility test",
+   "topic": "桌面像素屏上的字对辨识自测（O/0、S/5、G/6、B/8 的临界距离）",
+   "h2": "How to Test It on Your Own Desk",
+   "reason": "正文「Pick the most easily confused character pairs」处是天然的待补链位；台账 256 篇无「可读性字对自测」类文章，最近的 app-guide/keep-scrolling-text-readable-pixel-display 只讲滚动文字的字重/速度/对比/长度四变量，不覆盖字对临界距离测试，故只登记不插链。"
+  },
+  {
+   "anchor_candidate": "garbled glyph troubleshooting",
+   "topic": "单机故障：像素屏字形错乱/渲染异常（区别于本解释覆盖的可读性限制）",
+   "h2": "Where This Explanation Stops",
+   "reason": "正文「if a glyph is garbled rather than merely dotty」处是天然的待补链位；台账 troubleshooting 仅覆盖设备连接（app-guide/divoom-troubleshooting-pixel-art-device-not-connect）与离线模式，无「字形错乱/渲染异常」单机排查目标，故只登记不插链。"
+  }
+ ],
+ "review": {
+  "scores": {
+   "experience": {
+    "score": 7.0,
+    "pros": [
+     "[场景观察] 开头即给出「书桌距离下，眼睛先分辨出单个亮点、后分辨字形，句子到手时是一片点」的可观察行为，并对照「同一个短词在时钟面里清晰、做 caption 就失败」，是可以当场复现的场景而不是功能罗列（H1 后第 1 段）。",
+     "[操作序列] H2「How to Test It on Your Own Desk」给出 4 步可照做的检查：选 O/0、S/5、G/6、B/8 字对 → 前后慢移记下「散成点」的临界距离 → 对照静态与滚动 → 换更小画布复测；每步都写了「看到什么算通过」（该节第 1–4 段）。",
+     "[主动交代代价] 不回避介质本身的代价：明说滚动「does not make small text sharp」、只解除长度限制不解除分辨率限制；H2 末节直接给退出结论「需要长文阅读面就换介质，不是换字体」。"
+    ],
+    "cons": [
+     "[无第一手痕迹] 全篇是「机制推演 + 可做的验证方案」，没有一处「用过之后才知道」的观察值：H2 5/6 两节的检查只写「把字对摆上去、慢慢前后移动」，未给出任何一次实际观察到的临界距离、字高或字号档位，读者拿不到可对照的样本锚点 —— 这正是本项低于 7.5 的原因。",
+     "[代价陈述缺条件] H2 4 讲清了滚动解除长度限制，但未说明内容类别代价（滚动会牺牲「一眼可读」这一优势），权衡只覆盖了长度一个轴。"
+    ]
+   },
+   "expertise": {
+    "score": 8.0,
+    "pros": [
+     "[机制闭合] 主因果链完整且方向正确：64×64 = 4096 点（画布侧供给）→ 单字形最低像素预算（3×5 起才较清、5×5 才分开 M/W）→ 点距×观看距离决定单点视角（物理侧）→ 1-bit 无中间调无法柔化笔画，四步能从现象推到原因再推回可观察结果。",
+     "[比较同轴] H2 4 的对照设计守住了同一量纲：固定距离与句子只换画布、固定画布与句子只换距离、固定两者只换消息，三条对照各自只动一个变量，并给出方向性结论（更小网格永远不会更友好）。",
+     "[边界说得清] 明确把「可读性限制」与「单机故障/字形错乱」分开（H2 6 第 1 段），把「面板类型差异」与「字体更好」分开（H2 6 第 3 段），术语未误用。"
+    ],
+    "cons": [
+     "[算术口径偏软] H2 2 末段「a 5-pixel-wide glyph plus a one-pixel gap uses 6 of the canvas's 64 columns, so a single line holds roughly a dozen characters」：6/64 整除得 10，与「a dozen（12）」差 2 个字符。读者照这行会自己算出 10，与文中数字对不上；这是可修正的表述缺口，不是机制错误。",
+     "[字形预算未限定字母表] 「最小可用像素预算阶梯」讨论的是拉丁字母/M/W/G/B，正文没写这条阶梯对非拉丁字形（汉字、假名）不成立，而 Divoom 用户里存在中文/日文场景，边界漏了一侧。"
+    ]
+   },
+   "authoritativeness": {
+    "score": 7.5,
+    "pros": [
+     "[参数可追溯] 逐条能定位：16×16 / 32×32 / 64×64 与 128×128、480×480 均在 实体库<指标与阈值>（「显示分辨率 (16×16 / 32×32 / 64×64)」「64x64像素分辨率」「128×128分辨率」「480×480像素屏幕」）；「像素画布大小／像素画布细节」在 实体库<指标与阈值>；「滚动文字／滚动文字消息」在 实体库<功能与能力>；「工作书桌／桌面」在 实体库<场景与环境>；「不适合高分辨率照片查看」在 实体库<条件与限制>。",
+     "[无型号名风险] 全篇 0 个产品型号名（Divoom 出现 8 次均为品牌词），已与 品牌资料库/产品/ 的 58 个官方命名比对，不存在自创或拼错型号名的硬伤。",
+     "[外部口径分清] 明确把外部一般原理与 Divoom 规格切开：「This is a property of glyph forms, not a Divoom specification」、外部枚举证据写明来源（moonbench 实验 + 社区字号讨论）。"
+    ],
+    "cons": [
+     "[系统强制降级][系统强制降级] 官方产品名库缺失：读不到 `品牌资料库/产品/`，无法核对型号名是否官方；本轮所有型号名均按未登记处理。请先跑 build_brand_library.py。（hard_limits.py 生效封顶 = 8.0）",
+     "[系统强制降级][系统强制降级] 型号名：出现型号「Pixoo」，但品牌资料库的官方产品名里没有它；自创或拼错的型号名属硬伤。（复核：正文 0 次命中，该命中来自 hard_limits.py 读入整份 JSON 时把 search_demand 里的『r/PixelArt』切成『Pixel』所致，属脚本对 JSON 输入的解析假阳性，须在编排器侧修脚本后再跑一次）",
+     "[覆盖有缺口] 正文把 16×16／32×32／64×64 说成「像素画布那一档」，但未说明这几档分别落在哪个产品上；而 实体库<指标与阈值>同时记有 128×128 与 480×480，读者无法从文中判断 64×64 是「该系列最大画布」还是「某一款的画布」。",
+     "[链接落地未验] 6 条链接中 5 条指向 divoom.com 站内（pixel-art-canvas-size-guide、how-to-design-pixel-art-font-divoom-displays、pixel-display-viewing-distance-guide、keep-scrolling-text-readable-pixel-display、divoom-product-specs-that-matter-most-smart-display），本地无法验证其可解析性；若上线前为 404，本维度的可追溯性会直接受损。"
+    ]
+   },
+   "trustworthiness": {
+    "score": 5.5,
+    "pros": [
+     "[不假精确] 点距一节主动写明「an approximate pitch can be worked out as that dimension divided by the pixel count」「that is an arithmetic estimate from the published size, not a quoted device parameter」，并在 H2 6 再次声明「no official pixel-pitch figure to quote」——两条都是主动降级自己的数字。",
+     "[可查的限制声明] 「no official minimum font size」与「Features and specifications vary by model」与 实体库<条件与限制>（「功能随型号不同」「需参考官方产品手册」）一致，不是空口护栏。",
+     "[不冒充中立评测] 全篇以机制解释为主，未出现「我们实测」「第三方测试」这类会误导来源的措辞。"
+    ],
+    "cons": [
+     "[复核记录·非封顶] hard_limits.py 未命中「安全边界缺失（电气与电池）」：正文不涉及充电/电池/功率/发热/挂墙/防水/儿童/麦克风/App 权限，故 5.5 红线封顶不生效。本维 5.5 由下面「第一方来源未披露」等实质缺口判出，不是红线命中。",
+     "[第一方来源未披露] 稿件是品牌方（divoom.com）内容，正文机制论证却主要靠外部来源（moonbench 等）支撑，而全文没有任何一句说明「这是品牌方视角、机制解释非本品牌实测」——按 SKILL「不伪装中立：品牌方内容就承认是品牌视角」这是本维最拖分的一条，且直接决定它落在 5.5。",
+     "[推导密集但只逐条标注] 字符预算（6 of 64 columns → 一行约 10–12 字）、点距（官方尺寸 ÷ 像素数 ≈ 数毫米）两处都是二次推导；虽然各自就地标了「estimate / not official」，但没有一处汇总式地告诉读者「本文哪些数是官方规格、哪些是本文推算」，读者需要自己逐段辨认。",
+     "[「a few millimetres」略低于实算] 官方手册 品牌资料库/手册/pixoo-64.md:80 记 Dimension (mm): 262x20x261.4；262÷64 ≈ 4.1 mm。正文用「a roughly 10-inch panel」概括（262 mm ≈ 10.3 in），并以「a few millimetres」表述，方向正确但偏保守，宜与手册口径对齐。"
+    ]
+   },
+   "hcu": {
+    "score": 7.5,
+    "pros": [
+     "[结论先行] H1 后第 1 句就是完整答案（canvas size 与 per-character pixel budget 是两个量），第 1 段末尾给出机制方向；每个 H2 也都是段首先给局部结论（如 H2 5 第 1 段先给「固定两个变量、动第三个」的操作框架）。",
+     "[扫读友好] 6 个 H2 一问一节，无 H3；H2 5 用「Hold X and Y, change only Z」的三段并列结构，H2 6 用条件式退出清单，读者能按自己条件跳读；无大型表格或文字墙。",
+     "[决策效率] 末节给出可执行的取舍结论：64×64 适合时钟、图标、小组件、状态与短滚动消息，不适合段落；要长文阅读就换介质而不是换设置。"
+    ],
+    "cons": [
+     "[系统强制降级][系统强制降级] 官方产品名库缺失：读不到 `品牌资料库/产品/`，无法核对型号名是否官方；本轮所有型号名均按未登记处理。请先跑 build_brand_library.py。（hard_limits.py 生效封顶 = 8.0）（本维度计入该封顶：其余维度已被内容侧更低上限约束，8.0 上限在本维生效）",
+     "[栏目带宽超出] 开头两段 162 词，对照 科技与信息/正文写作规范.md:17 的 80–125 词带宽（22 篇样本中位 101 词）超出约 29%。第 1 段 108 词本身已在带宽上限附近，第 4 句（「The same short word can sit legibly in a clock face and fail as a caption.」）是延续例证而非新变量，进正文不会损失机制，留在开头只推迟读者到达 H2 1 的时间。",
+     "[节长超出对照带宽] 对照 科技与信息/正文写作规范.md:23「普通节以 3–5 个正文段落、合计约 110–185 个英文词为检查带宽（22 篇样本中位 4 段、143 词）」：H2 1 = 3 段 266 词、H2 2 = 3 段 339 词、H2 3 = 3 段 409 词、H2 4 = 4 段 331 词、H2 5 = 3 段 252 词、H2 6 = 4 段 320 词，六节全部超上限（1.4–2.2 倍），且多数节只有 3 段却接近 400 词 = 单段 100+ 词的认知摩擦。"
+    ]
+   },
+   "infogain": {
+    "score": 8.0,
+    "pros": [
+     "[决策降维] 给出一个可复用的三轴框架（画布分配 / 点距×距离 / 1-bit 无中间调），把读者通常混成一团的「读不清」拆成三个可分别检验的变量，并在 H2 4 用「固定二动一」的对照法把框架变成操作 —— 这是超出通用资料的增量所在。",
+     "[一手来源口径清楚] 把外部枚举证据（moonbench、社区字号讨论）与 Divoom 规格分开标注，说明每条信息从哪来，而不是把外部结论包装成自家参数。",
+     "[独立见解] 明确反驳两个常见假设：调亮/调色修不好字形辨识、屏幕坏了不是解释；并给出「字体难看 / 配色不合 / 亮度不合 / 字形认不出」四类问题的分轴。"
+    ],
+    "cons": [
+     "[独立支撑偏薄] 三轴框架本身是本文的增量，但支撑它的关键阶梯（3×5 较清、5×5 分开 M/W）完全来自外部单一来源（moonbench），本文没有对该来源做任何交叉验证或口径说明（该实验是何种字库/何种面板/何种观看条件下的枚举，正文未交代）。",
+     "[品牌方视角未声明的增益折扣] 文章的最终取向（短标签与滚动是本介质该做的事、长文换介质）与品牌产品定位一致；同一结论若来自独立第三方会更可信，而正文没有声明视角，故增益中有一部分无法与「厂商话术」区分。"
+    ]
+   },
+   "ymyl": {
+    "score": 8.0,
+    "pros": [
+     "[四类红线均未触及] 逐条核对 实体库 与正文：无充电/电池/功率/发热（电气与电池）、无挂墙/支架/承重（安装与坠落）、无防水/清洗/泼溅（防水与进水）、无儿童/麦克风/App 权限（儿童与隐私）；正文不出现任何功率、电池、安装或隐私主张，因此没有「敏感话题无边界」的问题。",
+     "[财务误导的护栏到位] 反复声明官方不公布最小字号与点距、任何字符上限不跨面板套用（H2 6 第 2 段），并以「是内容决策而不是找设置」收尾，避免了用数字诱导购买升级。",
+     "[无破坏性指令] 全文不含任何可能损坏设备或泄露数据的操作步骤。"
+    ],
+    "cons": [
+     "[未提长期近距离用眼] 文章反复鼓励读者「靠近到字散成点」的字对自测，但没有一句用眼舒适度的前置提示（这是本行业真实红线之一：长时间近距离读点阵小字）；建议在 H2 5 首段加一句停止条件式的提示。",
+     "[点距数字的购买含义未封口] 「a few millimetres」会被部分读者当成选型依据，而它只是本文由官方尺寸推算，正文虽在 H2 3 就地标注为推算，但未在涉及取舍的 H2 4/6 复用同一口径提醒，存在被当成官方参数转述的风险。"
+    ]
+   },
+   "aggregate_eeat": 7.0,
+   "weighted_total": null,
+   "caps_triggered": [
+    "[系统强制降级] 官方产品名库缺失：读不到 `品牌资料库/产品/`，无法核对型号名是否官方；本轮所有型号名均按未登记处理。请先跑 build_brand_library.py。（hard_limits.py 生效封顶 = 8.0）",
+    "[系统强制降级] 型号名：出现型号「Pixoo」，但品牌资料库的官方产品名里没有它；自创或拼错的型号名属硬伤。（脚本对 JSON 输入的解析假阳性，须修脚本后重跑）"
+   ]
+  },
+  "fact_grounding": [
+   {
+    "claim": "a 64×64 grid is 4,096 addressable points — four times the points of a 32×32 grid and sixteen times those of a 16×16 one（H2 1 第 1 段）",
+    "source": "实体库/实体变量库.csv <指标与阈值>「显示分辨率 (16×16 / 32×32 / 64×64)」「64x64像素分辨率」「像素画布大小」+ 算术（64²=4096，32²=1024，16²=256）",
+    "verdict": "supported"
+   },
+   {
+    "claim": "64×64 is recorded as the largest pixel-art canvas class, with a 64x64 pixel resolution appearing alongside a 128×128 panel and a 480 × 480 screen in the wider product family（H2 1 第 1 段）",
+    "source": "实体库/实体变量库.csv <指标与阈值>「显示分辨率 (16×16 / 32×32 / 64×64)」「64x64像素分辨率」「128×128分辨率」「480×480像素屏幕」「像素画布大小」",
+    "verdict": "supported"
+   },
+   {
+    "claim": "the catalog also lists finer canvas detail as a capability rather than a limitation（H2 1 第 1 段）",
+    "source": "实体库/实体变量库.csv <功能与能力>「像素画布细节 (finer details)」",
+    "verdict": "supported"
+   },
+   {
+    "claim": "In a 2×2 or 3×2 space the number of distinct shapes available is too small to cover an alphabet … At 3×3 and 3×4, useful sets exist but the designer has to choose which characters to include … At 3×5 the result is described as fairly clear … By 5×5, letters that are otherwise ambiguous — M and W, G and B … separate cleanly（H2 2 第 1 段）",
+    "source": "外部：https://moonbench.xyz/projects/tiny-pixel-art-fonts/（03-seo.json external_links 所记，逐尺寸枚举 1-bit 字形空间），正文已就地标注为外部证据、非 Divoom 规格",
+    "verdict": "supported"
+   },
+   {
+    "claim": "It is not a supported minimum font size for any particular display, and it is not a claim about which font a given device ships with（H2 2 第 2 段）",
+    "source": "实体库/实体变量库.csv <条件与限制>「功能随型号不同」「需参考官方产品手册」「不适合高分辨率照片查看」；实体库无「最小字号」条目",
+    "verdict": "supported"
+   },
+   {
+    "claim": "a 5-pixel-wide glyph plus a one-pixel gap uses 6 of the canvas's 64 columns, so a single line holds roughly a dozen characters at a comfortable bit size（H2 2 第 2 段）",
+    "source": "算术：64 ÷ 6 = 10.67 → 约 10 字/行，与文中「roughly a dozen」差 2 字符；实体库无字符数条目",
+    "verdict": "overreach"
+   },
+   {
+    "claim": "These are one-bit pixels: each point is on or off. There is no intermediate tint inside the grid for edge pixels, so there is no antialiasing（H2 2 第 3 段）",
+    "source": "实体库<指标与阈值>「256全RGB」「1600万RGB色彩」记的是色彩空间而非每点亮度级；1-bit 点阵无灰阶为通用技术事实，正文已把它与 Divoom 规格分开陈述",
+    "verdict": "supported"
+   },
+   {
+    "claim": "a pixel-art display is designed to be seen at a distance where the individual emitter grid is still visible（H2 3 第 1 段）",
+    "source": "实体库/实体变量库.csv <场景与环境>「工作书桌」「桌面」、<状态与症状>「常亮显示 (always-on desk display)」；「设计为在可分辨点阵的距离观看」为本文机制主张，实体库无对应条目，已就地标为解释而非规格",
+    "verdict": "overreach"
+   },
+   {
+    "claim": "Where an official manual gives a panel's physical dimensions, an approximate pitch can be worked out as that dimension divided by the pixel count — a roughly 10-inch panel carrying 64 pixels across works out to a pitch on the order of a few millimetres — but that is an arithmetic estimate from the published size, not a quoted device parameter（H2 3 第 2 段）",
+    "source": "品牌资料库/手册/pixoo-64.md:80「Dimension (mm): 262x20x261.4」→ 262÷64 ≈ 4.1 mm；正文已显式标注为推算并声明官方不公布点距",
+    "verdict": "supported"
+   },
+   {
+    "claim": "no display in this family publishes an official pixel-pitch or minimum-font-size figure（H2 3 第 2 段）／There is no official minimum font size and no official pixel-pitch figure for these displays to quote（H2 6 第 2 段）",
+    "source": "实体库/实体变量库.csv <指标与阈值> 无点距与最小字号条目；品牌资料库/手册/pixoo-64.md 亦未见",
+    "verdict": "supported"
+   },
+   {
+    "claim": "color vocabulary governs mood and artwork, not letterform recognition. Much the same is true of brightness and color settings（H2 3 第 3 段）",
+    "source": "实体库/实体变量库.csv 无「亮度」「对比」「色彩设置」条目（<功能与能力>有「可自定义RGB灯效」「自动调光」，指灯效与屏幕亮度，非可读性）；该主张为通用观察，实体库无从支持",
+    "verdict": "unsupported"
+   },
+   {
+    "claim": "the same line on a 32×32 or 16×16 grid breaks down sooner, because the per-character budget shrinks and the pitch gets coarser at the same time（H2 4 第 1 段）",
+    "source": "实体库/实体变量库.csv <指标与阈值>「显示分辨率 (16×16 / 32×32 / 64×64)」支持三档存在；「更小网格更早失效」为由本文三轴框架推出的结论，方向与 SKILL 所述实体库档位一致",
+    "verdict": "supported"
+   },
+   {
+    "claim": "that is where the scrolling-text capability earns its place: a short message can be moved across the canvas so it is read a few characters at a time（H2 4 第 3 段）",
+    "source": "实体库/实体变量库.csv <功能与能力>「滚动文字 (scrolling text)」「滚动文字消息 (scrolling text messages)」「显示滚动歌词」",
+    "verdict": "supported"
+   },
+   {
+    "claim": "Pick the most easily confused character pairs — O and 0, S and 5, G and 6, B and 8（H2 5 第 1 段）与整套自测流程",
+    "source": "实体库/实体变量库.csv 无对应条目；这是本文提供的观察方法而非产品参数，未冒充官方数据",
+    "verdict": "supported"
+   },
+   {
+    "claim": "A pixel grid that switches each point on or off is not the same reading surface as a finer-graded LCD panel, where per-point tonal steps can shape a stroke and the same viewing distance supports smaller letterforms（H2 6 第 3 段）",
+    "source": "实体库/实体变量库.csv <指标与阈值>「128×128分辨率」「LCD屏幕」「透明IPS屏幕」支持面板档位差异；「per-point tonal steps」为未登记的技术细节，正文已限定为面板技术差异而非某型号事实",
+    "verdict": "overreach"
+   },
+   {
+    "claim": "Features and specifications vary by model（H2 6 第 2 段）",
+    "source": "实体库/实体变量库.csv <条件与限制>「功能随型号不同 (features vary by model)」「兼容性依型号而定」",
+    "verdict": "supported"
+   }
+  ],
+  "verdict": "revise",
+  "rounds": 1,
+  "revision_notes": [
+   {
+    "version": "v1",
+    "location": "H2 4 第 3 段位置（或 H2 1 末段）",
+    "gap": "全文未声明第一方视角：稿件是 divoom.com 品牌方内容，机制论证却以外部来源为主，读者无法判断这是品牌方解释还是独立结论。trustworthiness 因此被压在最拖分位置（5.5）。",
+    "action": "在机制论证第一次依赖外部证据的位置之前或紧接其后，补一句来源视角声明（说明本文为品牌方内容、机制解释非本品牌实测、外部结论标注来源），不要写成通用免责套话，要与具体哪几条是外部证据绑定。",
+    "acceptance": "读该段后能在不读其他段落的情况下回答「这条机制解释是谁给的、依据是什么」；文中每条外部来源与每条 Divoom 规格仍各自可辨。"
+   },
+   {
+    "version": "v1",
+    "location": "H2 2 第 2 段第 3 句（a 5-pixel-wide glyph … roughly a dozen characters）",
+    "gap": "算术口径与措辞不一致：6/64 整除得约 10 字/行，文中写「roughly a dozen」，读者自算会对不上；本条是 authoritativeness 7.5 与 expertise 8.0 的直接扣分项。",
+    "action": "把字符上限改成与 6/64 算术自洽的表述区间，或补上让「a dozen」成立的显式条件（例如行首行尾留白、或不等宽字形），二者取一，不新增无来源的精确值。",
+    "acceptance": "按文中给出的列数自己除一遍，得到的数字落在文中区间内；改动后不出现在实体库无法定位的新数值。"
+   },
+   {
+    "version": "v1",
+    "location": "H2 1 第 1 段（16×16 / 32×32 / 64×64 与 128×128、480×480 并列处）",
+    "gap": "档位归属未交代：正文说 64×64 是「像素画布那一档」的最大规格，但没说这几档分别落在哪个产品上，而实体库同时记有 128×128 与 480×480，读者会误以为同一块面板能覆盖多档（authoritativeness 7.5 的覆盖缺口）。",
+    "action": "补一句把画布档位与产品/面板类型对应起来，或明确写「这几档分散在同一家族的不同型号上，本文讨论的是像素画布那一档」，不引入新的官方未登记参数。",
+    "acceptance": "读者能指出 64×64 属于哪一类面板、128×128 与 480×480 是另一类；句子里的档位能与 实体库<指标与阈值> 逐条对上。"
+   },
+   {
+    "version": "v1",
+    "location": "开头第 1–2 段（现 162 词）",
+    "gap": "超出本栏目 80–125 词带宽约 29%（正文写作规范.md:17），且第 1 段 108 词已在带宽上限附近，读者到达 H2 1 前要过 162 词（hcu 扣分项，但不构成「>100 词无用背景」的硬红线，因第 1 段确实在回答 why、第 2 段确实在给失效条件）。",
+    "action": "按不损失机制的原则压缩到 125 词以内：优先把第 1 段第 4 句（时钟面 vs caption 的对照例）移入 H2 1 作为例证，并合并第 1 段中与第 2 段重复的变量列举；不要删掉第 2 段的失效条件。",
+    "acceptance": "统计开头两段 ≤125 词；H1 后第 1 句仍是「条件 X 下变量 Y 经机制 Z 导致现象 A」的完整回答；第 2 段仍至少给出一个失效条件并点明下文区分的变量。"
+   },
+   {
+    "version": "v1",
+    "location": "H2 1 至 H2 6 全部六节",
+    "gap": "六节正文均为 250–410 词，超出 正文写作规范.md:23 的 110–185 词检查带宽（中位 143 词）1.4–2.2 倍，且多数节只有 3 段 = 单段 100+ 词的长段，是 hcu 的主要摩擦来源。",
+    "action": "对每节做一次「同一 H2 只承担一个解释问题」的裁剪：把与相邻节重复的变量复述删掉（H2 3 与 H2 4 对「点数不等于可读性」有重复论证），把可观察对照从长段拆成小节内的短段；不要求一次压到 143 词，先把超过 300 词的四节（H2 2/3/4/6）降到 250 词以内。",
+    "acceptance": "H2 2、H2 3、H2 4、H2 6 每节 ≤250 词且无单段超过约 90 词；每节段尾仍留下下一节需要澄清的变量或边界；删改后不丢失任何一条 fact_grounding 已登记的可追溯参数。"
+   },
+   {
+    "version": "v1",
+    "location": "H2 5 首段（How to Test It on Your Own Desk）",
+    "gap": "自测流程要求读者反复靠近到「字散成点」的临界距离，但全文没有一句用眼舒适度的前置提示（本行业真实红线之一，ymyl 8.0 的扣分项）。",
+    "action": "在该节首段补一个停止条件式的用眼提示：以「出现不适即停止、不要长时间近距离盯着点阵小字」为条件前置，而不是放到文末。",
+    "acceptance": "自测步骤开始前就能读到停止条件；提示措辞是条件句而非免责套话；不影响该节的 4 步可照做性。"
+   },
+   {
+    "version": "v1",
+    "location": "上线前置检查（不由编辑在正文完成）",
+    "gap": "5 条 divoom.com 站内链接的可解析性本地无法验证；若其中任一条为 404，authoritativeness 的可追溯性会直接受损。另：03-seo.json 的 html 字段为无链正文，按 skills/SEO优化师/SKILL.md:34 的既定契约由编排器在交 GEO 前由 body_markdown 确定性重建，本审核不改 html，但须在重建时校验锚文本与 href 与 markdown 一致。",
+    "acceptance": "5 条站内链接上线前返回 200；重建后的 html 的 <a href> 与 body_markdown 的 6 条链接一一对应、锚文本一致、正文可见文字不变。"
+   }
+  ]
+ }
+}

@@ -1,0 +1,13 @@
+{
+  "植入": false,
+  "产品键": "",
+  "产品名": "",
+  "PDP_URL": "",
+  "锚文本": "",
+  "锚文本词数": 0,
+  "路径": "",
+  "建议H2": "",
+  "匹配依据": "",
+  "这段要讲哪几点": [],
+  "不植入理由": "判据②「有能力对应」不过（决定性）：本选题真正在讨论的能力是「64×64 画布 → 单像素物理尺寸 → 小字/文本可读性」，属该显示格式的物理属性，不是任何单品《能力小节》里的条目。候选池（商品类型=单品 且 在售，按 64×64→16×16 收敛）为 pixoo-64 / divoom-pixoo-max / divoom-pixoo / divoom-timebox-evo，逐个核对 品牌资料库/产品/<handle>.md 的《能力小节》：pixoo-64 只有 How to setup the network connection? / Reset network? / How to power it? / General Troubleshoot / 2. Network pairing timeout / 3. Device shows number and full panel coloring / Product specification 等，其余三个为配网、充电、蓝牙连接、闹钟、语音备忘录一类；四个产品都没有「文本渲染／小字可读性／字体」相关小节，唯一官方相关表述是 pixoo-64 PDP FAQ 的限制声明「not for high-resolution photo viewing」，属限制而非可植入能力。按 产品植入规范 §2.1「植入点 = 正文中确实在讨论该产品某项手册级能力的那个 H2」，本篇没有这样的 H2，故也不走路径 A：路径 A 只改链接形态（品类词→集合页），不放松能力匹配要求，其锚文本候选 pixel art display 指向的 pixel-display 集合页本身也是「LED 像素网格不适合细文字」的同一结论，链路没有可植入的正面能力。判据①（待编辑落笔后确认）：按 科技与信息 FX 主表 F1「Why [表面足够的指标] Can Still Mean [相反结果] for [对象]」预判，H2 会是「标称指标与结果错位→直接原因（像素尺寸÷字号）→受影响变量→桌面实测→适用边界」，末个 H2 虽讲格式权衡，但落点是 格式/观看条件，不是某产品手册能力，仍非 §2.1 要求的植入点。判据③可过（但过不了②）：实体库<指标与阈值>有「显示分辨率 (16×16 / 32×32 / 64×64)」「64x64像素分辨率 (64x64 pixel)」「10.3英寸面板 (10.3-inch)」「像素画布大小」，<部件>有「LED像素面板 (LED pixel panel)」「像素显示屏 (pixel display)」，<条件与限制>有「不适合高分辨率照片查看 (not for high-resolution photo viewing)」。判据④本轮无正文，交审核官复核。另：本篇为解释类选题，唯一规格吻合的单品 pixoo-64 恰是被论证局限的对象，点名植入会违反 品牌资料库/README.md 第四节第 6 条「植入不得改变原文结论、不得把解释类文章改写成产品推荐」；竞品基线亦有 25% 文章完全不提产品，不植入为正常结果。"
+}

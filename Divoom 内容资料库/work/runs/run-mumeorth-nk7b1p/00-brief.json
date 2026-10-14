@@ -1,0 +1,74 @@
+{
+  "topic": "Why a 64×64 Pixel Canvas Can Still Make Small Text Hard to Read on a Desk Display",
+  "column": "科技与信息",
+  "fx": "F1",
+  "polished_title": "Why a 64×64 Pixel Canvas Can Still Make Small Text Hard to Read on a Desk Display",
+  "search_demand": {
+    "head_term": "pixel art display text readability",
+    "serp_check": {
+      "query": "pixel art display text readability",
+      "observed_at": "2026-09-29T08:24:04Z",
+      "exists": true,
+      "notes": "外面确实有人在问/在写低分辨率像素屏与像素艺术里的文字可读性问题（Reddit 游戏开发、像素字体讨论）；Divoom 官网也有一篇《How to Keep Scrolling Text Readable on a Pixel Display》同题内容，说明需求真实且已被官方触及。"
+    },
+    "user_voice": [
+      {
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/PixelArt/comments/1fbyqmo/is_this_4x4_font_legible/",
+        "quote": "A 5x3 matrix is the smallest readable size font imo."
+      },
+      {
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/godot/comments/1553r58/how_do_yall_do_good_looking_text_in_a_low/",
+        "quote": "all the text is totally unreadable — what's the best way to circumvent this?"
+      },
+      {
+        "source": "reddit.com",
+        "url": "https://www.reddit.com/r/gamedev/comments/1o13mhq/is_it_okay_to_use_a_nonpixel_font_in_a_pixel_art/",
+        "quote": "Pixel font is an accessibility disaster and generally should not be used for the same reason your playtesters were complaining about it."
+      }
+    ],
+    "volume": null
+  },
+  "outline_logic": [
+    {
+      "n": 1,
+      "h2": "64×64 是画布分辨率，不是文字分辨率：先拆开「总像素数」与「每字符像素数」",
+      "reader_question": "64×64 有 4,096 个像素点，看起来很多，为什么还是读不了小字？",
+      "conclusion": "可读性由每个字符能分到的像素数决定，不由总像素数决定。一个可辨认字符至少需要 5×7（极限 5×3）的最小字形点阵，64×64 真正能塞下的字远少于直觉。",
+      "why_next": "标题制造「指标够却不适用」的疑问，必须先解释这两个指标为什么不是一回事，否则后面无法解释「缩小字号为何立刻崩掉可读性」。"
+    },
+    {
+      "n": 2,
+      "h2": "直接原因：小字把每个字符压到最小字形点阵之下，笔画粘连/断裂且没有抗锯齿补偿",
+      "reader_question": "为什么字一小就读不了，具体机制是什么？",
+      "conclusion": "缩小字号意味着每字符可用像素数下降；低于最小字形点阵时笔画粘连或断裂、字符失去可辨形状。LED 点阵的每个「像素」是物理大点，不像手机屏有灰度亚像素抗锯齿来补偿，所以没有中间值兜底。",
+      "why_next": "明确了「每字符像素数 < 最小字形点阵」这一直接原因后，下一步要说明哪些变量在放大或缓解这个问题，避免读者把锅全甩给 64×64 这个固定数。"
+    },
+    {
+      "n": 3,
+      "h2": "关键变量：字号、字体粗细、信息密度三者叠加决定最终可读性",
+      "reader_question": "既然不是画布大小单独决定，那到底是哪些变量在起作用？",
+      "conclusion": "不是 64×64 单独决定，而是「字号（每字符像素高）＋字体粗细（细字体在点阵上更易糊）＋你想在一屏塞多少字（信息密度）」三者的组合。滚动文字只同时显示几个字，所以反而不那么受画布限制。",
+      "why_next": "列出变量后，读者需要能自己动手判断自己那块屏处于哪个档位，于是进入可观察验证。"
+    },
+    {
+      "n": 4,
+      "h2": "可观察验证：同一句话在 64×64 上对比 7px 高 vs 4px 高字形，看临界点",
+      "reader_question": "我怎么判断自己的字是不是已经压到不可读的档位？",
+      "conclusion": "把同一句话分别用 7px 高（每行约 8 字）与 4px 高字形在 64×64 上显示，观察小字是否开始粘连、字符是否不可辨；对照 5×7 与 5×3 字形即可定位「每字符可用像素数 < 最小字形点阵」的临界点。",
+      "why_next": "验证完临界点后，读者需要知道这个结论在什么场景下不成立，才能避免过度泛化。"
+    },
+    {
+      "n": 5,
+      "h2": "例外与边界：什么时候 64×64 反而不影响——滚动文字、大字时钟、像素画与动画",
+      "reader_question": "这个「限制」是不是意味着 64×64 像素屏读不了任何文字？",
+      "conclusion": "不是。该限制只针对「静态小字＋多字高密度」场景（长段落、股票代码、日历多字信息）；对滚动文字（一次显示几个字）、大字号时钟表盘、像素画与动画不构成障碍。结论在「想同时看清一整句小字」时才成立。",
+      "why_next": "到此标题承诺已闭环：错位→机制→变量→验证→边界，无需再引入新变量，收尾给边界即可。"
+    }
+  ],
+  "reference_urls": [
+    "https://divoom.com/blogs/app-guide/keep-scrolling-text-readable-pixel-display",
+    "https://divoom.com/products/pixoo-64"
+  ]
+}

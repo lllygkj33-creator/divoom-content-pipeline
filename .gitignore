@@ -1,0 +1,39 @@
+# 排除：体积大 / 含第三方版权内容 / 本机产物
+
+# ── 插件源码（645M，与本流程无关；插件已弃用，改用自建看板）──
+vendor/
+
+# ── 原始抓取与竞品正文（版权 + 体积）──
+raw/
+pdp_text/
+work/bodies/
+work/bodies.bak-curl/
+work/raw_fc/
+work/raw_brand_src/
+work/raw_brand/
+work/articles/
+work/samples/
+work/skills-incoming/
+
+# 资料库内的原始抓取缓存（保留 runs/ 作为流程跑通样例）
+Divoom 内容资料库/work/bodies/
+Divoom 内容资料库/work/raw_fc/
+Divoom 内容资料库/work/raw_brand_src/
+Divoom 内容资料库/work/raw_brand/
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ── 本机 / 编辑器 ──
+.DS_Store
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+*.log
+
+# ── 凭据（绝不入库）──
+*.env
+firecrawl.env
+.credentials*

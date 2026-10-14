@@ -1,0 +1,198 @@
+---
+group: "指标与阈值"
+english: Metric & threshold
+order: 10
+values:
+  - "显示分辨率 (16×16 / 32×32 / 64×64)"
+  - "屏幕格式 (smart LCD)"
+  - "像素画布大小 (largest pixel-art canvas)"
+  - "功率 (15W / 20W / 50W / 80W / 100W)"
+  - "接口数量 (number of connections)"
+  - "插头布局 (plug layout)"
+  - "尺寸与体积 (size)"
+  - "便携性 (portability)"
+  - "容量与收纳 (capacity)"
+  - "携带形态 (carrying format)"
+  - "显示屏位置 (display position)"
+  - "颜色选项 (colors)"
+  - "控制方式 (controls)"
+  - "麦克风数量 (two wireless microphones)"
+  - "连接版本 (Bluetooth version)"
+  - "规格参数 (full specifications)"
+  - "20W功率 (20W sound)"
+  - "15W功率 (15W powerful sound)"
+  - "10W扬声器 (10W speaker)"
+  - "35W输出 (35W)"
+  - "65W输出 (65W)"
+  - "50W输出 (50W)"
+  - "18W输出 (18W)"
+  - "80W输出 (80W)"
+  - "100W输出 (100W)"
+  - "6W驱动单元 (6W DSP-tuned driver)"
+  - "5W驱动器 (5W driver)"
+  - "4.2W功率 (4.2 W)"
+  - "蓝牙6.0 (Bluetooth 6.0)"
+  - "蓝牙5.3 (Bluetooth 5.3)"
+  - "蓝牙5.0 (Bluetooth 5.0)"
+  - "蓝牙5.2 (Bluetooth 5.2)"
+  - "24位DSP (24-bit DSP)"
+  - "16×16像素面板 (16×16 LED pixel panel)"
+  - "32x32像素分辨率 (32x32 pixel)"
+  - "64x64像素分辨率 (64x64 pixel)"
+  - "128×128分辨率 (128x128)"
+  - "480×480像素屏幕 (480 × 480 screen)"
+  - "256全RGB (256 full RGB)"
+  - "1600万RGB色彩 (16 million RGB colors)"
+  - "2.26英寸智能显示屏 (2.26-inch smart display)"
+  - "10.3英寸面板 (10.3-inch)"
+  - "4.7英寸像素显示屏 (4.7-inch pixel display)"
+  - "1.77英寸TFT屏幕 (1.77\" TFT screen)"
+  - "5.25英寸低音单元 (5.25-inch woofer)"
+  - "25mm高音单元 (25mm silk dome tweeters)"
+  - "93mm低音单元 (93mm woofer)"
+  - "48mm扬声器 (48mm speaker)"
+  - "45mm全频驱动器 (45mm full-range driver)"
+  - "90+白噪音音效 (more than 90 white noise sounds)"
+  - "18个时钟表盘 (18 live clock faces)"
+  - "70+表盘 (70+ retro clock faces)"
+  - "400+表盘 (400+ clock faces)"
+  - "15款复古迷你游戏 (15 retro mini-games)"
+  - "15+内置游戏 (15+ built-in games)"
+  - "20+应用通知 (20+ apps)"
+  - "3个充电接口 (3-Port)"
+  - "15英寸笔记本电脑 (15-inch laptop)"
+  - "6,000张照片 (6,000 photos)"
+  - "700,000+张照片容量 (700,000+ images)"
+  - "300万用户社区 (3 million users)"
+  - "1000+设计作品 (1,000+ designer artworks)"
+  - "三种配色 (Blue, Green, and Pink)"
+  - "三种配色 (Black, Pink, and Beige)"
+  - "五种颜色 (five colors)"
+  - "12+6个月保修 (12+6 Month Official Store Warranty)"
+  - "12个月标准保修 (12-month standard warranty)"
+  - "约3.5小时充电时长 (Approx. 3.5 hrs)"
+  - "640g重量 (640 g)"
+  - "106×108×135毫米 (106 × 108 × 135 mm)"
+  - "283×47×97毫米 (283 × 47 × 97 mm)"
+  - "30分钟充至51% (0 % to 51 % in 30 min)"
+  - "6小时电池续航 (6 hours of battery life)"
+  - "8小时以上续航 (8+ hours)"
+  - "10小时麦克风使用 (10 hours of microphone use)"
+  - "10小时播放时长 (10 hours of playtime)"
+  - "6小时播放时长 (6 hours of playtime)"
+  - "约5小时播放 (about 5 hours of music playback)"
+  - "2.5小时快充 (fast-charging in 2.5 hours)"
+  - "IP67防水防尘等级 (IP67 waterproof and dustproof rating)"
+  - "IPX5防水 (IPX5)"
+  - "64GB内置存储 (64GB built-in storage)"
+  - "32GB存储 (32GB storage)"
+  - "五块LCD屏 (five full-color LCD screens)"
+  - "双频WiFi (dual-band 2.4G & 5G WiFi)"
+  - "WiFi 6 协议 (WiFi 6)"
+  - "33英尺无线范围 (33-foot wireless range)"
+  - "12种闹钟铃声 (12 sounds)"
+  - "8种语音模式 (8 voice modes)"
+  - "六种声音模式 (six unique sound modes)"
+  - "12种RGB灯效 (12 customizable RGB effects)"
+  - "360°环绕声 (360° surround Hi-Fi sound)"
+  - "60秒语音备忘录 (60s Voice Memo)"
+  - "30分钟水下1米 (30 minutes submerged in 1 m of water)"
+---
+# 指标与阈值 (Metric & threshold)
+
+94 个词条。
+
+- 显示分辨率 (16×16 / 32×32 / 64×64)
+- 屏幕格式 (smart LCD)
+- 像素画布大小 (largest pixel-art canvas)
+- 功率 (15W / 20W / 50W / 80W / 100W)
+- 接口数量 (number of connections)
+- 插头布局 (plug layout)
+- 尺寸与体积 (size)
+- 便携性 (portability)
+- 容量与收纳 (capacity)
+- 携带形态 (carrying format)
+- 显示屏位置 (display position)
+- 颜色选项 (colors)
+- 控制方式 (controls)
+- 麦克风数量 (two wireless microphones)
+- 连接版本 (Bluetooth version)
+- 规格参数 (full specifications)
+- 20W功率 (20W sound)
+- 15W功率 (15W powerful sound)
+- 10W扬声器 (10W speaker)
+- 35W输出 (35W)
+- 65W输出 (65W)
+- 50W输出 (50W)
+- 18W输出 (18W)
+- 80W输出 (80W)
+- 100W输出 (100W)
+- 6W驱动单元 (6W DSP-tuned driver)
+- 5W驱动器 (5W driver)
+- 4.2W功率 (4.2 W)
+- 蓝牙6.0 (Bluetooth 6.0)
+- 蓝牙5.3 (Bluetooth 5.3)
+- 蓝牙5.0 (Bluetooth 5.0)
+- 蓝牙5.2 (Bluetooth 5.2)
+- 24位DSP (24-bit DSP)
+- 16×16像素面板 (16×16 LED pixel panel)
+- 32x32像素分辨率 (32x32 pixel)
+- 64x64像素分辨率 (64x64 pixel)
+- 128×128分辨率 (128x128)
+- 480×480像素屏幕 (480 × 480 screen)
+- 256全RGB (256 full RGB)
+- 1600万RGB色彩 (16 million RGB colors)
+- 2.26英寸智能显示屏 (2.26-inch smart display)
+- 10.3英寸面板 (10.3-inch)
+- 4.7英寸像素显示屏 (4.7-inch pixel display)
+- 1.77英寸TFT屏幕 (1.77" TFT screen)
+- 5.25英寸低音单元 (5.25-inch woofer)
+- 25mm高音单元 (25mm silk dome tweeters)
+- 93mm低音单元 (93mm woofer)
+- 48mm扬声器 (48mm speaker)
+- 45mm全频驱动器 (45mm full-range driver)
+- 90+白噪音音效 (more than 90 white noise sounds)
+- 18个时钟表盘 (18 live clock faces)
+- 70+表盘 (70+ retro clock faces)
+- 400+表盘 (400+ clock faces)
+- 15款复古迷你游戏 (15 retro mini-games)
+- 15+内置游戏 (15+ built-in games)
+- 20+应用通知 (20+ apps)
+- 3个充电接口 (3-Port)
+- 15英寸笔记本电脑 (15-inch laptop)
+- 6,000张照片 (6,000 photos)
+- 700,000+张照片容量 (700,000+ images)
+- 300万用户社区 (3 million users)
+- 1000+设计作品 (1,000+ designer artworks)
+- 三种配色 (Blue, Green, and Pink)
+- 三种配色 (Black, Pink, and Beige)
+- 五种颜色 (five colors)
+- 12+6个月保修 (12+6 Month Official Store Warranty)
+- 12个月标准保修 (12-month standard warranty)
+- 约3.5小时充电时长 (Approx. 3.5 hrs)
+- 640g重量 (640 g)
+- 106×108×135毫米 (106 × 108 × 135 mm)
+- 283×47×97毫米 (283 × 47 × 97 mm)
+- 30分钟充至51% (0 % to 51 % in 30 min)
+- 6小时电池续航 (6 hours of battery life)
+- 8小时以上续航 (8+ hours)
+- 10小时麦克风使用 (10 hours of microphone use)
+- 10小时播放时长 (10 hours of playtime)
+- 6小时播放时长 (6 hours of playtime)
+- 约5小时播放 (about 5 hours of music playback)
+- 2.5小时快充 (fast-charging in 2.5 hours)
+- IP67防水防尘等级 (IP67 waterproof and dustproof rating)
+- IPX5防水 (IPX5)
+- 64GB内置存储 (64GB built-in storage)
+- 32GB存储 (32GB storage)
+- 五块LCD屏 (five full-color LCD screens)
+- 双频WiFi (dual-band 2.4G & 5G WiFi)
+- WiFi 6 协议 (WiFi 6)
+- 33英尺无线范围 (33-foot wireless range)
+- 12种闹钟铃声 (12 sounds)
+- 8种语音模式 (8 voice modes)
+- 六种声音模式 (six unique sound modes)
+- 12种RGB灯效 (12 customizable RGB effects)
+- 360°环绕声 (360° surround Hi-Fi sound)
+- 60秒语音备忘录 (60s Voice Memo)
+- 30分钟水下1米 (30 minutes submerged in 1 m of water)
