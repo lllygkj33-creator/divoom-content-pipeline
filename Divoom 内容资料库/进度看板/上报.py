@@ -10,6 +10,10 @@
   python3 进度看板/上报.py 事件 --agent "Brief 官" --n 3 --状态 处理中
   python3 进度看板/上报.py 事件 --agent "Brief 官" --n 3 --状态 完成 --备注 "已产出 brief 卡"
 
+  # 交给 Codex / 人接手（卡在人这里时上报；接手完再改成 完成）
+  python3 进度看板/上报.py 事件 --agent "审核官" --n 2 --状态 等待人工 --备注 "等确认产品植入"
+  python3 进度看板/上报.py 事件 --agent "审核官" --n 2 --状态 完成
+
   # 某个 agent 整体收工（自动把它所有事件置完成）
   python3 进度看板/上报.py 完成 --agent "Brief 官"
 
@@ -73,12 +77,17 @@ def recompute(d: dict) -> None:
     ceiling = STAGE_PROGRESS.get("已完成", 1.0)
     # 阶段基准 + 阶段内完成度（不超过下一阶段基准的粗略上限）
     d["总进度"] = round(min(1.0, base + (1 - base) * (done / total) * 0.9), 4)
-    cur = d.get("当前") or {}
-    running = next((a for a in agents if a.get("状态") == "处理中"), None)
+    # 等待人工优先于处理中：卡在人/Codex 那里才是真正的瓶颈
+    waiting = next((a for a in agents if a.get("状态") == "等待人工"), None)
+    running = waiting or next((a for a in agents if a.get("状态") == "处理中"), None)
     if running:
-        ev = next((e for e in running.get("事件") or [] if e.get("状态") == "处理中"), None)
+        ev = next((e for e in running.get("事件") or []
+                   if e.get("状态") in ("处理中", "等待人工")), None)
         if ev:
-            d["当前"] = {"agent": running["id"], "事件": ev["n"], "说明": ev["名"]}
+            d["当前"] = {"agent": running["id"], "事件": ev["n"], "说明": ev["名"],
+                         "状态": running["状态"]}
+    if not waiting and (d.get("当前") or {}).get("状态") == "等待人工":
+        d["当前"].pop("状态", None)   # 人工已接手，顶部横幅别再挂着「等待人工」
     if not running and d.get("阶段") == "已完成":
         d["总进度"] = 1.0
 
@@ -101,7 +110,8 @@ def main() -> None:
     p = sub.add_parser("事件")
     p.add_argument("--agent", required=True)
     p.add_argument("--n", type=int, required=True)
-    p.add_argument("--状态", required=True, choices=["待命", "处理中", "完成", "失败"])
+    p.add_argument("--状态", required=True,
+                   choices=["待命", "处理中", "等待人工", "完成", "失败"])
     p.add_argument("--备注", default="")
 
     p = sub.add_parser("完成")
@@ -138,6 +148,7 @@ def main() -> None:
         d["开始时间"] = ts
         d["结束时间"] = None
         d["阶段"] = "第一轮 · 并行"
+        d["当前"] = {"说明": "已启动，等待角色接手"}
         d["回环"] = {"轮次": 1, "最大轮次": 2, "退回给": "", "原因": ""}
         for ag in d.get("agents", []):
             ag["状态"] = "待补充" if ag.get("占位") else "待命"
@@ -163,10 +174,17 @@ def main() -> None:
         ev["时间"] = ts if a.状态 != "待命" else None
         if a.备注:
             ev["备注"] = a.备注
-        if a.状态 == "处理中":
-            ag["状态"] = "处理中"
+        if a.状态 in ("处理中", "等待人工"):
+            ag["状态"] = a.状态
             if not ag.get("开始"):
                 ag["开始"] = ts
+        elif ag.get("状态") == "等待人工":
+            # 人工接手完，卡片要从「等待人工」放回（否则徽章永远停在紫色）
+            evs = ag.get("事件") or []
+            if not any(e.get("状态") == "等待人工" for e in evs):
+                ag["状态"] = ("处理中" if any(e.get("状态") == "处理中" for e in evs)
+                              else "完成" if evs and all(e.get("状态") == "完成" for e in evs)
+                              else "待命")
 
     elif a.cmd == "完成":
         ag = find_agent(d, a.agent)

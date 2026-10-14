@@ -83,6 +83,10 @@ description: 用户提交 Divoom 英文内容主题时，核实实体、轻量�
 python3 进度看板/上报.py 事件 --agent "Brief 官" --n 1 --状态 处理中
 python3 进度看板/上报.py 事件 --agent "Brief 官" --n 1 --状态 完成 --备注 "一句话结论"
 
+# ✋ 需要人 / Codex 接手时上报（接手完成后改回「完成」，卡片才脱离紫色）
+python3 进度看板/上报.py 事件 --agent "Brief 官" --n 1 --状态 等待人工 --备注 "等谁做什么"
+python3 进度看板/上报.py 事件 --agent "Brief 官" --n 1 --状态 完成
+
 # 本角色收工（自动把所有事件置完成）
 python3 进度看板/上报.py 完成 --agent "Brief 官"
 

@@ -7,6 +7,7 @@
   :root{
     --bg:#0f1115; --layer:#171a21; --layer2:#1e222b; --border:#2a2f3a;
     --ink:#e6e9ef; --ink2:#9aa4b2; --brand:#4f8cff; --ok:#3fb950; --run:#d29922; --fail:#f85149;
+    --human:#a371f7;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
@@ -34,6 +35,7 @@
          background:linear-gradient(90deg,var(--brand),#7bb0ff);transition:width .5s ease}
   .now{margin-top:10px;color:var(--ink2);font-size:13px}
   .now b{color:var(--run)}
+  .now .hb{color:var(--human);font-weight:700}
 
   /* ── 阶段轨 ── */
   .stage{margin-top:14px;display:flex;gap:6px;flex-wrap:wrap}
@@ -48,6 +50,7 @@
   .card.run{border-color:var(--run);box-shadow:0 0 0 1px rgba(210,153,34,.25)}
   .card.ok{border-color:rgba(63,185,80,.55)}
   .card.fail{border-color:var(--fail)}
+  .card.human{border-color:var(--human);box-shadow:0 0 0 1px rgba(163,113,247,.3)}
   .card-h{display:flex;justify-content:space-between;align-items:center;
           padding:11px 14px;background:var(--layer2);border-bottom:1px solid var(--border)}
   .card-h b{font-size:14px}
@@ -56,6 +59,7 @@
   .badge.ok{color:var(--ok);border-color:rgba(63,185,80,.5);background:rgba(63,185,80,.12)}
   .badge.run{color:var(--run);border-color:rgba(210,153,34,.5);background:rgba(210,153,34,.12)}
   .badge.fail{color:var(--fail);border-color:rgba(248,81,73,.5);background:rgba(248,81,73,.12)}
+  .badge.human{color:var(--human);border-color:rgba(163,113,247,.55);background:rgba(163,113,247,.14)}
   .ev{list-style:none;margin:0;padding:6px 0}
   .ev li{display:flex;gap:9px;align-items:flex-start;padding:6px 14px;font-size:13px}
   .ev li .n{color:var(--ink2);font-variant-numeric:tabular-nums;min-width:14px}
@@ -64,10 +68,12 @@
   .ev li.run .t{color:var(--run);font-weight:600}
   .ev li.ok .t{color:var(--ink2)}
   .ev li.fail .t{color:var(--fail)}
+  .ev li.human .t{color:var(--human);font-weight:600}
   .ev li .note{display:block;color:var(--ink2);font-size:11px;margin-top:1px}
   /* SVG 状态图标 */
   .ico{width:15px;height:15px;flex:none;margin-top:3px}
   .ico.ok{color:var(--ok)} .ico.run{color:var(--run)} .ico.wait{color:#5a6270} .ico.fail{color:var(--fail)}
+  .ico.human{color:var(--human)}
   .ico.run .spin{transform-origin:50% 50%;animation:sp 1s linear infinite}
   @keyframes sp{to{transform:rotate(360deg)}}
   .foot{margin-top:20px;color:var(--ink2);font-size:12px;text-align:center}
@@ -171,9 +177,10 @@ const ICONS = {
   ok:   '<svg class="ico ok" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="7"/><path d="M5 8.4l2.1 2.1L11 6.5"/></svg>',
   run:  '<svg class="ico run" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><g class="spin"><path d="M8 1.6a6.4 6.4 0 1 1-6.4 6.4"/></g></svg>',
   wait: '<svg class="ico wait" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.2" stroke-dasharray="2.4 2.4"/></svg>',
-  fail: '<svg class="ico fail" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="7"/><path d="M5.6 5.6l4.8 4.8M10.4 5.6l-4.8 4.8"/></svg>'
+  fail: '<svg class="ico fail" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="7"/><path d="M5.6 5.6l4.8 4.8M10.4 5.6l-4.8 4.8"/></svg>',
+  human:'<svg class="ico human" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8" cy="5" r="2.6"/><path d="M2.7 14c0-2.9 2.4-4.6 5.3-4.6s5.3 1.7 5.3 4.6"/></svg>'
 }
-const MAP = { '完成':'ok', '处理中':'run', '待命':'wait', '待补充':'wait', '失败':'fail' }
+const MAP = { '完成':'ok', '处理中':'run', '等待人工':'human', '待命':'wait', '待补充':'wait', '失败':'fail' }
 const STAGES = ['待启动','第一轮 · 并行','门禁 1 · 标题大纲','第二轮 · 并行','门禁 2 · 审核','交付']
 const ico = s => ICONS[MAP[s] || 'wait']
 
@@ -183,8 +190,10 @@ function render(d){
   document.getElementById('pct').textContent = pct + '%'
   document.getElementById('barFill').style.width = pct + '%'
   const cur = d.当前 || {}
+  const wait = cur.状态 === '等待人工'
   document.getElementById('now').innerHTML = cur.agent
-    ? `当前：<b>${cur.agent}</b> · 关键事件 ${cur.事件}　${cur.说明 || ''}`
+    ? (wait ? '<span class="hb">✋ 等待人工接手</span>　' : '')
+      + `当前：<b>${cur.agent}</b> · 关键事件 ${cur.事件}　${cur.说明 || ''}`
     : (cur.说明 || '等待输入标题')
 
   // 阶段轨：只做粗略高亮（按当前阶段名匹配）
@@ -210,7 +219,8 @@ function render(d){
     const isLoopBack = !!lp.退回给 && a.id === lp.退回给
     const cls = ghost ? 'ghost'
       : isLoopBack ? 'loop'
-      : st === '完成' ? 'ok' : st === '处理中' ? 'run' : st === '失败' ? 'fail' : ''
+      : st === '完成' ? 'ok' : st === '等待人工' ? 'human'
+      : st === '处理中' ? 'run' : st === '失败' ? 'fail' : ''
     const evs = (a.事件 && a.事件.length)
       ? a.事件.map(e=>{
           const c = MAP[e.状态] || 'wait'
@@ -246,7 +256,10 @@ function render(d){
        `python3 进度看板/上报.py 事件 --agent "${a.id}" --n 1 --状态 处理中\n` +
        `python3 进度看板/上报.py 事件 --agent "${a.id}" --n 1 --状态 完成 --备注 "一句话结论"`],
       ['③ 登记阶段性交付', `python3 进度看板/上报.py 产物 --agent "${a.id}" --名 "<产物名>" --路径 "${outPath}" --摘要 "一句话说明"`],
-      ['④ 本角色收工', `python3 进度看板/上报.py 完成 --agent "${a.id}"`],
+      ['④ 卡住 / 交给 Codex 或人（接手后改 完成）',
+       `python3 进度看板/上报.py 事件 --agent "${a.id}" --n 1 --状态 等待人工 --备注 "等谁做什么"\n` +
+       `python3 进度看板/上报.py 事件 --agent "${a.id}" --n 1 --状态 完成`],
+      ['⑤ 本角色收工', `python3 进度看板/上报.py 完成 --agent "${a.id}"`],
     ]
     const cmdBlock = ghost ? '' : `<details class="cmds"><summary>命令（复制即可执行）</summary><div class="cmd">` +
       cmds.map(([label, code]) =>
