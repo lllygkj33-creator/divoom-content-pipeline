@@ -1,0 +1,112 @@
+---
+group: "部件"
+english: Component
+order: 4
+values:
+  - "智能LCD屏 (smart LCD screens)"
+  - "LCD面板 (LCD)"
+  - "麦克风 (microphone)"
+  - "扬声器 (speaker)"
+  - "LED像素显示屏 (LED pixel display)"
+  - "像素显示屏 (pixel display)"
+  - "LED像素面板 (LED pixel panel)"
+  - "物理按键 (physical keys)"
+  - "摇杆 (joystick)"
+  - "RGB机械键盘 (RGB mechanical keyboard)"
+  - "机械键盘按键 (mechanical keyboard keys)"
+  - "无线麦克风 (wireless microphone)"
+  - "迷你麦克风 (mini microphone)"
+  - "电池 (battery)"
+  - "内置可充电电池 (built-in rechargeable battery)"
+  - "充电电池 (rechargeable battery)"
+  - "侧袋 (side pocket)"
+  - "笔记本电脑隔层 (laptop compartment)"
+  - "隐藏口袋 (hidden pockets)"
+  - "主隔层 (main compartment)"
+  - "肩带 (shoulder straps)"
+  - "可调节肩带 (adjustable strap)"
+  - "背带扣 (strap buckle)"
+  - "拉链 (zipper)"
+  - "网状靠垫 (mesh padding)"
+  - "透气网眼背板 (breathable mesh back panel)"
+  - "USB-C接口 (USB-C port)"
+  - "USB-A接口 (USB-A)"
+  - "充电线 (charging cable)"
+  - "USB电源线 (USB power cable)"
+  - "全频驱动器 (full-range driver)"
+  - "低音单元 (woofer)"
+  - "高音单元 (tweeters)"
+  - "被动辐射器 (passive radiators)"
+  - "无源低音辐射器 (passive bass radiators)"
+  - "DSP芯片 (DSP chip)"
+  - "金属夹 (metal clip)"
+  - "支架 (stand)"
+  - "旋钮 (rotary knob)"
+  - "RGB灯环 (RGB light ring)"
+  - "LED前面板 (LED front panel)"
+  - "钢化玻璃 (tempered glass)"
+  - "透明IPS屏幕 (transparent IPS screen)"
+  - "LCD屏幕 (LCD screen)"
+  - "移动电源 (power bank)"
+  - "便携收纳包 (portable case)"
+  - "手提把手 (carry handle)"
+  - "充电底座 (charging dock)"
+  - "防摔ABS外壳 (impact-resistant ABS shell)"
+  - "双吸盘 (dual suction cups)"
+  - "ANC麦克风 (ANC mic)"
+---
+# 部件 (Component)
+
+51 个词条。
+
+- 智能LCD屏 (smart LCD screens)
+- LCD面板 (LCD)
+- 麦克风 (microphone)
+- 扬声器 (speaker)
+- LED像素显示屏 (LED pixel display)
+- 像素显示屏 (pixel display)
+- LED像素面板 (LED pixel panel)
+- 物理按键 (physical keys)
+- 摇杆 (joystick)
+- RGB机械键盘 (RGB mechanical keyboard)
+- 机械键盘按键 (mechanical keyboard keys)
+- 无线麦克风 (wireless microphone)
+- 迷你麦克风 (mini microphone)
+- 电池 (battery)
+- 内置可充电电池 (built-in rechargeable battery)
+- 充电电池 (rechargeable battery)
+- 侧袋 (side pocket)
+- 笔记本电脑隔层 (laptop compartment)
+- 隐藏口袋 (hidden pockets)
+- 主隔层 (main compartment)
+- 肩带 (shoulder straps)
+- 可调节肩带 (adjustable strap)
+- 背带扣 (strap buckle)
+- 拉链 (zipper)
+- 网状靠垫 (mesh padding)
+- 透气网眼背板 (breathable mesh back panel)
+- USB-C接口 (USB-C port)
+- USB-A接口 (USB-A)
+- 充电线 (charging cable)
+- USB电源线 (USB power cable)
+- 全频驱动器 (full-range driver)
+- 低音单元 (woofer)
+- 高音单元 (tweeters)
+- 被动辐射器 (passive radiators)
+- 无源低音辐射器 (passive bass radiators)
+- DSP芯片 (DSP chip)
+- 金属夹 (metal clip)
+- 支架 (stand)
+- 旋钮 (rotary knob)
+- RGB灯环 (RGB light ring)
+- LED前面板 (LED front panel)
+- 钢化玻璃 (tempered glass)
+- 透明IPS屏幕 (transparent IPS screen)
+- LCD屏幕 (LCD screen)
+- 移动电源 (power bank)
+- 便携收纳包 (portable case)
+- 手提把手 (carry handle)
+- 充电底座 (charging dock)
+- 防摔ABS外壳 (impact-resistant ABS shell)
+- 双吸盘 (dual suction cups)
+- ANC麦克风 (ANC mic)

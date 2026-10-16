@@ -1,0 +1,4 @@
+interface:
+  display_name: "Divoom 正文撰写"
+  short_description: "Draft evidence-backed canonical English HTML"
+  default_prompt: "Use $divoom-draft for this Divoom article request."

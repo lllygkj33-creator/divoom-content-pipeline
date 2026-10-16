@@ -1,0 +1,148 @@
+---
+group: "功能与能力"
+english: Feature & capability
+order: 5
+values:
+  - "展示像素画 (pixel art display)"
+  - "App自定义动画与图标 (animations, icons)"
+  - "自定义屏幕内容 (customizable display)"
+  - "动态像素画 (animations)"
+  - "显示时钟 (clocks)"
+  - "显示天气 (weather)"
+  - "显示日历与倒数 (calendar)"
+  - "桌面小组件 (desk widgets)"
+  - "显示照片与视频 (photos)"
+  - "歌词显示 (lyric)"
+  - "闹钟与日程工具 (alarm and planner tools)"
+  - "睡眠时钟 (smart sleep clock)"
+  - "唱歌与录音 (singing and recording)"
+  - "双无线麦克风合唱 (duets)"
+  - "像素画布细节 (finer details)"
+  - "充电 (charging)"
+  - "像素徽章穿戴显示 (wearable display)"
+  - "播放音频 (play audio)"
+  - "显示照片 (display photos)"
+  - "显示像素艺术 (show pixel art)"
+  - "显示像素艺术动画 (display any pixel art animation)"
+  - "自定义时钟表盘 (customize clock faces)"
+  - "自定义表盘 (custom clock faces)"
+  - "设置闹钟 (set alarms)"
+  - "滚动文字 (scrolling text)"
+  - "滚动文字消息 (scrolling text messages)"
+  - "显示滚动歌词 (show scrolling lyrics)"
+  - "自定义像素动画 (custom pixel animations)"
+  - "自定义动画 (customize animations)"
+  - "实时像素绘画 (draw real-time pixel art)"
+  - "USB-C快充 (USB-C fast charging)"
+  - "多设备同时充电 (at once)"
+  - "白噪音 (white noise)"
+  - "白噪音播放 (white noise sounds)"
+  - "柔和唤醒 (wake more gently)"
+  - "像素迷你游戏 (pixel art mini-games)"
+  - "迷你游戏 (mini games)"
+  - "内置像素游戏 (built-in pixel games)"
+  - "倒计时 (countdown timer)"
+  - "氛围灯 (mood lighting)"
+  - "音乐可视化 (music visualizers)"
+  - "安全保护 (Safety Protection)"
+  - "折叠插脚 (fold the plug flat)"
+  - "一键传输图片 (One-click image transfer)"
+  - "播放音乐 (play music)"
+  - "流媒体播放音乐 (Stream music)"
+  - "FM收音机 (FM radio)"
+  - "闹钟 (alarm clock)"
+  - "世界时钟 (world clocks)"
+  - "股票行情 (stock tickers)"
+  - "天气报告 (weather reports)"
+  - "任务管理 (task management)"
+  - "秒表 (stopwatch)"
+  - "助眠 (sleep aid)"
+  - "可自定义RGB灯效 (customizable RGB effects)"
+  - "AI降噪 (AI noise reduction)"
+  - "人声消除 (vocal remover)"
+  - "远程分享 (remote sharing)"
+  - "免提通话 (hands-free calling)"
+  - "TWS串联 (TWS pairing)"
+  - "语音备忘录录音 (voice memo recording)"
+  - "噪音检测 (noise detection)"
+  - "社交媒体计数器 (social media counter)"
+  - "通知提醒 (notification alerts)"
+  - "语音控制 (voice control)"
+  - "卡拉OK模式 (karaoke modes)"
+  - "自动调光 (auto-dimming)"
+  - "番茄专注计时 (Pomodoro focus timer)"
+  - "屏幕提醒 (on-screen reminders)"
+---
+# 功能与能力 (Feature & capability)
+
+69 个词条。
+
+- 展示像素画 (pixel art display)
+- App自定义动画与图标 (animations, icons)
+- 自定义屏幕内容 (customizable display)
+- 动态像素画 (animations)
+- 显示时钟 (clocks)
+- 显示天气 (weather)
+- 显示日历与倒数 (calendar)
+- 桌面小组件 (desk widgets)
+- 显示照片与视频 (photos)
+- 歌词显示 (lyric)
+- 闹钟与日程工具 (alarm and planner tools)
+- 睡眠时钟 (smart sleep clock)
+- 唱歌与录音 (singing and recording)
+- 双无线麦克风合唱 (duets)
+- 像素画布细节 (finer details)
+- 充电 (charging)
+- 像素徽章穿戴显示 (wearable display)
+- 播放音频 (play audio)
+- 显示照片 (display photos)
+- 显示像素艺术 (show pixel art)
+- 显示像素艺术动画 (display any pixel art animation)
+- 自定义时钟表盘 (customize clock faces)
+- 自定义表盘 (custom clock faces)
+- 设置闹钟 (set alarms)
+- 滚动文字 (scrolling text)
+- 滚动文字消息 (scrolling text messages)
+- 显示滚动歌词 (show scrolling lyrics)
+- 自定义像素动画 (custom pixel animations)
+- 自定义动画 (customize animations)
+- 实时像素绘画 (draw real-time pixel art)
+- USB-C快充 (USB-C fast charging)
+- 多设备同时充电 (at once)
+- 白噪音 (white noise)
+- 白噪音播放 (white noise sounds)
+- 柔和唤醒 (wake more gently)
+- 像素迷你游戏 (pixel art mini-games)
+- 迷你游戏 (mini games)
+- 内置像素游戏 (built-in pixel games)
+- 倒计时 (countdown timer)
+- 氛围灯 (mood lighting)
+- 音乐可视化 (music visualizers)
+- 安全保护 (Safety Protection)
+- 折叠插脚 (fold the plug flat)
+- 一键传输图片 (One-click image transfer)
+- 播放音乐 (play music)
+- 流媒体播放音乐 (Stream music)
+- FM收音机 (FM radio)
+- 闹钟 (alarm clock)
+- 世界时钟 (world clocks)
+- 股票行情 (stock tickers)
+- 天气报告 (weather reports)
+- 任务管理 (task management)
+- 秒表 (stopwatch)
+- 助眠 (sleep aid)
+- 可自定义RGB灯效 (customizable RGB effects)
+- AI降噪 (AI noise reduction)
+- 人声消除 (vocal remover)
+- 远程分享 (remote sharing)
+- 免提通话 (hands-free calling)
+- TWS串联 (TWS pairing)
+- 语音备忘录录音 (voice memo recording)
+- 噪音检测 (noise detection)
+- 社交媒体计数器 (social media counter)
+- 通知提醒 (notification alerts)
+- 语音控制 (voice control)
+- 卡拉OK模式 (karaoke modes)
+- 自动调光 (auto-dimming)
+- 番茄专注计时 (Pomodoro focus timer)
+- 屏幕提醒 (on-screen reminders)

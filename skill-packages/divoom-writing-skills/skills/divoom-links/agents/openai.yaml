@@ -1,0 +1,4 @@
+interface:
+  display_name: "Divoom 内外链补充"
+  short_description: "Insert verified contextual links into Divoom drafts"
+  default_prompt: "Use $divoom-links for this Divoom article request."

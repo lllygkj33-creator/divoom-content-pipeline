@@ -1,0 +1,136 @@
+---
+group: "场景与环境"
+english: Scene & environment
+order: 7
+values:
+  - "工作书桌 (work desks)"
+  - "学习角与学习桌 (study corners / study desks)"
+  - "游戏房与游戏布置 (gaming rooms / gaming setups)"
+  - "床头柜与床边 (bedside tables)"
+  - "货架与置物架 (shelves)"
+  - "居家空间 (everyday spaces)"
+  - "工作室与创作空间 (studios / creative spaces)"
+  - "日常出行与旅行 (everyday carry)"
+  - "通勤路上 (moving through the city)"
+  - "生日与庆祝 (birthdays / shared celebrations)"
+  - "活动现场与展会 (events, conventions, meetups)"
+  - "街头风格 (street style)"
+  - "学校与日常 (school days)"
+  - "圣诞节 (Christmas)"
+  - "感恩节 (Thanksgiving)"
+  - "万圣节 (Halloween)"
+  - "礼物场景 (gift setups)"
+  - "旅行包与行李 (travel bags)"
+  - "桌面 (desk)"
+  - "桌面布置 (desk setup)"
+  - "卧室 (bedroom)"
+  - "工作区 (workspaces)"
+  - "游戏房 (gaming room)"
+  - "家庭聚会 (family gatherings)"
+  - "派对 (parties)"
+  - "公路旅行 (road trips)"
+  - "野餐 (picnics)"
+  - "校园 (campus)"
+  - "城市漫步 (city walks)"
+  - "演唱会 (concerts)"
+  - "漫展 (conventions)"
+  - "床头柜 (nightstand)"
+  - "户外 (outdoors)"
+  - "生日 (birthdays)"
+  - "家 (home)"
+  - "电竞布置 (gaming setup)"
+  - "学习桌 (study desk)"
+  - "办公室 (office)"
+  - "客厅 (living room)"
+  - "宿舍 (dorm room)"
+  - "创意空间 (creative spaces)"
+  - "咖啡馆 (cafes)"
+  - "商店 (shops)"
+  - "施工现场 (job sites)"
+  - "车间 (workshops)"
+  - "露营 (camping trips)"
+  - "海滩 (beaches)"
+  - "家庭之夜 (family nights)"
+  - "小型聚会 (small gatherings)"
+  - "音乐节 (festivals)"
+  - "夜间街景 (night city scenes)"
+  - "汽车后窗 (rear window)"
+  - "直播布景 (livestream setups)"
+  - "居家办公 (home office)"
+  - "工作室 (studios)"
+  - "后院派对 (backyard parties)"
+  - "家庭派对 (house parties)"
+  - "户外聚会 (outdoor gatherings)"
+  - "街头表演 (street performances)"
+  - "公司活动 (company events)"
+  - "婚礼 (weddings)"
+  - "乔迁 (housewarmings)"
+  - "送礼场合 (gift occasions)"
+---
+# 场景与环境 (Scene & environment)
+
+63 个词条。
+
+- 工作书桌 (work desks)
+- 学习角与学习桌 (study corners / study desks)
+- 游戏房与游戏布置 (gaming rooms / gaming setups)
+- 床头柜与床边 (bedside tables)
+- 货架与置物架 (shelves)
+- 居家空间 (everyday spaces)
+- 工作室与创作空间 (studios / creative spaces)
+- 日常出行与旅行 (everyday carry)
+- 通勤路上 (moving through the city)
+- 生日与庆祝 (birthdays / shared celebrations)
+- 活动现场与展会 (events, conventions, meetups)
+- 街头风格 (street style)
+- 学校与日常 (school days)
+- 圣诞节 (Christmas)
+- 感恩节 (Thanksgiving)
+- 万圣节 (Halloween)
+- 礼物场景 (gift setups)
+- 旅行包与行李 (travel bags)
+- 桌面 (desk)
+- 桌面布置 (desk setup)
+- 卧室 (bedroom)
+- 工作区 (workspaces)
+- 游戏房 (gaming room)
+- 家庭聚会 (family gatherings)
+- 派对 (parties)
+- 公路旅行 (road trips)
+- 野餐 (picnics)
+- 校园 (campus)
+- 城市漫步 (city walks)
+- 演唱会 (concerts)
+- 漫展 (conventions)
+- 床头柜 (nightstand)
+- 户外 (outdoors)
+- 生日 (birthdays)
+- 家 (home)
+- 电竞布置 (gaming setup)
+- 学习桌 (study desk)
+- 办公室 (office)
+- 客厅 (living room)
+- 宿舍 (dorm room)
+- 创意空间 (creative spaces)
+- 咖啡馆 (cafes)
+- 商店 (shops)
+- 施工现场 (job sites)
+- 车间 (workshops)
+- 露营 (camping trips)
+- 海滩 (beaches)
+- 家庭之夜 (family nights)
+- 小型聚会 (small gatherings)
+- 音乐节 (festivals)
+- 夜间街景 (night city scenes)
+- 汽车后窗 (rear window)
+- 直播布景 (livestream setups)
+- 居家办公 (home office)
+- 工作室 (studios)
+- 后院派对 (backyard parties)
+- 家庭派对 (house parties)
+- 户外聚会 (outdoor gatherings)
+- 街头表演 (street performances)
+- 公司活动 (company events)
+- 婚礼 (weddings)
+- 乔迁 (housewarmings)
+- 送礼场合 (gift occasions)

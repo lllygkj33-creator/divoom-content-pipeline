@@ -1,0 +1,88 @@
+---
+group: "结果与风险"
+english: Outcome & risk
+order: 13
+values:
+  - "视觉桌面布置 (visual desk setup)"
+  - "个性化与自我表达 (personalize)"
+  - "唱歌的乐趣 (joy)"
+  - "家庭娱乐氛围 (home entertainment)"
+  - "分享像素画作品 (share pixel art)"
+  - "更有个性化的礼物 (gift-ready)"
+  - "避免手持笨重麦克风 (heavy weight of a large microphone)"
+  - "保持桌面整洁 (keep your desk cleaner)"
+  - "避免无聊 (boredom)"
+  - "创意自我表达 (creative self-expression)"
+  - "桌面装饰 (desktop decor)"
+  - "游戏房装饰 (gaming room decoration)"
+  - "改善睡眠体验 (improve your sleep experience)"
+  - "更平静的夜间环境 (calmer nighttime environment)"
+  - "风格更突出 (style stand out)"
+  - "减轻压力 (reduce pressure)"
+  - "改善透气 (improve airflow)"
+  - "更好的背部支撑 (better back support)"
+  - "过载 (overload)"
+  - "过热 (overheating)"
+  - "过压 (overvoltage)"
+  - "电路问题 (circuit issues)"
+  - "房间装饰 (room decor)"
+  - "电竞氛围 (gaming atmosphere)"
+  - "氛围灯效 (ambient lighting)"
+  - "个性化日常携带 (personalized everyday carry)"
+  - "送礼时刻 (gift moments)"
+  - "业务推广 (promote your business)"
+  - "入睡 (fall asleep)"
+  - "提升舒适度 (improves comfort)"
+  - "不错过来电 (never miss calls)"
+  - "充满房间的音效 (room-filling sound)"
+  - "清晰人声 (clear vocals)"
+  - "深沉低音 (deep bass)"
+  - "个性化礼物 (personalized gift)"
+  - "本地保存回忆 (memories stay local)"
+  - "无订阅 (No subscription)"
+  - "拖延 (procrastination)"
+  - "隐私侵犯 (privacy invasion)"
+---
+# 结果与风险 (Outcome & risk)
+
+39 个词条。
+
+- 视觉桌面布置 (visual desk setup)
+- 个性化与自我表达 (personalize)
+- 唱歌的乐趣 (joy)
+- 家庭娱乐氛围 (home entertainment)
+- 分享像素画作品 (share pixel art)
+- 更有个性化的礼物 (gift-ready)
+- 避免手持笨重麦克风 (heavy weight of a large microphone)
+- 保持桌面整洁 (keep your desk cleaner)
+- 避免无聊 (boredom)
+- 创意自我表达 (creative self-expression)
+- 桌面装饰 (desktop decor)
+- 游戏房装饰 (gaming room decoration)
+- 改善睡眠体验 (improve your sleep experience)
+- 更平静的夜间环境 (calmer nighttime environment)
+- 风格更突出 (style stand out)
+- 减轻压力 (reduce pressure)
+- 改善透气 (improve airflow)
+- 更好的背部支撑 (better back support)
+- 过载 (overload)
+- 过热 (overheating)
+- 过压 (overvoltage)
+- 电路问题 (circuit issues)
+- 房间装饰 (room decor)
+- 电竞氛围 (gaming atmosphere)
+- 氛围灯效 (ambient lighting)
+- 个性化日常携带 (personalized everyday carry)
+- 送礼时刻 (gift moments)
+- 业务推广 (promote your business)
+- 入睡 (fall asleep)
+- 提升舒适度 (improves comfort)
+- 不错过来电 (never miss calls)
+- 充满房间的音效 (room-filling sound)
+- 清晰人声 (clear vocals)
+- 深沉低音 (deep bass)
+- 个性化礼物 (personalized gift)
+- 本地保存回忆 (memories stay local)
+- 无订阅 (No subscription)
+- 拖延 (procrastination)
+- 隐私侵犯 (privacy invasion)

@@ -1,0 +1,744 @@
+{
+  "repository": "lllygkj33-creator/divoom-content-pipeline",
+  "commit": "d3ec3ccf2cfcb65932c79b31238b00ad6c8e372f",
+  "files": [
+    {
+      "file": "references/source/audit-dimensions.md",
+      "source_path": "Divoom 内容资料库/skills/审核官/references/audit-dimensions.md",
+      "git_blob_sha": "a0a9042005938bf5b70a1e22585252908413a790",
+      "sha256": "1a368f5bb7fb31f15dfd94a6eed2fa66cfe2905766eb041bed75211842719af8"
+    },
+    {
+      "file": "references/source/产品对比/标题与大纲规范.md",
+      "source_path": "Divoom 内容资料库/产品对比/标题与大纲规范.md",
+      "git_blob_sha": "2403983f5a6762ee2839235a6b27cf8e860d6723",
+      "sha256": "e114d3f242e2173c95ae2e4141d0d04484fa7fb8a6d6b74c54f4b05f61eda5c1"
+    },
+    {
+      "file": "references/source/产品对比/正文写作规范.md",
+      "source_path": "Divoom 内容资料库/产品对比/正文写作规范.md",
+      "git_blob_sha": "75c8621d5494221407ada52e082260da09b1a1e4",
+      "sha256": "4f5a738c543c88f14ae6987d708df524db2b123c0e0e5b1985b557ca064e949d"
+    },
+    {
+      "file": "references/source/产品对比/锚文本规范.md",
+      "source_path": "Divoom 内容资料库/产品对比/锚文本规范.md",
+      "git_blob_sha": "8d129e644413c428623dc37196dc4d067ab2704b",
+      "sha256": "df210f8ea19b2ca9f4f629eb9d19f9afd6c482ccae7d950de8b06d340a4dc7ce"
+    },
+    {
+      "file": "references/source/产品植入规范.md",
+      "source_path": "Divoom 内容资料库/产品植入规范.md",
+      "git_blob_sha": "d333b674bed7a2cb18652a66d7edcf3bd863c30a",
+      "sha256": "9b24c17bd97a4099bcf1d363789a2f2b1732307d14c2ab0a2bf845b8f829f554"
+    },
+    {
+      "file": "references/source/内链索引/产品.json",
+      "source_path": "Divoom 内容资料库/内链索引/产品.json",
+      "git_blob_sha": "07b94aec54c6ca0e42322d2f938e2eca212bc5a0",
+      "sha256": "e598a64c9aa32729d68e23d8ef502dfe1d2a9b1640d06e0040d2a68c51a975bd"
+    },
+    {
+      "file": "references/source/内链索引/博客.json",
+      "source_path": "Divoom 内容资料库/内链索引/博客.json",
+      "git_blob_sha": "3c2cc694cb0ee5c2523583abebb9a34c556ddda4",
+      "sha256": "86f7b9db262c4c62a2c78b0187c663b3ec296da3a694fd210af648f002b416cb"
+    },
+    {
+      "file": "references/source/内链索引/页面.json",
+      "source_path": "Divoom 内容资料库/内链索引/页面.json",
+      "git_blob_sha": "e5a7e9d33ff7b8d2859194526034b6b221ab839e",
+      "sha256": "2e635af8b57d29e9ad273c86baeb947279c9d507d5336b1d0ca7bfa1731096d8"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divo-the-divoom-mascot-surprise-gift-35-value.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divo-the-divoom-mascot-surprise-gift-35-value.md",
+      "git_blob_sha": "bc7e4f25e500eca1f1530eca413c57ad9f2b0919",
+      "sha256": "97f10f356548bfaa787151c31b6a44ba35d32e24c373aec3b1e8a07cdb25570d"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-astrotoo-flowtoo-desk-bedside-speaker-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-astrotoo-flowtoo-desk-bedside-speaker-bundle.md",
+      "git_blob_sha": "3272a28f19e00a26aa93b8c3c2f26f543d9896ac",
+      "sha256": "463f3b24fa44fa6da2b95529a2e45853b92c3aff784bd9857efdc67c579e3e10"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-astrotoo-smart-pixel-art-desktop-speaker.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-astrotoo-smart-pixel-art-desktop-speaker.md",
+      "git_blob_sha": "b04fb0c1c54b889035c01c396a35cc443d148312",
+      "sha256": "0d18091722fa61db07916d7138133e3053b1e6688fa48719d3d79f9425a92a12"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-astrotoo-times-frame-desk-setup-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-astrotoo-times-frame-desk-setup-bundle.md",
+      "git_blob_sha": "86409d6a69400532dfc4218d24a6038b6e4ba49d",
+      "sha256": "9022ceee9260edccc41891f9ea80cad651197b30952143ead9f0c04e8e5565db"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-astrotoo-times-gate-premium-desk-setup-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-astrotoo-times-gate-premium-desk-setup-bundle.md",
+      "git_blob_sha": "05fbb23a01026fee6eb43286ec34cf77258940c3",
+      "sha256": "2bd748bcd9506cccee51f95bd23993006e7033eab82e1e1b70c566c3b77777ef"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-backpack-s.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-backpack-s.md",
+      "git_blob_sha": "9a39ce718b051a9fae8d2952c11a1ae58034dd1e",
+      "sha256": "4b9f7bc5ae431380a042ae41ce647de0ed2a089ba22af55ef54f865c00f83547"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-backpack.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-backpack.md",
+      "git_blob_sha": "c3c02fb10856e36569c23db00279cf909158fe95",
+      "sha256": "ec5577c9b3f34e92dc460ec1df7d066a86a99ee0a025cc9fc53b6b65bded7c8b"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-cyberbag-pixel-art-led-backpack.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-cyberbag-pixel-art-led-backpack.md",
+      "git_blob_sha": "44b1f06b2e295b9acd3c07e4c0f50e8f402845f4",
+      "sha256": "4b8ce3a9fedeeb50d349a29fff4d0c1fc86ef90349902ff408a211a6b56f0774"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-dipow-35w.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-dipow-35w.md",
+      "git_blob_sha": "fb34b492551c6d2557809a4ac97b23d1b4c8e3a9",
+      "sha256": "99dc73f3a42d198b3db758a180a697772119af33cdf2b6454f1d3f8cbe6b2a59"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-dipow-65w-multi-socket-fast-charger.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-dipow-65w-multi-socket-fast-charger.md",
+      "git_blob_sha": "edf99213ac215c3a8e2b51ba06a854a24c55e004",
+      "sha256": "32980036b91eb8b6c56345d64d3fbc798d512db7155acdb6cb102c6548ef7514"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-ditoo-5-mic-bluetooth-speaker.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-ditoo-5-mic-bluetooth-speaker.md",
+      "git_blob_sha": "c84ec24269697fb4a7e6edb627669e7b6c1a6f3a",
+      "sha256": "a3dda1e8aa7701ef922e2670319b89933c721f4b84bee3d9fe88a6b1f805f976"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-ditoo-mic-microphone-speaker.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-ditoo-mic-microphone-speaker.md",
+      "git_blob_sha": "7e50ba315133ee166eedb698f13dfa78e5f5f952",
+      "sha256": "f4777438e10f5feef0539b16db22d473433af02eb02d78d8f5966c6b10169f68"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-ditoo-plus-pixoo-m-backpack.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-ditoo-plus-pixoo-m-backpack.md",
+      "git_blob_sha": "e84c5f9d47645e897c02b8f566e46171491f26a9",
+      "sha256": "c39d575bbf82a8b7707b69ec9da8d183064f41b9c1f56c3ebe473f67df9ff221"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-ditoo-sling-bag.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-ditoo-sling-bag.md",
+      "git_blob_sha": "a26ea05cb6cbd19498a99d99be682ec75ea734f6",
+      "sha256": "dcad97adf11a7543373d0c8dfb5b3f2057ad05eb15b071a595ec88bd2f505e54"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-emodo-pixel-art-display-badge.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-emodo-pixel-art-display-badge.md",
+      "git_blob_sha": "161d9b215f1a2f3d51589855e0c01a84c0c32a70",
+      "sha256": "255abc6cc84f456c1439c93018f6dcdce2436e74306e0943878e9b740af4e3d3"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-emodo-pixel-badge-flowtoo-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-emodo-pixel-badge-flowtoo-bundle.md",
+      "git_blob_sha": "d39d0fcb27d5c1c357e56e4808ba4224f90b8e93",
+      "sha256": "968d08fa58b7dfbb0706513ef9f88ee4a063a561c620e1eee82bbb53650e8a9a"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-emodo-pixel-badge-times-frame-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-emodo-pixel-badge-times-frame-bundle.md",
+      "git_blob_sha": "bb1ea92580c0869ac2662edf07b3ca17488e19ab",
+      "sha256": "b2e943aa5bec682b293dedcb6fa2e9e14d2e70a8ce561375320c6755e26e1a3c"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-emodo-pixel-badge-times-gate-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-emodo-pixel-badge-times-gate-bundle.md",
+      "git_blob_sha": "8db2ce6c05386eae024d647f86cb9d6ed71b293e",
+      "sha256": "f8b89e9771d3de9ddf7a1409abe14c0e1f3cb50240b18227b641b8dac4be01e6"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-fairy-ok-microphone-speaker-pixoo-m-backpack.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-fairy-ok-microphone-speaker-pixoo-m-backpack.md",
+      "git_blob_sha": "73b2bc2f9b03c3e70242c76986590867121d5c69",
+      "sha256": "fc832c7d982bcff512e34c770b25b4f3d8e48c4c1aec72d246bf7d6392eb59e7"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-fairy-ok.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-fairy-ok.md",
+      "git_blob_sha": "57f6a4d22cd8361b3375f8897347ebb23269dbcc",
+      "sha256": "62438521b582c7b921036ed1c7b0ffce6227a88f4e3b5658b011e431529a4814"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-flowtoo-premium-bedside-speaker-smart-sleep-clock.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-flowtoo-premium-bedside-speaker-smart-sleep-clock.md",
+      "git_blob_sha": "d307d48ca33a799133aadcf882f92798ea013c15",
+      "sha256": "30f723946450c84a3417fec247dd03d1fdb706e4bb947fea9e4392ac350f1c0e"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-itour-s-portable-bluetooth-speaker.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-itour-s-portable-bluetooth-speaker.md",
+      "git_blob_sha": "50e0e0810c1985446560d258aff7d3ca1b49a120",
+      "sha256": "fe2a3f9cd24aa36a0b373f11d9a725559db1fee8a8603d4098d2f73e419ef564"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-lovelock-bluetooth-speaker.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-lovelock-bluetooth-speaker.md",
+      "git_blob_sha": "86b9bf63085a3d2f7156752242b15523f7fc55ae",
+      "sha256": "64ff79047e276688765527e97451510f1e58a51d9495ef2d8dc6fdab1778dff9"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-minitoo-ditoo-pro-summer-pixel-art-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-minitoo-ditoo-pro-summer-pixel-art-bundle.md",
+      "git_blob_sha": "c14bcf73efb361b6bb930d42cf8185032544eb28",
+      "sha256": "44a3691a770e863da5cabdcac39d88cf72697617626a203bd548ad380812897b"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-pixoo-64ⅱ-ditoo-pro-summer-pixel-art-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-pixoo-64ⅱ-ditoo-pro-summer-pixel-art-bundle.md",
+      "git_blob_sha": "6cb441a40407da1055a6e3f405746fdb642f95ed",
+      "sha256": "ef6d9f418cf958ad469cfab84182ec7c1672c0d875c333e0d316d75e4bc6c561"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-pixoo-max.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-pixoo-max.md",
+      "git_blob_sha": "64e21c55a0d7dbbbc66211e5ffcad4d015f58174",
+      "sha256": "b2e311fd20e54e06309f8696f2be174abba9557d5f8a27bbeb598e6adb206a66"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-pixoo-pixoo-max-timebox-evo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-pixoo-pixoo-max-timebox-evo.md",
+      "git_blob_sha": "0c79774859280f3f8221da3d9e42645e3cb992ff",
+      "sha256": "5ab5e8c511ccd448944bd3a68382b19feeab824c1af429e56205cabb32492458"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-pixoo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-pixoo.md",
+      "git_blob_sha": "9ab6b66cc6410fc9a49382ff5b61bf510718ba2b",
+      "sha256": "e687c4dc91c42b205613db55c1027baac48787d621567d9a485cebee0413ef52"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-pixoo64-pixoo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-pixoo64-pixoo.md",
+      "git_blob_sha": "460d5d0be312a1002e368cc88c78e2c44073636e",
+      "sha256": "b0086d9405d4722fee2cd098336c6f7e1af9d8d79af2927df0fa3852a50c713e"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-pixoo64-sling-bag.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-pixoo64-sling-bag.md",
+      "git_blob_sha": "60c4b2b2b834f256d38eef32d9370523b69a38eb",
+      "sha256": "0fc30c97af98dd06e163a3604754e644fbe01d4a4d625906b5fa910dff9aa061"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-pro.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-pro.md",
+      "git_blob_sha": "bffe0ca39cee0c9cf6e56afb8ea37cb354184a2e",
+      "sha256": "bf7c8c01edd6859c90751f77846fa2b08f8d8297ff937d8489ef2e65f347213e"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-slingbag-v.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-slingbag-v.md",
+      "git_blob_sha": "dada82966da297768003605d504858f6ed50c88b",
+      "sha256": "04c88c02ba8f467ded84260a6858201557bcab2b2cf480c2bee037ed0850d201"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-songbird-hq-se-portable-bluetooth-speaker.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-songbird-hq-se-portable-bluetooth-speaker.md",
+      "git_blob_sha": "4e39b4725ad511db88c7bf93279fe6de4662d645",
+      "sha256": "d9a3f00fec22269445ac075d863377292d9fe51275203a148271b64e2d724d26"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-songbird-ultra.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-songbird-ultra.md",
+      "git_blob_sha": "eb8f3e4dbee1bff826ab528bc405f1b02ffba880",
+      "sha256": "2b62a344b71d6163868f801d1b92d3a59251fd0ceda7e96a536ecb31cf8c6e77"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-songbird.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-songbird.md",
+      "git_blob_sha": "dc6e233db37008392c381283f559c55eb8c3b669",
+      "sha256": "da8491cb03ba3312f34a6675ac542964c19fca8fde6fe0a5d74eb55673861992"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-spark-pop-bluetooth-speaker-portable-small-speaker.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-spark-pop-bluetooth-speaker-portable-small-speaker.md",
+      "git_blob_sha": "d97c04f0d5eabd26287a8b311ab8b8bd17f6a492",
+      "sha256": "3e9e2a9c28f7444123c274818878e4770e6ded0a234a51d6c4822a3a12fc8244"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-spark-pro-bluetooth-portable-speaker-karaoke-speaker.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-spark-pro-bluetooth-portable-speaker-karaoke-speaker.md",
+      "git_blob_sha": "7824d00761f4227577fbcf8ba3d70d7198145d77",
+      "sha256": "eb6610ba199dcb28dd14ec0d69a54b59edd6d4eae408e0cf3e437de129c01aed"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-tiivoo-2-flowtoo-summer-audio-display-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-tiivoo-2-flowtoo-summer-audio-display-bundle.md",
+      "git_blob_sha": "4cbeafc7c7182fe86124dc11863ac17809235c25",
+      "sha256": "d57b60102525b6be01bf044808eea02341380782292fa89f92cb1fe5cf0ee227"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-tiivoo-2-photo-album-lyrics-speaker.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-tiivoo-2-photo-album-lyrics-speaker.md",
+      "git_blob_sha": "9dbe9e47ee7f2e091d433fbb74730ed5b19b6a8e",
+      "sha256": "144e12ad78a5b048dd0bc8b8c1923f2f654342eec672b98f8cb4148ac2551db4"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-timebox-evo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-timebox-evo.md",
+      "git_blob_sha": "fd9531d987df2def12be1ce0bfdbf4ed7ae5f7b3",
+      "sha256": "21099e3cdf41825078ef727366b4a6e8135dc5bf86409ac682043e29659b330b"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-times-frame-flowtoo-summer-bedside-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-times-frame-flowtoo-summer-bedside-bundle.md",
+      "git_blob_sha": "18e1dcba2b4094755369bb2e0f27e1c7e092f83e",
+      "sha256": "e6eb982b60c1f046dd440831d171b49c04e57eb6355297e561c92e033acaa5cd"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-times-frame-minitoo-summer-pixel-display-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-times-frame-minitoo-summer-pixel-display-bundle.md",
+      "git_blob_sha": "60c43fd9a08cb94241a6653594fbaa3c5a04b6b3",
+      "sha256": "989ecf5928301e17a237434231ae7e26e076b8dbd0b242df86e1bf6506fe2a20"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-times-frame-times-gate-summer-smart-display-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-times-frame-times-gate-summer-smart-display-bundle.md",
+      "git_blob_sha": "e984c48f90538370f93c634c88d15550021454f8",
+      "sha256": "6cfd003fc21fb6dc68fecbc61880651dc1807dda28bfe0c355203001026a577c"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-times-gate-ditoo-pro.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-times-gate-ditoo-pro.md",
+      "git_blob_sha": "22d98dff451557fa4568e7643d04dd52ae281cff",
+      "sha256": "ed050807adf3a6d8cda65d4b5722afbbf29ee8177be80b95aebc7af46dc414de"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-times-gate-pixoo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-times-gate-pixoo.md",
+      "git_blob_sha": "a705c834961badce77b69d8351e1b0c83f95299b",
+      "sha256": "d9f8cced038ab45a0fbc76c0860e1716fee997dfca79c918d2403f307a55ac14"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-times-gate-pixoo64.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-times-gate-pixoo64.md",
+      "git_blob_sha": "de9e24031bd06be3c20ff3ea4581fb259d805bd1",
+      "sha256": "2e1cfada792d54eaefd10d226fdd8c4a033e0a8b3c2af8b04f32c6c9f3c10efc"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-times-gate-tiivoo-2-summer-desk-setup-bundle.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-times-gate-tiivoo-2-summer-desk-setup-bundle.md",
+      "git_blob_sha": "14aa490c13a6dcd4ae3ae41c8d3b7767e7ca9f5d",
+      "sha256": "754d7f1f7ceee56b36396c0b7e790a69ec0ea38f74bb081512275da95b3b40d2"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-times-gate-timebox-evo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-times-gate-timebox-evo.md",
+      "git_blob_sha": "e054ee1ef0832498017350fa8e51525da0cadfc2",
+      "sha256": "54d75f45023ab179f709564c56599f6e4db74c28f693fedfaeb37a47ac1a9c49"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/divoom-usb-type-c-charging-power-cord.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/divoom-usb-type-c-charging-power-cord.md",
+      "git_blob_sha": "996d67a6a1d50053f3f10f12953733269abe5a85",
+      "sha256": "37be5a11bc5ae393dfac011428d8767841d47851de3f2dafa8c8ee672d252a87"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/k-starspark.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/k-starspark.md",
+      "git_blob_sha": "165389b1400b1238c9ead4081f3e4832e7c9a372",
+      "sha256": "5bd340199d0022f16b8d6b490835eb1c34f2b2e4d98a752b89ebd9aac9cdbfe9"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/minitoo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/minitoo.md",
+      "git_blob_sha": "b7f2936fe0eabe5bc56cb1d66637aaad22232d49",
+      "sha256": "e0f5c0039e12f972b7eaf20977c71bde94f640ad4d85027b1503556474941cb1"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/pixoo-64-ditoo-plus.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/pixoo-64-ditoo-plus.md",
+      "git_blob_sha": "6da9ebedbc70560ab58785fae2d6a76ebd8a2249",
+      "sha256": "8394f61602aa0517200da57eb98f8f9921c4b4aae3e7b235b49847a16e66ef89"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/pixoo-64.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/pixoo-64.md",
+      "git_blob_sha": "01ec0cf0a068e20a19a4e25ca89f96aee84fa95a",
+      "sha256": "78affc9ef307dad77143061a713f871138fabf0077ce0cb94a22bd5ca61964d1"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/pixoo-pixoomax-pixoo64.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/pixoo-pixoomax-pixoo64.md",
+      "git_blob_sha": "9cd0ab3d44999bf9626eef4cce0e25ef82a5ba86",
+      "sha256": "311053fbe6f5b55794effd9976de98ee30bc625b9aef47467e8f47e830689ae1"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/pixoo-slingbag.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/pixoo-slingbag.md",
+      "git_blob_sha": "370c509851223bfb680724d9945a6fbcd167ff4d",
+      "sha256": "0494c2f3872526b423d18d7a2e7d69694030156d45f9f14f1d76f130bddf0b62"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/pixoo16.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/pixoo16.md",
+      "git_blob_sha": "1cb81aa0dda598355a6b07616aa582f47e962ac0",
+      "sha256": "ae7fc93b2e13cf6eb30c8aa81ffa39db8e3427b1624768e825d12ed60f9674fd"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/price-spread.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/price-spread.md",
+      "git_blob_sha": "18d1e76236f20a6a87809d784a533c08568ac733",
+      "sha256": "04524c1cb662d82ea652f5b1f3d77128ed04b38451bc0b7dd19bf72a2faae954"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/time-gate.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/time-gate.md",
+      "git_blob_sha": "1f6308b063a57d39a07ae73cb371f53627956855",
+      "sha256": "9f31210d70002099a2ad2812e3db212c8e8022b1c39762efc3c115b3ca7ff5d8"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/times-frame-pure.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/times-frame-pure.md",
+      "git_blob_sha": "4e0067558991be7140d50c9d64728dfd7700a2e5",
+      "sha256": "e5a6d85f842707cdab6018e8c64f469e4015b71f32ff6cc964157465290ec29e"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/times-frame.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/times-frame.md",
+      "git_blob_sha": "8f31b41b686e7f5ee0bd9995e633ac5bd33e2fd7",
+      "sha256": "13d9d62b4c57f078315026c036b1377c5b26d617690406f39f8ff7b401087036"
+    },
+    {
+      "file": "references/source/品牌资料库/产品/worry-free-purchase.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/产品/worry-free-purchase.md",
+      "git_blob_sha": "c68c843e51e57907ea3d37163e85bcec2503ef81",
+      "sha256": "8d74c27948f373a20e68a52290ac25cf23993f70b4d50dabb55745dc788f90e8"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/astrotoo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/astrotoo.md",
+      "git_blob_sha": "ce87f47c1baf5cf84e13af15637f3b88c5c7e8b0",
+      "sha256": "e1a47b0d15ad279968d7667de1e4c3d4da79bbcd1f507319a1469f3c8c3b09af"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/cyberbag.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/cyberbag.md",
+      "git_blob_sha": "7705ff988816158bc6dff6f468971173a808eb17",
+      "sha256": "3ef4452795b07c837ea918512e4ada612d4d1bde5c2e5d4f2b3b10e6db8102b0"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/dipow-35.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/dipow-35.md",
+      "git_blob_sha": "9819ba90d497146494509a95d7a61120593ee06b",
+      "sha256": "8a81dbc43febfb6cff16d02dcf65905457dd6a5f4db8fdf749d04e0fbeb033fb"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/dipow-65.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/dipow-65.md",
+      "git_blob_sha": "aad8b3459b5571012f56e7bd3f7db8aa85a84811",
+      "sha256": "5f1c2821516841c00d31fb6ed90a77a73fa9044f4e02cee0e368b2c2cf82144b"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/ditoo-5m.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/ditoo-5m.md",
+      "git_blob_sha": "23d7a864e3ddcc8287a37a19f2e2e9af336b91f9",
+      "sha256": "92cad920428e4be9301aee43462e5e4f1e37ec5d1639fdb27b58537194a0438e"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/ditoomic.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/ditoomic.md",
+      "git_blob_sha": "12e0d7e5b0f29106cac114a7d2b4a0b627a276fa",
+      "sha256": "3233c9336dda8faa36ae9d771d5195d39448a945e18d827962392edaf05a3380"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/ditoopro.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/ditoopro.md",
+      "git_blob_sha": "d00574401fe1d9dd8064b73421cc1b59e51c50bf",
+      "sha256": "c4d852f1c2500115da08b8ea007688ab4fe3bbaeec79778e54d3f885fcb74805"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/emodo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/emodo.md",
+      "git_blob_sha": "00c155e5e9c279e2bdd33b788a8ce6ea497b9b72",
+      "sha256": "a1661fdfed3351a996474cea84eff32fe2aaf91ccd3afe828385c9c6daed0a8c"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/fairy.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/fairy.md",
+      "git_blob_sha": "c64d6a8ae7155932d1064eff08a8386f4a0bea73",
+      "sha256": "5103984a3f3ffcf278b1424fbd65ed5c1e20beb91059c0c0865aced981e0fa96"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/itour-s.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/itour-s.md",
+      "git_blob_sha": "16ec1ca8d784ca060e0257f46a61b43f8ffa6ca8",
+      "sha256": "19bf398f2497f52f737a392cd9c165c75af0340ff09bf7cf9ebe96921fa6a391"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/lovelock.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/lovelock.md",
+      "git_blob_sha": "701edade845e8966d3b0a22918abc046e317a455",
+      "sha256": "3660b8e9527fbfce42e34f7759274f664ced8c186c8a875854eaa0b973c03746"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/pixoo-16.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/pixoo-16.md",
+      "git_blob_sha": "e0f53016eee3ccd60dcf613ae6e249d9e9dd08ea",
+      "sha256": "e95ec5d3fc47e868697a2a3132ff79ad62dfbb40dd8ac7be139ee250d38557dc"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/pixoo-64.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/pixoo-64.md",
+      "git_blob_sha": "7b51170fdd03879ae68ec4ed8533b88c8e7b0380",
+      "sha256": "24405bb524acbfd6095026ac668bd017052f476a28582738bf3714cdc06f42ba"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/pixoo-max.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/pixoo-max.md",
+      "git_blob_sha": "57270d318443a57b993c23cbb46fbaaa61cb7d81",
+      "sha256": "0ad744684d16fffc777c2484f75974dd587b9efa90cd5dc7b251f6fe11cd5efa"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/pixoo-sling-bag.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/pixoo-sling-bag.md",
+      "git_blob_sha": "528edf45d27e97a844912dc15fb167ce034789aa",
+      "sha256": "96ae2823b019d9b3258f15e16c12fd6fe27c9084376131cc4e6eaf02c2e842e2"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/pixoo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/pixoo.md",
+      "git_blob_sha": "564420e3cb608bfd766310d21c85e01d15f91c14",
+      "sha256": "199bdd36360fc33c9027e7445b0c8314eb28db4d62db0fcc63751abc41c835aa"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/songbird-hq.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/songbird-hq.md",
+      "git_blob_sha": "855b607e42104808bb31ef1d44d826521ad74575",
+      "sha256": "a19b397426da810876a77194db50f313ed3987de1a63c35dc8316c0e1250d87f"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/songbird-ultra.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/songbird-ultra.md",
+      "git_blob_sha": "8edb354ed6f821b7ff3a719b358bfc653564e113",
+      "sha256": "e6af7d74be2019f04a6a6530ff0030647eb4e0589d306533ef17e91a99277110"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/spark-pop.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/spark-pop.md",
+      "git_blob_sha": "a23903f67f483638a0ab2fedf0d65bad3fefe8cd",
+      "sha256": "a935cea32af639761e869892f8d23ea413d59adbf2d38afd53064770611e730a"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/spark-pro.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/spark-pro.md",
+      "git_blob_sha": "453e7e4591371b2a90eb9a8fa0b6b0f3efff3d09",
+      "sha256": "03225b987bb5b316a15e3012bc8b21f1ccf9c5f5d4cf1726ea56df81de83154e"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/starspark.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/starspark.md",
+      "git_blob_sha": "961a0cc7bd4b0aa47ec799e9ce5430af62998b50",
+      "sha256": "720241e427908831551ec829df8bf31c76bdb7999a9dea3b37b3bd8ea1adbb15"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/tiivoo-2.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/tiivoo-2.md",
+      "git_blob_sha": "9fee7571aa94b2995418474f738950c3893eb691",
+      "sha256": "3250c4f717956380211a6f1c538043c0c9eb7163d5d484c70427010077ea5ed7"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/timebox-evo.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/timebox-evo.md",
+      "git_blob_sha": "c6f3564d2b65f71ff4765651a530a52322e1673b",
+      "sha256": "b55c432485868a7a0b8c35a5f4823a843b2e32f08d465143a8d3e70f7f81509b"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/times-frame.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/times-frame.md",
+      "git_blob_sha": "b8cf32ba9661263d0d485a0d4957066024da779a",
+      "sha256": "ef94f27fff65cdf7e3f324348bd5ea8aa601e7699600e83aef89f39fcab16761"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/timesframe-pure.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/timesframe-pure.md",
+      "git_blob_sha": "6ba958f9a79ec7ae9bbae532502462abfbead817",
+      "sha256": "c41976cc1cd6a9748a990dfda3825f0a518934f35527c2977124ff755e057753"
+    },
+    {
+      "file": "references/source/品牌资料库/手册/timesgate-ii.md",
+      "source_path": "Divoom 内容资料库/品牌资料库/手册/timesgate-ii.md",
+      "git_blob_sha": "6ebe40ee341ee9633184d735a2590667fe5cda5a",
+      "sha256": "b52e9a4eab5c34506e229d05dce0460461da2596f4ae285c937ce94549d888fa"
+    },
+    {
+      "file": "references/source/实体库/变量组-alternative.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-alternative.md",
+      "git_blob_sha": "d8a013a35c57c4828949d380fd0a83762eb2c8e9",
+      "sha256": "50f3c09062c896c3f7fbee3fa7b06d4610be41462050b3f7ba2c8d655b4c0bb3"
+    },
+    {
+      "file": "references/source/实体库/变量组-category.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-category.md",
+      "git_blob_sha": "d657e6bea64474572ddaac133d9e5b6691b58604",
+      "sha256": "8a885c54ab5c1093e59919ca82a6cb6289bb6a41958c8c0a15a5574cc70173c6"
+    },
+    {
+      "file": "references/source/实体库/变量组-component.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-component.md",
+      "git_blob_sha": "cc54213666feb6d55b8695c237cf3dc6811f051c",
+      "sha256": "5927bd16a741c1f387a492cc3967948b3f3bd66a070c27e0f5bd0501d8b16475"
+    },
+    {
+      "file": "references/source/实体库/变量组-condition.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-condition.md",
+      "git_blob_sha": "41e0b610374b1f31003d7a935b77534665f2558b",
+      "sha256": "24dbd1b7589c7d1f23d5a10d64ec0307643ad9a11395c12195c667f02eebf09d"
+    },
+    {
+      "file": "references/source/实体库/变量组-feature.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-feature.md",
+      "git_blob_sha": "ddd76a012ef73aa6272f2aaca542967c79fa7a1d",
+      "sha256": "ad6c3b72894c9e9f88d259bd6dd28c5d288099f3dbb53ac57a500e5f0bb0cca6"
+    },
+    {
+      "file": "references/source/实体库/变量组-interface.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-interface.md",
+      "git_blob_sha": "edb18c53cc2460160e51328e9b59d4a977e7bff8",
+      "sha256": "6cae3e8db2004f72b8b5e01877fc799ff65f2ad083a3f80c03846ca1e1b351d0"
+    },
+    {
+      "file": "references/source/实体库/变量组-metric.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-metric.md",
+      "git_blob_sha": "0d46038d01c546bb82c22c4be48bdf622bf52bc0",
+      "sha256": "117ecc6d19e4f1b6b072c53763c547b9e0174b5566778734bc0b9b9a770aa491"
+    },
+    {
+      "file": "references/source/实体库/变量组-model.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-model.md",
+      "git_blob_sha": "4b1e983874a86572cd7b1dc412435861150bad25",
+      "sha256": "0ced8122b793ea68fab4dcd507c69de721f912ec03f3d968addc40692be70324"
+    },
+    {
+      "file": "references/source/实体库/变量组-outcome.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-outcome.md",
+      "git_blob_sha": "2c658dbb4ad9c9bb834dddcd29b3a860f8ddd117",
+      "sha256": "ae5707518d6006b30289d346c4c66c032ada78df3524eedc260500cdf39c1b8b"
+    },
+    {
+      "file": "references/source/实体库/变量组-scene.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-scene.md",
+      "git_blob_sha": "6c0421f5b215ed6e23093109a824f4f17778c6c5",
+      "sha256": "e302d56d88ec00a841e3ae004a8ef8d1bad89f8723c8594c5988fbd4ebf0ee06"
+    },
+    {
+      "file": "references/source/实体库/变量组-stage.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-stage.md",
+      "git_blob_sha": "1f468a9b4c8cef9928690f7493763ea863645cc9",
+      "sha256": "b968e739073ad0302f5a3d93f76424390a423b18ad1bf1044d003015349f6dd5"
+    },
+    {
+      "file": "references/source/实体库/变量组-state.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-state.md",
+      "git_blob_sha": "74c7d622b69a2b2d6f4eea48ddc78df79709056e",
+      "sha256": "e4c8042820f9176cbe3e8d22c0830c55f7d2870f54f6e845db60bf35ed71ff81"
+    },
+    {
+      "file": "references/source/实体库/变量组-task.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-task.md",
+      "git_blob_sha": "04a1fe20cdd89fbd11bef61be928dd2b7786422b",
+      "sha256": "dd248d96941c6e837dba2c80b3fec6843fecbff9122f521cb576cb0f08c3805f"
+    },
+    {
+      "file": "references/source/实体库/变量组-user.md",
+      "source_path": "Divoom 内容资料库/实体库/变量组-user.md",
+      "git_blob_sha": "c206091bf3c026bbc65491ee14c18bad6735e7ba",
+      "sha256": "ce558c72aac166531106af0942fb9ac751cf6b31ab7f77379c8d84a422dbd022"
+    },
+    {
+      "file": "references/source/实体库/实体变量库.csv",
+      "source_path": "Divoom 内容资料库/实体库/实体变量库.csv",
+      "git_blob_sha": "02f36fdec22456384502e83472815ea8c3a47e0e",
+      "sha256": "9a603eef5794fa8d3f5eb6e41d22974ece6d80b15b090591bccac580cbda7fa9"
+    },
+    {
+      "file": "references/source/帮助与提示/标题与大纲规范.md",
+      "source_path": "Divoom 内容资料库/帮助与提示/标题与大纲规范.md",
+      "git_blob_sha": "ad5f79fda69694381fd38e7770abce4aff2fceef",
+      "sha256": "f30533f906ed13fc135f44f9ff80ae212dc6f1715383c3ca31879175fa71a139"
+    },
+    {
+      "file": "references/source/帮助与提示/正文写作规范.md",
+      "source_path": "Divoom 内容资料库/帮助与提示/正文写作规范.md",
+      "git_blob_sha": "2b6c1f9a81f7548b8cc981061dec16dd894985f7",
+      "sha256": "e7a2684df23485aa91d2948be3cdf86ed17f85c90ad4981e49f860611736a18b"
+    },
+    {
+      "file": "references/source/帮助与提示/锚文本规范.md",
+      "source_path": "Divoom 内容资料库/帮助与提示/锚文本规范.md",
+      "git_blob_sha": "08001b8bf7d0e2d1f896cfbe6c34081c6cc73909",
+      "sha256": "b848c0cfef5b3f60713f97104072119b59e27cd9c91f6a750234f4792ae3cd2a"
+    },
+    {
+      "file": "references/source/科技与信息/标题与大纲规范.md",
+      "source_path": "Divoom 内容资料库/科技与信息/标题与大纲规范.md",
+      "git_blob_sha": "cc3fc7a37d6be46793b4cb8ed2c9151f13841ce2",
+      "sha256": "d8779a4439d2692754b95cb0a379955a241d02c11bd6fb1b1c753bf4ea14a32a"
+    },
+    {
+      "file": "references/source/科技与信息/正文写作规范.md",
+      "source_path": "Divoom 内容资料库/科技与信息/正文写作规范.md",
+      "git_blob_sha": "396fd2d5275d4a47901eded909a6a7852520aa08",
+      "sha256": "24e609a7d7b9112b6632485381dc9b26957ce40b953384f64f4117b12830c5e8"
+    },
+    {
+      "file": "references/source/科技与信息/锚文本规范.md",
+      "source_path": "Divoom 内容资料库/科技与信息/锚文本规范.md",
+      "git_blob_sha": "38fc6ea43e82749fec3ccf1df64156c8fe2fa6b4",
+      "sha256": "a15c81d8ecb76be8cc44d0d672389b8b0d4b7cffca62743f46d06db12eae7472"
+    },
+    {
+      "file": "references/source/设置与使用/标题与大纲规范.md",
+      "source_path": "Divoom 内容资料库/设置与使用/标题与大纲规范.md",
+      "git_blob_sha": "98f397821b13d416a892b803f5f922ddf53444bf",
+      "sha256": "562e7086b588e439a0f89105a67cdab14b4e4546cdfdde0317fc132c80926d34"
+    },
+    {
+      "file": "references/source/设置与使用/正文写作规范.md",
+      "source_path": "Divoom 内容资料库/设置与使用/正文写作规范.md",
+      "git_blob_sha": "4209638d9ec69698bfab23fb4fba5e4b13b01471",
+      "sha256": "a7b91dfd4480e0eaa1f4372252b62765e60c5b734dd90849e8b64e0e379d4f5a"
+    },
+    {
+      "file": "references/source/设置与使用/锚文本规范.md",
+      "source_path": "Divoom 内容资料库/设置与使用/锚文本规范.md",
+      "git_blob_sha": "2b3f074ca63e3f3cfa86d195ac8bf7524c12c7f9",
+      "sha256": "ae9bbdd6802237c15e731819aaac62335a7f78eab25bf8b3cd4cc36a47ca68de"
+    },
+    {
+      "file": "references/source/购买指南/标题与大纲规范.md",
+      "source_path": "Divoom 内容资料库/购买指南/标题与大纲规范.md",
+      "git_blob_sha": "8c4eb00499775ba4cb1df09c855b031cdb0f7a88",
+      "sha256": "f1cd81acda6e3971987a0ecc99ca85a00a47a0cd728f6eb9db839e618f1b6c55"
+    },
+    {
+      "file": "references/source/购买指南/正文写作规范.md",
+      "source_path": "Divoom 内容资料库/购买指南/正文写作规范.md",
+      "git_blob_sha": "71e2c087f87a1dce38f5fe2a0b045cb9914228d6",
+      "sha256": "e6a6bb9eec4abb2580e914901480baef663ac420eb05a1f7615a2fc409cbcb24"
+    },
+    {
+      "file": "references/source/购买指南/锚文本规范.md",
+      "source_path": "Divoom 内容资料库/购买指南/锚文本规范.md",
+      "git_blob_sha": "e8bcdc9f89732e7d787fcc65f841a6a76646c0c5",
+      "sha256": "fdf479d237bb3d3db45ee81991d97138a436f2024c9cd987c944ec9292e78ee8"
+    },
+    {
+      "file": "references/source/锚文本总规范.md",
+      "source_path": "Divoom 内容资料库/锚文本总规范.md",
+      "git_blob_sha": "3f90c2b6878548c143384e6347640b71e5c72e8f",
+      "sha256": "c877daa76448ebc719a9e91923b7882b0774b6b25d02ac227a5e2cba4cec946b"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:divoom:article-run:v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "input", "created_at", "content_revisions", "stages"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "input": {"type": "object", "required": ["title"], "additionalProperties": false, "properties": {"title": {"type": "string", "minLength": 1}}},
+    "created_at": {"type": "string", "format": "date-time"},
+    "content_revisions": {"type": "integer", "minimum": 0, "maximum": 1},
+    "last_draft_digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "stages": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "outline": {"$ref": "#/$defs/seal"},
+        "draft": {"$ref": "#/$defs/seal"},
+        "links": {"$ref": "#/$defs/seal"},
+        "review": {"$ref": "#/$defs/seal"}
+      }
+    }
+  },
+  "$defs": {"seal": {"type": "object", "additionalProperties": false, "required": ["digest", "sealed_at"], "properties": {"digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "sealed_at": {"type": "string", "format": "date-time"}}}}
+}

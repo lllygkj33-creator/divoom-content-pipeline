@@ -1,0 +1,4 @@
+interface:
+  display_name: "Divoom 大纲规划"
+  short_description: "Plan typed outlines with traceable claim evidence"
+  default_prompt: "Use $divoom-outline for this Divoom article request."

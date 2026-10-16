@@ -1,0 +1,26 @@
+{
+  "brand": "Divoom",
+  "domain": "divoom.com",
+  "first_party_suffixes": ["divoom.com"],
+  "author": "Divoom Professional Team",
+  "language": "en",
+  "blogs": {
+    "technology": "Technology Hub",
+    "buying-guide": "Recommend & Comparison",
+    "comparison": "Recommend & Comparison",
+    "setup": "Support & Tips",
+    "support": "Support & Tips"
+  },
+  "categories": [
+    {"tag": "Pixel Art Speakers", "terms": ["pixel art speaker", "pixel speaker", "retro pixel speaker"], "url": "https://divoom.com/collections/smart-pixel-speaker"},
+    {"tag": "Smart Pixel Displays", "terms": ["pixel display", "pixel art display", "smart display"], "url": "https://divoom.com/collections/pixel-display"},
+    {"tag": "Bluetooth Speakers", "terms": ["bluetooth speaker", "portable speaker"], "url": "https://divoom.com/collections/bluetooth-speakers"},
+    {"tag": "Karaoke Speakers", "terms": ["karaoke speaker", "microphone speaker"], "url": "https://divoom.com/collections/karaoke"},
+    {"tag": "Digital Photo Frames", "terms": ["digital photo frame", "photo frame"], "url": "https://divoom.com/collections/digital-photo-frames-1"},
+    {"tag": "Pixel Backpacks", "terms": ["pixel backpack", "led backpack"], "url": "https://divoom.com/collections/pixel-backpack"},
+    {"tag": "Chargers", "terms": ["charger", "usb charger"], "url": "https://divoom.com/collections/charger"}
+  ],
+  "word_count": {"min": 1200, "max": 2200},
+  "max_content_revisions": 1,
+  "publication_owner": "existing publisher application; not this package"
+}
