@@ -25,10 +25,28 @@ def article():
     return {'blog title':'Why Pixel Art Displays Look Different at a Distance', 'url':'pixel-art-displays-at-a-distance', 'meta title':'Pixel Art Displays at a Distance', 'meta description':'Understand distance and visible pixels.', 'summary':'A practical explanation of distance and visible pixels.', 'author':'Divoom Professional Team', 'blog':'Technology Hub', 'tags':['Smart Pixel Displays'], 'html代码':body()}
 
 
-def populate(run, p):
+def add_editorial_plan(outline):
+    case = next(x for x in w.load(BASE / 'references/technology-cases.json')['cases'] if x['fx'] == outline['fx'])
+    outline.update(editorial_protocol_version=2,
+                   sample_review={'fx':outline['fx'], 'url':case['registered_url'], 'status':'snapshot_only',
+                                  'checked_at':None, 'visual_inspection':'none', 'reason':'Contract fixture, not an actual source audit.',
+                                  'adopt':['Fixture structural observation.'], 'avoid':['Do not copy product facts.']},
+                   scenario_plan={'needed':False,'reason':'Fixture exercises contracts, not scenario quality.','cases':[]},
+                   faq_decision={'include':False,'reason':'Fixture has no unresolved additional question.','questions':[]},
+                   visual_plan=[], visual_reason='Fixture has no provided assets; no fabricated image.')
+    for section in outline['sections']:
+        section.update(format='prose',format_reason='Fixture explanatory paragraph.',transition='Fixture independent next question.')
+    return outline
+
+
+def populate(run, p, enhanced=True):
     a = article()
     w.init_run(run, a['blog title'])
     outline = {'title':a['blog title'], 'type':'technology', 'fx':'F7', 'blog':a['blog'], 'core_term':'pixel art displays', 'tags':a['tags'], 'answer':'Conditional explanation.', 'scope':'Perception, not buying or setup.', 'sections':[{'id':f'section-{i}', 'h2':f'Question {i}', 'question':'An independent subquestion.', 'new_information':'A distinct variable.', 'claim_ids':['C1'], 'boundary':'Specified conditions.'} for i in range(1,5)]}
+    if enhanced:
+        add_editorial_plan(outline)
+    else:
+        state=w.load(run/'run.json');state.pop('editorial_contract_version');w.write_json(run/'run.json',state)
     w.write_json(run / 'outline.json', outline)
     evidence = [{'id':'C1','claim':'Fixture support','body_excerpt':'Supported example statement 1.','status':'supported','reason':'Contract fixture, not a publication claim.','sources':[{'url':'https://www.example.org/specification','path':'','locator':'Fixture section','checked_at':'2026-10-16T00:00:00+00:00','supports':'Fixture support only.'}]}]
     w.write_json(run / 'evidence.json', evidence)
@@ -39,6 +57,8 @@ def populate(run, p):
     w.write_json(run / 'links.json', [])
     w.seal(run,'links',p)
     review = {'decision':'pass','reviewer':'test-fixture-not-real-review','scores':{d:8 for d in w.DIMENSIONS},'rationales':{d:'Fixture rationale; not a real article evaluation.' for d in w.DIMENSIONS},'hard_issues':[],'claim_coverage':{'complete':True,'reason':'Fixture only.'},'checks':{c:True for c in w.CHECKS},'revision_notes':[]}
+    if enhanced:
+        review['editorial_checks']={key:{'decision':'pass','section':'whole-article','reason':'Mechanical fixture only, not completed semantic review.'} for key in w.EDITORIAL_CHECKS}
     w.write_json(run / 'review.json',review)
     w.seal(run,'review',p)
 

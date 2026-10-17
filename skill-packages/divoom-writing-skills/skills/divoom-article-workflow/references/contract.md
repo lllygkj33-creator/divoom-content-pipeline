@@ -14,6 +14,8 @@
 
 各阶段拥有字段：大纲负责 outline/evidence 初始；正文负责 body/metadata/evidence 支持关系；链接负责 body 中锚和 links；复核负责 review。改变论证必须回正文阶段；任何阶段不得写发布/排期字段。
 
+Technology 新 run 的 editorial_contract_version=2，outline 使用编辑协议 2：同 FX sample_review、逐节呈现与承接、scenario_plan、faq_decision、visual_plan/visual_reason。review 包含 editorial_checks。字段定义见 [编辑与配图规划](editorial-planning.md)；它们绑定在既有指纹链内，不增加新阶段、不进入文章 JSON。无版本字段的历史 run 保持可读，不能冒称已经通过新编辑审核。其他四类暂不强制迁移该协议。
+
 ## 封存与审查
 
 outline 指纹绑定 outline；draft 绑定 outline、正文无锚语义投影、metadata、evidence；links 绑定完整 body、links、metadata、evidence；review 绑定所有最终产物、配置与 review。正文从 draft 到 links 允许插锚；换词/加事实改变语义投影会要求重新 draft。配置变化也会使检查失效。

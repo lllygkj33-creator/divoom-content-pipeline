@@ -134,6 +134,7 @@ class BodyParser(HTMLParser):
         self.text_parts = []
         self.semantic = []
         self.links = []
+        self.images = []
         self.ids = set()
         self.h2_ids = []
         self.h2_texts = []
@@ -182,6 +183,8 @@ class BodyParser(HTMLParser):
             self.semantic.append("<" + tag + json.dumps(sorted(attrs.items()), ensure_ascii=False) + ">")
         if tag == "img" and any(not nonempty(attrs.get(k)) for k in ("src", "alt", "title")):
             self.errors.append("Every img requires nonempty src/alt/title")
+        if tag == "img":
+            self.images.append({"src": attrs.get("src", ""), "section": self.current_section})
         if tag == "th" and attrs.get("scope") not in ("col", "row", "colgroup", "rowgroup"):
             self.errors.append("Every th requires a valid scope")
         if tag not in VOID:
@@ -342,6 +345,91 @@ def validate_outline(outline, profile):
         require(isinstance(section.get("claim_ids"), list) and all(nonempty(x) for x in section["claim_ids"]), "claim_ids must be strings")
         ids.append(section["id"])
     require(len(ids) == len(set(ids)), "Duplicate section ids")
+    if "editorial_protocol_version" in outline:
+        validate_editorial_outline(outline)
+
+
+EDITORIAL_CHECKS = ("sample_alignment", "paragraph_progression", "condition_integrity",
+                    "scenario_value", "format_fit", "visual_alignment", "faq_choice")
+
+
+def validate_editorial_outline(outline):
+    """Validate planning records, not the quality or truth of the observations."""
+    require(type(outline.get("editorial_protocol_version")) is int and outline["editorial_protocol_version"] == 2,
+            "Unsupported editorial protocol version")
+    require(outline["type"] == "technology", "Editorial protocol 2 currently targets technology")
+    sections = {x["id"] for x in outline["sections"]}
+    claims = {c for x in outline["sections"] for c in x["claim_ids"]}
+    for section in outline["sections"]:
+        require(section.get("format") in ("prose", "list", "table", "mixed"), "Section needs a presentation format")
+        require(nonempty(section.get("format_reason")) and nonempty(section.get("transition")),
+                "Section needs format_reason and transition")
+    sample = outline.get("sample_review")
+    require(isinstance(sample, dict) and sample.get("fx") == outline["fx"], "Sample review/FX mismatch")
+    registry = load(ROOT / "references/technology-cases.json")
+    case = next(x for x in registry["cases"] if x["fx"] == outline["fx"])
+    require(sample.get("status") in ("read", "snapshot_only", "unavailable"), "Invalid sample read status")
+    if case["registered_url"]:
+        require(sample.get("url") == case["registered_url"], "Sample must match the registered FX URL, not a layout reference")
+    else:
+        require(sample.get("mapping_status") == "supplementary_candidate", "F14 must retain supplementary candidate status")
+        require(not sample.get("url") or valid_url(sample["url"], False), "Invalid candidate sample URL")
+    if sample["status"] == "read":
+        require(valid_time(sample.get("checked_at")) and valid_url(sample.get("url", ""), False), "Read sample needs checked_at and URL")
+    require(sample.get("visual_inspection") in ("pixels", "metadata_only", "none"), "State actual visual inspection coverage")
+    require(nonempty(sample.get("reason")), "Sample needs selection reason")
+    for key in ("adopt", "avoid"):
+        require(isinstance(sample.get(key), list) and sample[key] and all(nonempty(x) for x in sample[key]),
+                "Sample needs concrete " + key + " observations")
+    scenarios = outline.get("scenario_plan")
+    require(isinstance(scenarios, dict) and type(scenarios.get("needed")) is bool and
+            nonempty(scenarios.get("reason")) and isinstance(scenarios.get("cases"), list), "Scenario decision required")
+    require(bool(scenarios["cases"]) == scenarios["needed"], "Scenario cases must agree with the decision")
+    for row in scenarios["cases"]:
+        require(isinstance(row, dict) and row.get("section") in sections, "Scenario section not in outline")
+        for key in ("condition", "changes", "stays_constant", "reader_signal"):
+            require(nonempty(row.get(key)), "Scenario missing " + key)
+        require(isinstance(row.get("claim_ids"), list) and row["claim_ids"] and all(c in claims for c in row["claim_ids"]),
+                "Scenario must reference outline claims")
+    faq = outline.get("faq_decision")
+    require(isinstance(faq, dict) and type(faq.get("include")) is bool and nonempty(faq.get("reason")) and
+            isinstance(faq.get("questions"), list) and all(nonempty(q) for q in faq["questions"]), "FAQ decision required")
+    require(bool(faq["questions"]) == faq["include"], "FAQ questions must agree with the decision")
+    visuals = outline.get("visual_plan")
+    require(isinstance(visuals, list) and nonempty(outline.get("visual_reason")), "Visual plan and reason required")
+    visual_ids = []
+    for row in visuals:
+        require(isinstance(row, dict) and nonempty(row.get("id")), "Visual needs id")
+        visual_ids.append(row["id"])
+        require(row.get("role") in ("banner", "explanatory", "comparison", "scene", "measurement", "process"), "Invalid visual role")
+        require(row.get("section") in sections | {"banner", "intro"}, "Visual section not in outline")
+        require(type(row.get("after_paragraph")) is int and row["after_paragraph"] >= 0, "Invalid visual position")
+        require(nonempty(row.get("purpose")), "Visual needs an explanatory purpose")
+        require(isinstance(row.get("claim_ids"), list) and all(c in claims for c in row["claim_ids"]), "Visual references missing claims")
+        require(row.get("asset_status") in ("pending", "ready", "omitted"), "Invalid asset status")
+        if row["asset_status"] == "ready":
+            require(valid_url(row.get("src", ""), False), "Ready asset needs a real URL")
+        else:
+            require(row.get("src") == "", "Pending/omitted visual cannot carry an invented URL")
+    require(len(visual_ids) == len(set(visual_ids)), "Duplicate visual id")
+
+
+def validate_editorial_body(outline, parsed):
+    ready = {row["src"]: row for row in outline["visual_plan"] if row["asset_status"] == "ready"}
+    for image in parsed.images:
+        require(image["src"] in ready, "HTML image missing a ready visual plan")
+        expected = ready[image["src"]]["section"]
+        require(image["section"] == ("intro" if expected == "banner" else expected), "Image inserted outside its planned section")
+
+
+def validate_editorial_review(review, outline):
+    rows = review.get("editorial_checks")
+    require(isinstance(rows, dict), "Editorial review records required")
+    locations = {x["id"] for x in outline["sections"]} | {"intro", "whole-article"}
+    for key in EDITORIAL_CHECKS:
+        row = rows.get(key)
+        require(isinstance(row, dict) and row.get("decision") == "pass" and
+                row.get("section") in locations and nonempty(row.get("reason")), "Incomplete editorial check: " + key)
 
 
 def validate_evidence(evidence, body=None, outline=None):
@@ -455,6 +543,9 @@ def fresh(run_dir, state, stage, profile):
 def check_files(run_dir, stage, profile):
     outline = load(run_dir / "outline.json")
     validate_outline(outline, profile)
+    state = load(run_dir / "run.json")
+    if state.get("editorial_contract_version") == 2 and outline["type"] == "technology":
+        require(outline.get("editorial_protocol_version") == 2, "New Technology runs require editorial protocol 2")
     evidence = load(run_dir / "evidence.json")
     if stage == "outline":
         validate_evidence(evidence, outline=outline)
@@ -464,20 +555,25 @@ def check_files(run_dir, stage, profile):
     require(not errors, "; ".join(errors))
     require(article["blog title"] == outline["title"] and article["blog"] == outline["blog"] and article["tags"] == outline["tags"], "Metadata/outline mismatch")
     parsed = parse_body(article["html代码"], profile)
+    if outline.get("editorial_protocol_version") == 2:
+        validate_editorial_body(outline, parsed)
     require(parsed.h2_ids == [x["id"] for x in outline["sections"]], "Body H2 order differs from outline")
     require(parsed.h2_texts == [x["h2"] for x in outline["sections"]], "Body H2 text differs from outline")
     validate_evidence(evidence, parsed.text, outline)
     if stage in ("links", "review"):
         validate_links(load(run_dir / "links.json"), parsed, profile)
     if stage == "review":
-        validate_review(load(run_dir / "review.json"))
+        review = load(run_dir / "review.json")
+        validate_review(review)
+        if outline.get("editorial_protocol_version") == 2:
+            validate_editorial_review(review, outline)
 
 
 def init_run(run_dir, title):
     run_dir = Path(run_dir)
     require(nonempty(title), "Title must be nonempty")
     require(not (run_dir / "run.json").exists(), "Run already exists; use status to resume")
-    write_json(run_dir / "run.json", {"schema_version": 1, "input": {"title": title},
+    write_json(run_dir / "run.json", {"schema_version": 1, "editorial_contract_version": 2, "input": {"title": title},
                "created_at": now(), "content_revisions": 0, "stages": {}})
 
 

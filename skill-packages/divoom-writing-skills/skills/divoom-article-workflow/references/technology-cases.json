@@ -1,0 +1,1182 @@
+{
+  "checked_at": "2026-10-17",
+  "method": "Live page body DOM plus pixel inspection of all 62 collected OG/body/product assets; list/table cell paragraphs and product modules excluded from prose counts. OG images are not automatically banner images. Counts are observations, not writing quotas.",
+  "coverage": {
+    "registered_cases": 13,
+    "supplementary_candidates": 1,
+    "registered_body_editorial_images": 43,
+    "registered_cover_assets": 13,
+    "product_image_nodes": 4,
+    "supplementary_body_images": 1
+  },
+  "cases": [
+    {
+      "checked_at": "2026-10-17T01:39:50.609Z",
+      "http_status": 200,
+      "title": "Why a High Weight Limit Can Still Mean a Too-Small High Chair for Your Toddler",
+      "template": "editorial",
+      "paragraphs": 23,
+      "paragraph_words": {
+        "min": 6,
+        "max": 59,
+        "median": 38
+      },
+      "h2": 5,
+      "h3": 5,
+      "ul": 4,
+      "ol": 1,
+      "tables": 0,
+      "faq": false,
+      "editorial_images": 3,
+      "product_images": 0,
+      "fx": "F1",
+      "family": "因果现象",
+      "registered_url": "https://momcozy.com/blogs/babycare/high-weight-limit-too-small-high-chair-fit-check",
+      "url": "https://momcozy.com/blogs/babycare/high-weight-limit-too-small-high-chair-fit-check",
+      "mapping_status": "registered",
+      "logic": "从指标与实际结果错位进入，转为观察、排除可调整原因和适用边界。",
+      "condition_notes": "同一标称范围下个体比例不同，观察结果不同；没有另设 FAQ。",
+      "transfer": "先给三种低音结果，再以播放音量和摆位作为有解释力的条件。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/A_toddler_sitting_in_a_high_chair_appearing_crampe.png?v=1790132569",
+      "body_sha256": "f8317b6653b080167559d82f1e65b131e2507024d247d6eddb6761ef011d11a7",
+      "images": [
+        {
+          "id": "A002",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Infographic_comparing_weight_capacity_versus_actua.png?v=1790132547",
+          "role": "diagram",
+          "function": "指标与实际尺寸对照",
+          "quality_note": "图中示例尺寸和重量不能迁移为 Divoom 参数。",
+          "section_index": 0,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A003",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Two_toddlers_of_similar_weight_showing_different_f.png?v=1790132556",
+          "role": "scene",
+          "function": "同类对象的适配结果对照",
+          "quality_note": "画面不能证明两个孩子体重相同；alt 的实验条件不能直接采信。",
+          "section_index": 1,
+          "after_paragraph": 3,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A004",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Diagram_showing_key_posture_checkpoints_for_proper.png?v=1790132563",
+          "role": "diagram",
+          "function": "姿态检查点",
+          "quality_note": "图后接观察变量，具体身体/安全主张须独立核实。",
+          "section_index": 2,
+          "after_paragraph": 3,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:40:17.239Z",
+      "http_status": 200,
+      "title": "Why High Chair Seats Crack After Months of Use",
+      "template": "classic",
+      "paragraphs": 24,
+      "paragraph_words": {
+        "min": 31,
+        "max": 81,
+        "median": 41.5
+      },
+      "h2": 6,
+      "h3": 11,
+      "ul": 1,
+      "ol": 0,
+      "tables": 0,
+      "faq": false,
+      "editorial_images": 4,
+      "product_images": 0,
+      "fx": "F2",
+      "family": "根因解释",
+      "registered_url": "https://momcozy.com/blogs/babycare/why-high-chair-seats-crack-after-months-of-use",
+      "url": "https://momcozy.com/blogs/babycare/why-high-chair-seats-crack-after-months-of-use",
+      "mapping_status": "registered",
+      "logic": "区分受力根因、清洁加速因素和成长带来的负载变化，最后识别停止条件。",
+      "condition_notes": "多数解释节四段，说明四段本身不是缺陷；图片承担部位定位和检查。",
+      "transfer": "把部件、异常、时长和加速条件分开；不把机制文变成维修教程。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/Infographic_showing_common_stress_points_on_a_high.png?v=1786690635",
+      "body_sha256": "cf1b887f31014b2d5e4f9b0adf06a464c9eea8606a3771de3737135af2355011",
+      "images": [
+        {
+          "id": "A006",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Infographic_showing_common_stress_points_on_a_high_41d8210f-c565-418e-bf45-f9e609efcf3d.png?v=1784955110",
+          "role": "diagram",
+          "function": "部件应力位置",
+          "quality_note": "用于定位，不代表该结构适用于所有型号。",
+          "section_index": 1,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A007",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Parent_cleaning_a_high_chair_seat_showing_food_res.png?v=1784955118",
+          "role": "scene",
+          "function": "清洁情境",
+          "quality_note": "场景服务加速条件，不证明画面中的因果已经发生。",
+          "section_index": 2,
+          "after_paragraph": 3,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A008",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Toddler_standing_in_high_chair_while_parent_reache.png?v=1784955126",
+          "role": "scene",
+          "function": "成长与危险动作情境",
+          "quality_note": "风险画面不能当推荐操作。",
+          "section_index": 3,
+          "after_paragraph": 3,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A009",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Inspection_checklist_diagram_highlighting_key_area.png?v=1784955134",
+          "role": "diagram",
+          "function": "检查清单",
+          "quality_note": "可见编号重复；不可照搬生成图的小字和编号。",
+          "section_index": 5,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:40:39.403Z",
+      "http_status": 200,
+      "title": "How Activated Carbon and Foam Seals in Diaper Pails Actually Work—and When They Stop",
+      "template": "editorial",
+      "paragraphs": 20,
+      "paragraph_words": {
+        "min": 9,
+        "max": 65,
+        "median": 38.5
+      },
+      "h2": 5,
+      "h3": 5,
+      "ul": 6,
+      "ol": 1,
+      "tables": 2,
+      "faq": false,
+      "editorial_images": 4,
+      "product_images": 0,
+      "fx": "F3",
+      "family": "机制／处理链",
+      "registered_url": "https://momcozy.com/blogs/babycare/activated-carbon-foam-seals-diaper-pails-how-they-work",
+      "url": "https://momcozy.com/blogs/babycare/activated-carbon-foam-seals-diaper-pails-how-they-work",
+      "mapping_status": "registered",
+      "logic": "先分开两个部件职责，再用气味出现的时机和位置区分路径。",
+      "condition_notes": "清单和两张表承载条件；不是逐段重复同一边界。",
+      "transfer": "采用输入→部件职责→协作→失效信号；图解不能替代真实结构证据。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/Split_view_of_activated_carbon_pores_and_foam_seal.png?v=1790065512",
+      "body_sha256": "590219ec51b02ec85ac9e8f92411e5bf4262bca4ec78053f72e6baf3b25742d1",
+      "images": [
+        {
+          "id": "A011",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Microscopic_view_of_odor_molecules_being_adsorbed.png?v=1790065483",
+          "role": "diagram",
+          "function": "微观机理示意",
+          "quality_note": "是表现机制的画面，不能称为显微实测照片。",
+          "section_index": 1,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A012",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Cross_section_showing_compressed_seal_blocking_air.png?v=1790065491",
+          "role": "diagram",
+          "function": "密封剖面",
+          "quality_note": "剖面图需要与实际结构或通用示意身份一致。",
+          "section_index": 2,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A013",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Diagram_highlighting_three_common_odor_source_zone.png?v=1790065498",
+          "role": "diagram",
+          "function": "不同来源分区",
+          "quality_note": "颜色连接观察位置与原因；不能据图直接诊断具体产品。",
+          "section_index": 3,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A014",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Three_step_maintenance_sequence_clean_replace_filt.png?v=1790065506",
+          "role": "diagram",
+          "function": "处理顺序",
+          "quality_note": "有先后依赖才采用步骤图。",
+          "section_index": 4,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:40:17.550Z",
+      "http_status": 200,
+      "title": "Organic Formula Ingredients: What's Included, What's Not, and Why It Matters",
+      "template": "classic",
+      "paragraphs": 16,
+      "paragraph_words": {
+        "min": 8,
+        "max": 63,
+        "median": 46.0
+      },
+      "h2": 9,
+      "h3": 0,
+      "ul": 3,
+      "ol": 1,
+      "tables": 1,
+      "faq": true,
+      "editorial_images": 4,
+      "product_images": 0,
+      "fx": "F4",
+      "family": "定义／范围",
+      "registered_url": "https://momcozy.com/blogs/babycare/organic-formula-ingredients-whats-included-whats-not-and-why-it-matters",
+      "url": "https://momcozy.com/blogs/babycare/organic-formula-ingredients-whats-included-whats-not-and-why-it-matters",
+      "mapping_status": "registered",
+      "logic": "先定义标签范围，再解释包含、排除、现实影响和例外。",
+      "condition_notes": "FAQ 和参考来源独立出现；有些小节主要依赖清单或表格。",
+      "transfer": "概念边界与产品能力分开；定义、组成、使用场景选不同图型。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/Organic_infant_formula_container_displayed_with_na_e0d487de-2ac3-4937-bb73-b33f69aaa185.png?v=1782905689",
+      "body_sha256": "cadb6c2f9ed17d4a126912bccb5a17a84ef0636b3b7f58dd970d69fe3aa17caa",
+      "images": [
+        {
+          "id": "A016",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Infographic_showing_organic_formula_composition_wi.png?v=1782455824",
+          "role": "diagram",
+          "function": "比例／组成图",
+          "quality_note": "可见百分号排版重复；数值与地区适用性需另查，不直接引用。",
+          "section_index": 1,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A017",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Visual_breakdown_of_essential_nutritional_componen.png?v=1782455832",
+          "role": "diagram",
+          "function": "组成类别图标",
+          "quality_note": "需要文字解释图标对应类别。",
+          "section_index": 2,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A018",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Parent_carefully_examining_infant_formula_label_in.png?v=1782455841",
+          "role": "scene",
+          "function": "读取标签的情境",
+          "quality_note": "用于说明读者任务，不替代标签实物信息。",
+          "section_index": 3,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A019",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Tender_moment_of_mother_feeding_infant_in_warm_hom.png?v=1782455849",
+          "role": "scene",
+          "function": "喂养场景",
+          "quality_note": "信息增量偏弱，不能当功效证据。",
+          "section_index": 5,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:40:47.280Z",
+      "http_status": 200,
+      "title": "How Flange Size Affects Letdown and Milk Flow, Not Just Comfort",
+      "template": "classic",
+      "paragraphs": 24,
+      "paragraph_words": {
+        "min": 4,
+        "max": 72,
+        "median": 42.5
+      },
+      "h2": 8,
+      "h3": 0,
+      "ul": 3,
+      "ol": 2,
+      "tables": 1,
+      "faq": true,
+      "editorial_images": 2,
+      "product_images": 0,
+      "fx": "F5",
+      "family": "关系／权衡",
+      "registered_url": "https://momcozy.com/blogs/breastfeeding/how-flange-size-affects-letdown-and-milk-flow-not-just-comfort",
+      "url": "https://momcozy.com/blogs/breastfeeding/how-flange-size-affects-letdown-and-milk-flow-not-just-comfort",
+      "mapping_status": "registered",
+      "logic": "先说明变量作用路径，再用对照、观察和工作约束展开。",
+      "condition_notes": "工作与出行有实际约束；泛化 alt 不能说明画面价值。",
+      "transfer": "为条件说明改变的结果和保持不变的因素，不只换场景名称。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/header_002_How_Flange_Size_Affects_Letdown_and__20_fa400718-742e-4dad-be52-902c85ce37ac.png?v=1787124778",
+      "body_sha256": "cfb02f326577212cd29f01532f5691b37805f9a44251eaee24d8327bf5a68dc0",
+      "images": [
+        {
+          "id": "A021",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_a6233ba3-4350-4ec6-af54-c8b0fe101967.png?v=1782445939",
+          "role": "diagram",
+          "function": "局部适配示意",
+          "quality_note": "专用部件外观与身体主张不能泛化。",
+          "section_index": 3,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A022",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_62e83587-71bd-45e3-a28d-58a1f128c544.png?v=1782445947",
+          "role": "scene",
+          "function": "办公环境使用",
+          "quality_note": "画面支持约束场景，不提供测试结果。",
+          "section_index": 5,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:40:51.936Z",
+      "http_status": 200,
+      "title": "Can a Portable Baby Swing Stay Stable on Carpet?",
+      "template": "editorial",
+      "paragraphs": 15,
+      "paragraph_words": {
+        "min": 12,
+        "max": 68,
+        "median": 44
+      },
+      "h2": 7,
+      "h3": 1,
+      "ul": 2,
+      "ol": 0,
+      "tables": 0,
+      "faq": false,
+      "editorial_images": 4,
+      "product_images": 0,
+      "fx": "F6",
+      "family": "可行性／兼容性",
+      "registered_url": "https://momcozy.com/blogs/babycare/portable-baby-swing-stability-on-carpet",
+      "url": "https://momcozy.com/blogs/babycare/portable-baby-swing-stability-on-carpet",
+      "mapping_status": "registered",
+      "logic": "先给使用前提，解释环境影响，再给检查和不可用边界。",
+      "condition_notes": "小节常只有两三段；地面材质是影响结论的条件。",
+      "transfer": "先回答有条件能否成立；条件对照图与失效图比装饰图更有用。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/Portable_baby_swing_sitting_on_carpeted_nursery_fl.png?v=1788848945",
+      "body_sha256": "1b9845c33948cc5f1814d5a38f14a21f9367f347fc24e0f116dd84ff2c6245ab",
+      "images": [
+        {
+          "id": "A024",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Comparison_diagram_of_baby_swing_placement_on_firm.png?v=1788848915",
+          "role": "diagram",
+          "function": "环境条件对照",
+          "quality_note": "对错符号不能替代型号手册的适用范围。",
+          "section_index": 1,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A025",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Close_up_view_of_swing_base_pressing_into_thick_ca.png?v=1788848924",
+          "role": "scene",
+          "function": "材质接触细节",
+          "quality_note": "近景显示条件如何作用，通常比泛场景更具体。",
+          "section_index": 2,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A026",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Visual_checklist_showing_four_key_stability_inspec.png?v=1788848931",
+          "role": "diagram",
+          "function": "稳定性检查图",
+          "quality_note": "检查图要对应具体可观察信号。",
+          "section_index": 4,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A027",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Baby_swing_showing_visible_instability_with_lifted.png?v=1788848940",
+          "role": "scene",
+          "function": "失效条件场景",
+          "quality_note": "应说明何时不适用，不模仿危险摆放。",
+          "section_index": 5,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:41:00.416Z",
+      "http_status": 200,
+      "title": "Why Wooden High Chairs Feel Sturdier Than Plastic Models",
+      "template": "classic",
+      "paragraphs": 22,
+      "paragraph_words": {
+        "min": 25,
+        "max": 83,
+        "median": 37.0
+      },
+      "h2": 6,
+      "h3": 10,
+      "ul": 2,
+      "ol": 0,
+      "tables": 0,
+      "faq": false,
+      "editorial_images": 4,
+      "product_images": 0,
+      "fx": "F7",
+      "family": "感知／环境差异",
+      "registered_url": "https://momcozy.com/blogs/momcare/why-wooden-high-chairs-feel-sturdier-than-plastic-models",
+      "url": "https://momcozy.com/blogs/momcare/why-wooden-high-chairs-feel-sturdier-than-plastic-models",
+      "mapping_status": "registered",
+      "logic": "区分感觉更稳、实际结构和环境，保留反例。",
+      "condition_notes": "文字多为四段结构；用部件图、姿态图和检查照片改变信息形式。",
+      "transfer": "把听感与声学能力分开；图像不能证明主观感受或测试结果。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/Toddler_kicking_tray_of_a_stable_wooden_high_chair_f98b51a1-b82f-45a5-bf58-eec60ebbea63.png?v=1785495798",
+      "body_sha256": "1aecd6fc827b8cb4beee30e87933b16cb7d061b23995b3d106e3a78dda5c25c7",
+      "images": [
+        {
+          "id": "A029",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Toddler_kicking_tray_of_a_stable_wooden_high_chair_fe9c54ca-815e-4e33-9881-690d5cb1cba2.png?v=1785317607",
+          "role": "scene",
+          "function": "动态行为场景",
+          "quality_note": "alt 描述的踢托盘动作与画面不完全吻合。",
+          "section_index": 0,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A030",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Diagram_showing_wide_base_and_secure_lock_points_o.png?v=1785317616",
+          "role": "diagram",
+          "function": "结构因素映射",
+          "quality_note": "部件位置和作用路径要可核实。",
+          "section_index": 2,
+          "after_paragraph": 3,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A031",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Side_view_diagram_of_baby_in_high_chair_showing_pr.png?v=1785317622",
+          "role": "diagram",
+          "function": "姿态角度示意",
+          "quality_note": "角度和姿态规范须独立核实，不当通用安全保证。",
+          "section_index": 3,
+          "after_paragraph": 3,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A032",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Parent_testing_the_stability_of_a_wooden_high_chai.png?v=1785317631",
+          "role": "scene",
+          "function": "现场检查动作",
+          "quality_note": "照片不能证明经过标准测试。",
+          "section_index": 5,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:41:12.599Z",
+      "http_status": 200,
+      "title": "Normal Newborn Weight Loss in the First Week: The Percentages That Matter",
+      "template": "classic",
+      "paragraphs": 18,
+      "paragraph_words": {
+        "min": 5,
+        "max": 82,
+        "median": 32.5
+      },
+      "h2": 9,
+      "h3": 0,
+      "ul": 6,
+      "ol": 1,
+      "tables": 1,
+      "faq": true,
+      "editorial_images": 3,
+      "product_images": 0,
+      "fx": "F8",
+      "family": "阈值／规模",
+      "registered_url": "https://momcozy.com/blogs/babycare/normal-newborn-weight-loss-in-the-first-week-the-percentages-that-matter",
+      "url": "https://momcozy.com/blogs/babycare/normal-newborn-weight-loss-in-the-first-week-the-percentages-that-matter",
+      "mapping_status": "registered",
+      "logic": "把基线、时间窗和阈值与其他观察联合解释。",
+      "condition_notes": "阈值图和观察清单图都在承载信息，不能当作纯装饰。",
+      "transfer": "图中单位、基线和阈值必须由实际资料支持；不迁移医学数字。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/Header_cd559ce8-cfc2-447c-9312-8b1917012b6e.png?v=1784716249",
+      "body_sha256": "01ab0159b8b9160d9a9e45185fa1fccd4e452643edcd253e2d08d1f6f44ca738",
+      "images": [
+        {
+          "id": "A034",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_394a029b-6754-46ea-818e-8142811920e2.png?v=1782441164",
+          "role": "diagram",
+          "function": "阈值分区图",
+          "quality_note": "图内 growth 用词与减重主题不一致；不迁移任何医学阈值。",
+          "section_index": 1,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A035",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_f6a70e5b-0b45-4a44-a5b6-0a10668f287a.png?v=1782441173",
+          "role": "scene",
+          "function": "日常喂养场景",
+          "quality_note": "帮助说明观察背景，信息作用弱于读数图。",
+          "section_index": 3,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A036",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_9b89eae5-6834-402d-8b9c-997a3f733d96.png?v=1782441181",
+          "role": "diagram",
+          "function": "多信号清单",
+          "quality_note": "将多个观察信号放在同一判断框架。",
+          "section_index": 4,
+          "after_paragraph": 0,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:41:37.967Z",
+      "http_status": 200,
+      "title": "How to Read an Infant Weight Tracking Chart: Understanding Percentiles Without Panicking",
+      "template": "classic",
+      "paragraphs": 28,
+      "paragraph_words": {
+        "min": 5,
+        "max": 86,
+        "median": 40.0
+      },
+      "h2": 11,
+      "h3": 1,
+      "ul": 4,
+      "ol": 1,
+      "tables": 1,
+      "faq": true,
+      "editorial_images": 2,
+      "product_images": 0,
+      "fx": "F9",
+      "family": "测量／测试",
+      "registered_url": "https://momcozy.com/blogs/babycare/how-to-read-an-infant-weight-tracking-chart-understanding-percentiles-without-panicking",
+      "url": "https://momcozy.com/blogs/babycare/how-to-read-an-infant-weight-tracking-chart-understanding-percentiles-without-panicking",
+      "mapping_status": "registered",
+      "logic": "先解释指标，再区分单点与趋势，讨论测量对象和条件。",
+      "condition_notes": "有 FAQ；图有信息图外观，但不一定提供可读坐标或数据。",
+      "transfer": "用有来源、单位、轴和条件的示例图；无数据则采用明示的示意。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/Header_3b6fd27e-56af-4b3a-ac30-0e49b6595675.png?v=1784791803",
+      "body_sha256": "f6829f9aa65ce3f77d77b91166164ed6724da08f3a0f84462fe9b1424d68d397",
+      "images": [
+        {
+          "id": "A038",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_7040a96f-4487-4dd5-9665-7932a2b214ca.png?v=1782382657",
+          "role": "diagram",
+          "function": "百分位概念图标",
+          "quality_note": "缺清晰可读轴与数值，不能作为读图教学的唯一图。",
+          "section_index": 1,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A039",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_5b685834-37e3-4631-a038-8a2fbe05080a.png?v=1782382665",
+          "role": "diagram",
+          "function": "变化过程示意",
+          "quality_note": "曲线和日期需标明示意或真实数据来源。",
+          "section_index": 4,
+          "after_paragraph": 3,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:42:07.892Z",
+      "http_status": 200,
+      "title": "When Were Baby Monitors Invented? A Quick History",
+      "template": "classic",
+      "paragraphs": 23,
+      "paragraph_words": {
+        "min": 5,
+        "max": 71,
+        "median": 38
+      },
+      "h2": 10,
+      "h3": 0,
+      "ul": 2,
+      "ol": 0,
+      "tables": 4,
+      "faq": false,
+      "editorial_images": 2,
+      "product_images": 4,
+      "fx": "F10",
+      "family": "趋势／版本演进",
+      "registered_url": "https://momcozy.com/blogs/babycare/when-were-baby-monitors-invented",
+      "url": "https://momcozy.com/blogs/babycare/when-were-baby-monitors-invented",
+      "mapping_status": "registered",
+      "logic": "时间线、动因、实现变化、当下能力分层推进。",
+      "condition_notes": "正文末尾混入商品卡；现代使用照不能充当历史照片。",
+      "transfer": "时间线优先可核查节点；分开历史事实图与现代场景图，不复制选购尾段。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/When_Were_Baby_Monitors_Invented_28b9f4ef-b155-4bcb-bd37-b3dbc31f317f.png?v=1778139173",
+      "body_sha256": "b99bb09fd49404ca6223b4637c9572e62abe16dbc01827b6b5c9540ae51e268a",
+      "images": [
+        {
+          "id": "A041",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/baby-monitors-evolution.jpg?v=1774251452",
+          "role": "scene",
+          "function": "现代监护使用",
+          "quality_note": "出现在历史起因小节，但画面不是早期设备史料。",
+          "section_index": 4,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            612,
+            408
+          ]
+        },
+        {
+          "id": "A042",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/first-baby-monitor.jpg?v=1774251452",
+          "role": "scene",
+          "function": "移动设备使用",
+          "quality_note": "现代场景与技术演进关系需由文字明确。",
+          "section_index": 7,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            612,
+            408
+          ]
+        },
+        {
+          "id": "A043",
+          "url": "https://momcozy.com/cdn/shop/files/12741b1ac0481635e2d1fa50e9cc4e99_9d49265d-615c-432f-9b8a-b9742632faa1.jpg?v=1779354690&width=1",
+          "role": "product",
+          "function": "商品卡主图或悬停图",
+          "quality_note": "与正文解释图分开计数；不计为四个商品。",
+          "section_index": 9,
+          "after_paragraph": 3,
+          "product": true,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            899
+          ]
+        },
+        {
+          "id": "A044",
+          "url": "https://momcozy.com/cdn/shop/files/6_3255b11e-90f8-411f-97cc-effb794329d0.jpg?v=1779354690&width=1",
+          "role": "product",
+          "function": "商品卡主图或悬停图",
+          "quality_note": "与正文解释图分开计数；不计为四个商品。",
+          "section_index": 9,
+          "after_paragraph": 3,
+          "product": true,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            899
+          ]
+        },
+        {
+          "id": "A045",
+          "url": "https://momcozy.com/cdn/shop/files/BM04-DTC-camera-app_f69ae394-5616-4141-9d89-f91859451c62.jpg?v=1779374411&width=1",
+          "role": "product",
+          "function": "商品卡主图或悬停图",
+          "quality_note": "与正文解释图分开计数；不计为四个商品。",
+          "section_index": 9,
+          "after_paragraph": 3,
+          "product": true,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            899
+          ]
+        },
+        {
+          "id": "A046",
+          "url": "https://momcozy.com/cdn/shop/files/02_cd58ecc9-8dbe-42fe-b3b2-bb2af28c9142.jpg?v=1779374421&width=1",
+          "role": "product",
+          "function": "商品卡主图或悬停图",
+          "quality_note": "与正文解释图分开计数；不计为四个商品。",
+          "section_index": 9,
+          "after_paragraph": 3,
+          "product": true,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            899
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:42:04.083Z",
+      "http_status": 200,
+      "title": "How Pumping at Work Changes When Your Baby Starts Solid Foods",
+      "template": "classic",
+      "paragraphs": 33,
+      "paragraph_words": {
+        "min": 3,
+        "max": 68,
+        "median": 47
+      },
+      "h2": 8,
+      "h3": 16,
+      "ul": 3,
+      "ol": 1,
+      "tables": 1,
+      "faq": true,
+      "editorial_images": 4,
+      "product_images": 0,
+      "fx": "F11",
+      "family": "工作流／场景",
+      "registered_url": "https://momcozy.com/blogs/breastfeeding/how-pumping-at-work-changes-when-your-baby-starts-solid-foods",
+      "url": "https://momcozy.com/blogs/breastfeeding/how-pumping-at-work-changes-when-your-baby-starts-solid-foods",
+      "mapping_status": "registered",
+      "logic": "先说变化与不变，再讨论频率、结果、协作和时间约束。",
+      "condition_notes": "日程图承担流程，场景照承担环境；部分 alt 与画面不一致。",
+      "transfer": "前后状态比较固定其他条件；用流程图标出真正变化的节点。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/Baby_being_bottle_fed_with_solid_food_waiting_near_bf4d746d-94aa-4b0e-9364-7370522c91df.png?v=1783075683",
+      "body_sha256": "2b64b54d6876e647f96a69bd47c7224403744e44a9950fa057debdeae80757de",
+      "images": [
+        {
+          "id": "A048",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Baby_being_bottle_fed_with_solid_food_waiting_near_2df09dfe-b67f-4a8e-82d8-0410d22282a9.png?v=1782460005",
+          "role": "scene",
+          "function": "添加辅食场景",
+          "quality_note": "画面为勺喂，alt 却描述瓶喂，存在直接不一致。",
+          "section_index": 1,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A049",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Workday_pumping_schedule_timeline_showing_nursing.png?v=1782460013",
+          "role": "diagram",
+          "function": "工作日时间线",
+          "quality_note": "时间只是例示，不得当通用日程要求。",
+          "section_index": 2,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A050",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Working_mother_setting_up_breast_pump_during_a_sho.png?v=1782460021",
+          "role": "scene",
+          "function": "工作休息间隙",
+          "quality_note": "体现时间与空间限制，不把特定情境写成通用规律。",
+          "section_index": 3,
+          "after_paragraph": 3,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A051",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Illustrated_baby_bottle_showing_recommended_feedin.png?v=1782460028",
+          "role": "diagram",
+          "function": "量与时间关系图",
+          "quality_note": "单位、量和建议须有适用依据，不复制医学数字。",
+          "section_index": 4,
+          "after_paragraph": 4,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:42:22.675Z",
+      "http_status": 200,
+      "title": "Microwave Sterilizing for Baby Bottles: How It Works and Common Mistakes to Avoid",
+      "template": "classic",
+      "paragraphs": 31,
+      "paragraph_words": {
+        "min": 30,
+        "max": 80,
+        "median": 39
+      },
+      "h2": 8,
+      "h3": 7,
+      "ul": 3,
+      "ol": 0,
+      "tables": 1,
+      "faq": true,
+      "editorial_images": 4,
+      "product_images": 0,
+      "fx": "F12",
+      "family": "陈述式解释",
+      "registered_url": "https://momcozy.com/blogs/babycare/microwave-sterilizing-for-baby-bottles-how-it-works-and-common-mistakes-to-avoid",
+      "url": "https://momcozy.com/blogs/babycare/microwave-sterilizing-for-baby-bottles-how-it-works-and-common-mistakes-to-avoid",
+      "mapping_status": "registered",
+      "logic": "适用前提→原理→条件→错误→相邻方法边界。",
+      "condition_notes": "机理图、步骤图、状态对照位于不同任务节点；含操作成分。",
+      "transfer": "通识保留原理和错误原因；具体设置与安全步骤另按对应规则核实。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/header_001_Microwave_Sterilizing_for_Baby_Bottl_20_7dc32f8f-2404-4c00-a624-a3bed500e706.png?v=1784891632",
+      "body_sha256": "9c2ccf50901b91a80d2fa5edf89f48088234f77eebcc3f42a68a985e6b4456b1",
+      "images": [
+        {
+          "id": "A053",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_be40700f-0977-47f6-a92d-1bbeca974a3a.png?v=1782372283",
+          "role": "diagram",
+          "function": "能量与蒸汽机理图",
+          "quality_note": "箭头、物理概念和标签需与正文一致。",
+          "section_index": 2,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A054",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_35102dbb-8c6f-4e66-b462-7131bab52cc9.png?v=1782372291",
+          "role": "diagram",
+          "function": "先后操作图",
+          "quality_note": "图像应与适用设备说明相符，不生成通用危险步骤。",
+          "section_index": 3,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A055",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_38b3e0b8-97d3-4651-9937-a64208d13c97.png?v=1782372298",
+          "role": "scene",
+          "function": "部件状态对照",
+          "quality_note": "视觉差异不等于完成消毒或杀菌效果测试。",
+          "section_index": 4,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A056",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Image_f374bbf0-7a4e-4cab-9c8c-fe68fadc571b.png?v=1782372307",
+          "role": "scene",
+          "function": "摆放方式对照",
+          "quality_note": "需要文字指出差异与具体适用条件。",
+          "section_index": 4,
+          "after_paragraph": 5,
+          "product": false,
+          "alt_quality": "generic",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:43:03.393Z",
+      "http_status": 200,
+      "title": "What Makes a High Chair Frame Wobble-Free on Uneven Kitchen Floors?",
+      "template": "classic",
+      "paragraphs": 31,
+      "paragraph_words": {
+        "min": 23,
+        "max": 58,
+        "median": 32
+      },
+      "h2": 6,
+      "h3": 9,
+      "ul": 1,
+      "ol": 0,
+      "tables": 0,
+      "faq": false,
+      "editorial_images": 3,
+      "product_images": 0,
+      "fx": "F13",
+      "family": "因素／组件映射",
+      "registered_url": "https://momcozy.com/blogs/babycare/what-makes-a-high-chair-frame-wobble-free-on-uneven-kitchen-floors",
+      "url": "https://momcozy.com/blogs/babycare/what-makes-a-high-chair-frame-wobble-free-on-uneven-kitchen-floors",
+      "mapping_status": "registered",
+      "logic": "拆分环境原因、结构因素、姿态影响和现场观察。",
+      "condition_notes": "同为解释节有六个段落，说明段落数量随任务变化。",
+      "transfer": "将因素接到作用路径与观察结果；避免功能清单冒充因果解释。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/Illustration_of_high_chair_frame_features_includin.png?v=1786690801",
+      "body_sha256": "1a84828d96698058e588bf266e8dbe34a709952614ed136067242bd6a6151d73",
+      "images": [
+        {
+          "id": "A058",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Illustration_of_high_chair_frame_features_includin_8a03a6d1-6412-44dc-b729-6317e0ecbbd7.png?v=1784954855",
+          "role": "diagram",
+          "function": "组件与结构因素图",
+          "quality_note": "不把勾号当稳定性认证。",
+          "section_index": 2,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A059",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Baby_sitting_upright_in_high_chair_with_feet_on_fo.png?v=1784954862",
+          "role": "scene",
+          "function": "坐姿使用情境",
+          "quality_note": "具体姿态需与型号及使用要求一致。",
+          "section_index": 3,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        },
+        {
+          "id": "A060",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Parent_testing_high_chair_stability_by_pressing_on.png?v=1784954870",
+          "role": "scene",
+          "function": "稳定性观察动作",
+          "quality_note": "动作图不是测试合格证明。",
+          "section_index": 4,
+          "after_paragraph": 2,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    },
+    {
+      "checked_at": "2026-10-17T01:43:32.262Z",
+      "http_status": 200,
+      "title": "Can a Heated Breast Massager Prevent Mastitis?",
+      "template": "editorial",
+      "paragraphs": 21,
+      "paragraph_words": {
+        "min": 7,
+        "max": 56,
+        "median": 40
+      },
+      "h2": 5,
+      "h3": 3,
+      "ul": 2,
+      "ol": 0,
+      "tables": 1,
+      "faq": false,
+      "editorial_images": 1,
+      "product_images": 0,
+      "fx": "F14",
+      "family": "证据／主张审视（补充候选）",
+      "registered_url": null,
+      "url": "https://momcozy.com/blogs/breastfeeding/heated-breast-massager-mastitis-prevention",
+      "mapping_status": "supplementary_candidate",
+      "logic": "区分舒适感、预防主张、证据和未知，再收束边界。",
+      "condition_notes": "只有一张正文对照图；不是原始截图已确认 URL。",
+      "transfer": "把证据强弱与图像主张绑定，不能把示意图上的对错号当研究结论。",
+      "cover_url": "https://momcozy.com/cdn/shop/articles/A_gentle_illustration_showing_breastfeeding_care_w.png?v=1792052353",
+      "body_sha256": "08aec318d2c8dc735a6e25ac728476ed1701f8e2fbec97c45c5da1bcc5bf2510",
+      "images": [
+        {
+          "id": "A062",
+          "url": "https://cdn.shopify.com/s/files/1/0559/2321/2486/files/Infographic_comparing_incorrect_heated_massage_app.png?v=1792052348",
+          "role": "diagram",
+          "function": "做法与边界对照",
+          "quality_note": "医学建议需独立核实；本次只研究图文组织。",
+          "section_index": 1,
+          "after_paragraph": 1,
+          "product": false,
+          "alt_quality": "descriptive_not_automatically_correct",
+          "dimensions": [
+            720,
+            402
+          ]
+        }
+      ]
+    }
+  ]
+}

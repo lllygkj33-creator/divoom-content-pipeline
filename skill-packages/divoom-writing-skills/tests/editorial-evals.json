@@ -1,21 +1,329 @@
 {
   "purpose": "Manual/model forward-test requests and acceptance criteria. These are not fabricated completed articles or automatically executed semantic tests.",
   "cases": [
-    {"id":"intent-technology","input":{"title":"Why Pixel Art Displays Look Different Up Close and Across a Room"},"expect":{"type":"technology","fx":"F7","blog":"Technology Hub","must":["Explain perception versus unchanged physical grid","Do not become shopping comparison or device settings tutorial"]}},
-    {"id":"intent-buying","input":{"title":"How to Choose a Digital Photo Frame for a Shared Family Living Room"},"expect":{"type":"buying-guide","blog":"Recommend & Comparison","must":["Evaluate whether current solution already suffices","Define task-based exclusion criteria before candidates","No invented model features or prices"]}},
-    {"id":"intent-comparison","input":{"title":"Pixel Art Speakers vs Bluetooth Speakers for a Small Desk: Which Fits the Task?"},"expect":{"type":"comparison","blog":"Recommend & Comparison","must":["Both sides in each decision axis","Conditional conclusions; no unconditional winner","Repeated necessary references to both objects are not banned as extra product placement"]}},
-    {"id":"intent-setup","input":{"title":"How to Set Up a Digital Photo Frame for a Shared Household"},"expect":{"type":"setup","blog":"Support & Tips","must":["Identify prerequisites and applicable model capabilities","Actions include observable validation and fallback","No imagined common app menu for all models"]}},
-    {"id":"intent-support","input":{"title":"Digital Photo Frame Not Receiving Photos: What to Check First"},"expect":{"type":"support","blog":"Support & Tips","must":["Symptom routes and reversible checks","Distinguish network connection from successful content delivery","Stop and escalation conditions"]}},
-    {"id":"evidence-review","input":{"title":"Does Higher Brightness Really Make a Pixel Art Display Easier to Read?","type":"technology","fx":"F14"},"expect":{"must":["Distinguish claim support, confounders, uncertainty","Retain candidate FX status rather than claim verified Momcozy formula","No invented numeric optimum"]}},
-    {"id":"no-internal-target","input":{"title":"Why Pixel Art Displays Look Different Up Close and Across a Room","condition":"No relevant published explanatory blog exists"},"expect":{"must":["No invented slug or empty href","Pending opportunity stays internal","Category link only if existing sentence genuinely warrants it"]}},
-    {"id":"reachable-not-supporting","input":{"condition":"A source is HTTP200 but discusses a different model"},"expect":{"must":["Do not mark target model capability supported","Find appropriate source or narrow/delete claim"]}},
-    {"id":"unreadable-target","input":{"condition":"Relevant URL is blocked or returns403"},"expect":{"must":["Do not claim verified or fabricate status","Use inspectable authoritative alternative or omit link","Core unsupported claim blocks export"]}},
-    {"id":"category-variants","input":{"condition":"pixel display and pixel art display refer to the same appropriate collection"},"expect":{"must":["Allow same genuine collection for natural keyword variants","Do not create one fake collection per phrase"]}},
-    {"id":"unknown-model-feature","input":{"condition":"Entity vocabulary lists a capability but chosen model manual does not establish it"},"expect":{"must":["Do not infer model support from general vocabulary","Verify applicable official source; otherwise remove assertion"]}},
-    {"id":"post-link-fact-change","input":{"condition":"Link insertion changes a causal or numeric claim"},"expect":{"must":["Update evidence and reseal draft","Invalidate later links/review","Do not treat link stage as exempt from fact review"]}},
-    {"id":"post-review-faq","input":{"condition":"A new FAQ is appended after review"},"expect":{"must":["Invalidate old review","Review final complete content before export"]}},
-    {"id":"template-duplication","input":{"condition":"Existing Liquid template already outputs H1 author TOC disclaimer and recommendation cards"},"expect":{"must":["Do not duplicate fixed modules in body","Do not automatically use cover as first banner","No invented banner URL"]}},
-    {"id":"false-experience","input":{"condition":"No hands-on experiment was performed"},"expect":{"must":["No we tested or invented user result","Evaluate experience through grounded observable situations rather than fabricated credentials"]}},
-    {"id":"publication-owner","input":{"condition":"Existing publisher controls hidden status and scheduling"},"expect":{"must":["No published/published_at/status/schedule fields","No publishing or backend calls","Deliver one blog-array JSON only"]}}
+    {
+      "id": "intent-technology",
+      "input": {
+        "title": "Why Pixel Art Displays Look Different Up Close and Across a Room"
+      },
+      "expect": {
+        "type": "technology",
+        "fx": "F7",
+        "blog": "Technology Hub",
+        "must": [
+          "Explain perception versus unchanged physical grid",
+          "Do not become shopping comparison or device settings tutorial"
+        ]
+      }
+    },
+    {
+      "id": "intent-buying",
+      "input": {
+        "title": "How to Choose a Digital Photo Frame for a Shared Family Living Room"
+      },
+      "expect": {
+        "type": "buying-guide",
+        "blog": "Recommend & Comparison",
+        "must": [
+          "Evaluate whether current solution already suffices",
+          "Define task-based exclusion criteria before candidates",
+          "No invented model features or prices"
+        ]
+      }
+    },
+    {
+      "id": "intent-comparison",
+      "input": {
+        "title": "Pixel Art Speakers vs Bluetooth Speakers for a Small Desk: Which Fits the Task?"
+      },
+      "expect": {
+        "type": "comparison",
+        "blog": "Recommend & Comparison",
+        "must": [
+          "Both sides in each decision axis",
+          "Conditional conclusions; no unconditional winner",
+          "Repeated necessary references to both objects are not banned as extra product placement"
+        ]
+      }
+    },
+    {
+      "id": "intent-setup",
+      "input": {
+        "title": "How to Set Up a Digital Photo Frame for a Shared Household"
+      },
+      "expect": {
+        "type": "setup",
+        "blog": "Support & Tips",
+        "must": [
+          "Identify prerequisites and applicable model capabilities",
+          "Actions include observable validation and fallback",
+          "No imagined common app menu for all models"
+        ]
+      }
+    },
+    {
+      "id": "intent-support",
+      "input": {
+        "title": "Digital Photo Frame Not Receiving Photos: What to Check First"
+      },
+      "expect": {
+        "type": "support",
+        "blog": "Support & Tips",
+        "must": [
+          "Symptom routes and reversible checks",
+          "Distinguish network connection from successful content delivery",
+          "Stop and escalation conditions"
+        ]
+      }
+    },
+    {
+      "id": "evidence-review",
+      "input": {
+        "title": "Does Higher Brightness Really Make a Pixel Art Display Easier to Read?",
+        "type": "technology",
+        "fx": "F14"
+      },
+      "expect": {
+        "must": [
+          "Distinguish claim support, confounders, uncertainty",
+          "Retain candidate FX status rather than claim verified Momcozy formula",
+          "No invented numeric optimum"
+        ]
+      }
+    },
+    {
+      "id": "no-internal-target",
+      "input": {
+        "title": "Why Pixel Art Displays Look Different Up Close and Across a Room",
+        "condition": "No relevant published explanatory blog exists"
+      },
+      "expect": {
+        "must": [
+          "No invented slug or empty href",
+          "Pending opportunity stays internal",
+          "Category link only if existing sentence genuinely warrants it"
+        ]
+      }
+    },
+    {
+      "id": "reachable-not-supporting",
+      "input": {
+        "condition": "A source is HTTP200 but discusses a different model"
+      },
+      "expect": {
+        "must": [
+          "Do not mark target model capability supported",
+          "Find appropriate source or narrow/delete claim"
+        ]
+      }
+    },
+    {
+      "id": "unreadable-target",
+      "input": {
+        "condition": "Relevant URL is blocked or returns403"
+      },
+      "expect": {
+        "must": [
+          "Do not claim verified or fabricate status",
+          "Use inspectable authoritative alternative or omit link",
+          "Core unsupported claim blocks export"
+        ]
+      }
+    },
+    {
+      "id": "category-variants",
+      "input": {
+        "condition": "pixel display and pixel art display refer to the same appropriate collection"
+      },
+      "expect": {
+        "must": [
+          "Allow same genuine collection for natural keyword variants",
+          "Do not create one fake collection per phrase"
+        ]
+      }
+    },
+    {
+      "id": "unknown-model-feature",
+      "input": {
+        "condition": "Entity vocabulary lists a capability but chosen model manual does not establish it"
+      },
+      "expect": {
+        "must": [
+          "Do not infer model support from general vocabulary",
+          "Verify applicable official source; otherwise remove assertion"
+        ]
+      }
+    },
+    {
+      "id": "post-link-fact-change",
+      "input": {
+        "condition": "Link insertion changes a causal or numeric claim"
+      },
+      "expect": {
+        "must": [
+          "Update evidence and reseal draft",
+          "Invalidate later links/review",
+          "Do not treat link stage as exempt from fact review"
+        ]
+      }
+    },
+    {
+      "id": "post-review-faq",
+      "input": {
+        "condition": "A new FAQ is appended after review"
+      },
+      "expect": {
+        "must": [
+          "Invalidate old review",
+          "Review final complete content before export"
+        ]
+      }
+    },
+    {
+      "id": "template-duplication",
+      "input": {
+        "condition": "Existing Liquid template already outputs H1 author TOC disclaimer and recommendation cards"
+      },
+      "expect": {
+        "must": [
+          "Do not duplicate fixed modules in body",
+          "Do not automatically use cover as first banner",
+          "No invented banner URL"
+        ]
+      }
+    },
+    {
+      "id": "false-experience",
+      "input": {
+        "condition": "No hands-on experiment was performed"
+      },
+      "expect": {
+        "must": [
+          "No we tested or invented user result",
+          "Evaluate experience through grounded observable situations rather than fabricated credentials"
+        ]
+      }
+    },
+    {
+      "id": "publication-owner",
+      "input": {
+        "condition": "Existing publisher controls hidden status and scheduling"
+      },
+      "expect": {
+        "must": [
+          "No published/published_at/status/schedule fields",
+          "No publishing or backend calls",
+          "Deliver one blog-array JSON only"
+        ]
+      }
+    },
+    {
+      "id": "fx-reference-over-layout",
+      "input": {
+        "condition": "F1 watts article; the latest UI discussion referenced a pregnancy-travel page."
+      },
+      "expect": {
+        "must": [
+          "Read the registered F1 high-chair sample before outlining.",
+          "Do not substitute the travel guide or use it to require FAQs."
+        ]
+      }
+    },
+    {
+      "id": "same-paragraph-count-not-failure",
+      "input": {
+        "condition": "Two adjacent sections each have four paragraphs but answer distinct questions."
+      },
+      "expect": {
+        "must": [
+          "Judge incremental information, not equal paragraph count.",
+          "Merge only actual repetition."
+        ]
+      }
+    },
+    {
+      "id": "cosmetic-scenes",
+      "input": {
+        "condition": "The draft repeats the same advice for desks, bedrooms and travel."
+      },
+      "expect": {
+        "must": [
+          "Keep only scenarios with a changed condition and different observation or conclusion.",
+          "State controlled conditions; no invented experiment."
+        ]
+      }
+    },
+    {
+      "id": "no-faq-is-valid",
+      "input": {
+        "condition": "The F1 body answers the core question and there is no new relevant FAQ."
+      },
+      "expect": {
+        "must": [
+          "Permit no FAQ with a reason.",
+          "Do not add FAQ to satisfy sample frequency or scoring."
+        ]
+      }
+    },
+    {
+      "id": "alt-pixel-mismatch",
+      "input": {
+        "condition": "A photo shows spoon feeding while alt claims bottle feeding."
+      },
+      "expect": {
+        "must": [
+          "Inspect pixels and correct the description.",
+          "Do not treat alt as authoritative visual evidence."
+        ]
+      }
+    },
+    {
+      "id": "pending-image-not-publisher-content",
+      "input": {
+        "condition": "A necessary explanatory figure has been planned but no asset exists."
+      },
+      "expect": {
+        "must": [
+          "Keep the plan internal and body self-contained.",
+          "Do not invent a CDN URL or insert prompts/placeholders."
+        ]
+      }
+    },
+    {
+      "id": "chart-is-not-measurement",
+      "input": {
+        "condition": "A proposed generated frequency-response graph has no measured source."
+      },
+      "expect": {
+        "must": [
+          "Do not fabricate numeric curves.",
+          "Use explicitly conceptual diagrams or verified data with conditions."
+        ]
+      }
+    },
+    {
+      "id": "cover-banner-separation",
+      "input": {
+        "condition": "A title-heavy OG cover is proposed as the article H1 background."
+      },
+      "expect": {
+        "must": [
+          "Separate listing cover, banner and body figure.",
+          "Do not duplicate baked-in heading text or silently use the cover as banner."
+        ]
+      }
+    },
+    {
+      "id": "f14-supplement-not-original",
+      "input": {
+        "condition": "A new mastitis claim-review article was found while the registered F14 URL is unknown."
+      },
+      "expect": {
+        "must": [
+          "Keep the original mapping unverified.",
+          "Label the new article supplementary candidate; do not claim recovery of the original."
+        ]
+      }
+    }
   ]
 }

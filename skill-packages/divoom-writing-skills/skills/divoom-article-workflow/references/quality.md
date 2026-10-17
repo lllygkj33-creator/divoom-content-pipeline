@@ -2,6 +2,8 @@
 
 最终审核发生在正文、FAQ、链接、meta 全部完成后。导出再核对指纹，任何改动使旧 review 无效。机械检查不能代替来源审读，反过来高自评分也不能盖过格式错误。
 
+Technology 协议 2 同时执行 [编辑审核](editorial-review.md)，在 review 增加七项 editorial_checks；不要把是否出现列表、FAQ 或相同段落数直接换成分数。变更参照案例时说明评分基准改变，不能把评分变化说成正文已改善。
+
 ## 保留的七维
 
 experience（具体真实情境与可观察结果，禁止虚构实测）；expertise（机制闭合、正确同轴）；authoritativeness（原始事实与主张可追溯，词库不充当证据）；trustworthiness（范围、风险、品牌视角透明）；hcu（答案前置、便于使用、无注水）；infogain（变量区分和判断框架的增量）；ymyl（相关风险的就地边界，不塞无关警告）。详细原基线见 [审核维度](source/audit-dimensions.md)，其中旧脚本“只要命中必须压分”的泛词规则由下述语义门禁取代。

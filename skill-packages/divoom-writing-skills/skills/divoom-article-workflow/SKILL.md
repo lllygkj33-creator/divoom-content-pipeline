@@ -13,6 +13,7 @@ description: Write a Divoom blog article from a supplied title and deliver one p
 2. 顺序读并执行兄弟阶段 Skill：[大纲](../divoom-outline/SKILL.md) → [正文](../divoom-draft/SKILL.md) → [链接](../divoom-links/SKILL.md)。阶段模块是契约化能力，不要求多 Agent、服务或看板。所有阶段使用同一 run 目录，不复制上一角色的整份 JSON。
 3. 每阶段结束运行 `workflow.py seal <run目录> <outline|draft|links>`。后续依赖前序文件指纹；编辑前序产物后必须从该阶段重新封存，不能沿用旧审核。
 4. 链接完成后读 [quality](references/quality.md)，对最终 HTML、元信息和证据做统一审核。完成 `review.json`，运行 `workflow.py seal <run目录> review`，再 `workflow.py export <run目录> --out <交付目录>/articles.json`。
+   Technology 新稿还须读 [编辑审核](references/editorial-review.md)，核查同 FX 案例、段落推进、条件与场景、图文关系及 FAQ 取舍。新 run 的大纲协议为 2；历史 run 不强制重写。内部规划字段不进入交付 JSON。
 5. 首稿最多进行一次有依据的内容定向修订；仍不通过则报告具体阻塞，不伪造通过、评分或证据。机械属性修正不需要重写全文，但所有变动都要重新验证和审核。
 
 ## 不可丢失的约束

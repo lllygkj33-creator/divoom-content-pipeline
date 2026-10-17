@@ -8,9 +8,9 @@
 flowchart TD
     U[用户只输入标题] --> O[divoom-article-workflow 总控]
     O --> R[识别读者任务：五类类型与FX]
-    R --> A[divoom-outline 大纲规划]
+    R --> A[divoom-outline：绑定同FX案例、段落问题链、条件与图位规划]
     K[(固定资料快照与官方实时来源)] --> A
-    A --> G1{标题承诺与大纲检查}
+    A --> G1{标题承诺、同FX案例与图文计划检查}
     G1 -->|通过| B[divoom-draft 正文撰写]
     G1 -->|关键前提缺失| X[说明具体阻塞]
     K --> B
@@ -49,6 +49,10 @@ flowchart LR
 ```
 
 四个Skill按共享契约串行协作，不需要多Agent服务；详细模块职责、指纹规则和返工条件见 [架构设计](ARCHITECTURE.md)。
+
+2026-10-17 更新：Technology Hub 新稿采用编辑协议 2，写之前规划条件、场景、列表/表格和配图；对应案例核验见 [案例索引](skills/divoom-article-workflow/references/technology-cases.json)，规则见 [编辑与配图规划](skills/divoom-article-workflow/references/editorial-planning.md)。F1–F13 已读，F14 另有补充候选且不冒充原始确认样本。此次只规划素材，不自动生图或上传。对用户仍只输出文章数组 JSON。
+
+逐类配图、位置、段落条件和参考项目的完整报告：[Technology 图文审计](reports/technology-editorial-visual-audit-2026-10-17.html)。
 
 ## 安装与使用
 

@@ -13,4 +13,5 @@ description: Insert and verify contextual internal and primary-source external l
 4. 插入 `<a href="真实URL" title="目标内容的自然说明">自然锚文本</a>`。第三方链接加 `target="_blank" rel="noopener noreferrer nofollow"`。站内优先真实根相对路径；自家域名按配置边界判断，不按字符串包含匹配。不要生成模板变量 URL。
 5. 写 `links.json` 数组。每项含 `href`（与 HTML 一致）、`kind`（internal/external/pending）、`anchor`、`section`、`purpose`、`checked_at`、`verification`（verified/unverified）、`source_locator`（实际读取位置）。pending 使用空 href、不能留在 HTML；verified 仅代表已检查目标内容，事实仍由 evidence 表逐项审视。
 6. 只改必要锚文本。若为了补链改变了结论、数字、FAQ 或正文结构，更新 evidence 并回正文阶段重新封存，不能跳过上游重审。仅插锚不改变论证时可直接 `seal <run> links`；该动作把最终链接 HTML 纳入新指纹。
+   Technology 的场景条件、图片 src/alt/标签及图位也属于上游内容。不要在补链时临时抓竞品图片或填充 pending 素材；改变后按大纲→正文→链接重新封存。
 7. 按 quality 规范审核最终稿，写 review.json；由总控完成 review 封存和 export。不要以“链接数量达标”代替语义质量。
