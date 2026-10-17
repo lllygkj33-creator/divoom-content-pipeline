@@ -23,7 +23,7 @@ def main():
             errors.append('Invalid frontmatter: ' + name)
         if not (file.parent / 'agents/openai.yaml').exists():
             errors.append('Missing UI metadata: ' + name)
-    for path in SKILLS.rglob('*.md'):
+    for path in (file for name in skills for file in (SKILLS / name).rglob('*.md')):
         if 'source' in path.parts:
             continue  # archived examples use original Obsidian paths, not current instruction links
         text = path.read_text(encoding='utf-8')
