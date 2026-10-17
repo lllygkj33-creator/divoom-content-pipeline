@@ -41,6 +41,8 @@ ALLOWED = {"article", "div", "span", "p", "h2", "ul", "ol", "li", "strong",
            "th", "td", "caption", "figure", "figcaption", "img", "a", "br", "hr",
            "code", "pre", "sup", "sub", "s", "del"}
 PLACEHOLDER = re.compile(r"\$\{[^}]+\}|\[\[(?!related_products_\d+\]\])[^\]]+\]\]|\b(?:YOUTUBE_URL_|BLOG_URL_|PLACEHOLDER)\b", re.I)
+IMAGE_PROMPT_PREFIX = "DIVOOM_IMAGE_PROMPT_V1 "
+IMAGE_PROMPT_FIELDS = ("id", "role", "section", "aspect_ratio", "filename", "prompt", "alt", "title")
 
 
 class ContractError(ValueError):
@@ -125,6 +127,31 @@ def valid_url(href, allow_anchor=True):
         return False
 
 
+def parse_image_prompt(data):
+    data = data.strip()
+    require(data.startswith(IMAGE_PROMPT_PREFIX), "Only structured Divoom image-prompt comments are permitted")
+    require(len(data) <= 16000 and "--" not in data and "<" not in data and ">" not in data,
+            "Unsafe or oversized image-prompt comment")
+    payload = json.loads(data[len(IMAGE_PROMPT_PREFIX):])
+    require(isinstance(payload, dict) and set(payload) == set(IMAGE_PROMPT_FIELDS), "Image prompt has invalid fields")
+    require(all(nonempty(payload.get(k)) for k in IMAGE_PROMPT_FIELDS), "Image prompt fields must be nonempty strings")
+    require(re.fullmatch(r"[a-z][a-z0-9-]*", payload["id"]), "Invalid image-prompt id")
+    require(payload["role"] in ("banner", "explanatory", "comparison", "scene", "measurement", "process"), "Invalid image-prompt role")
+    require(re.fullmatch(r"[a-z][a-z0-9-]*", payload["section"]), "Invalid image-prompt section")
+    require(re.fullmatch(r"[1-9][0-9]*:[1-9][0-9]*", payload["aspect_ratio"]), "Invalid target aspect ratio")
+    require(re.fullmatch(r"[a-z0-9][a-z0-9-]*\.(?:png|jpe?g|webp)", payload["filename"]), "Invalid image filename")
+    return payload
+
+
+def render_image_prompt(row):
+    require(isinstance(row, dict) and all(key in row for key in IMAGE_PROMPT_FIELDS), "Image prompt plan is missing required fields")
+    payload = {key: row[key] for key in IMAGE_PROMPT_FIELDS}
+    encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True)
+    encoded = encoded.replace("<", "\\u003c").replace(">", "\\u003e").replace("--", "\\u002d\\u002d")
+    parse_image_prompt(IMAGE_PROMPT_PREFIX + encoded)
+    return "<!-- " + IMAGE_PROMPT_PREFIX + encoded + " -->"
+
+
 class BodyParser(HTMLParser):
     def __init__(self, profile):
         super().__init__(convert_charrefs=True)
@@ -135,6 +162,7 @@ class BodyParser(HTMLParser):
         self.semantic = []
         self.links = []
         self.images = []
+        self.image_prompts = []
         self.ids = set()
         self.h2_ids = []
         self.h2_texts = []
@@ -228,7 +256,12 @@ class BodyParser(HTMLParser):
             self.current_link["anchor"] += data
 
     def handle_comment(self, data):
-        self.errors.append("HTML comments are not article content")
+        try:
+            payload = parse_image_prompt(data)
+            self.image_prompts.append({"payload": payload, "section": self.current_section})
+            self.semantic.append("<image-prompt>" + json.dumps(payload, sort_keys=True, ensure_ascii=False) + "</image-prompt>")
+        except (ValueError, TypeError, KeyError) as exc:
+            self.errors.append("HTML comments are not article content except validated image prompts: " + str(exc))
 
     def handle_decl(self, decl):
         self.errors.append("HTML document declarations are not body fragments")
@@ -347,6 +380,7 @@ def validate_outline(outline, profile):
     require(len(ids) == len(set(ids)), "Duplicate section ids")
     if "editorial_protocol_version" in outline:
         validate_editorial_outline(outline)
+    validate_prompt_plan(outline)
 
 
 EDITORIAL_CHECKS = ("sample_alignment", "paragraph_progression", "condition_integrity",
@@ -430,6 +464,35 @@ def validate_editorial_review(review, outline):
         row = rows.get(key)
         require(isinstance(row, dict) and row.get("decision") == "pass" and
                 row.get("section") in locations and nonempty(row.get("reason")), "Incomplete editorial check: " + key)
+
+
+def validate_prompt_plan(outline):
+    mode = outline.get("image_prompt_delivery", "internal")
+    require(mode in ("internal", "html_comments_v1"), "Invalid image-prompt delivery mode")
+    if mode == "internal":
+        return
+    require(isinstance(outline.get("visual_plan"), list), "Prompt delivery needs visual_plan")
+    ids = []
+    for row in outline["visual_plan"]:
+        if row.get("asset_status") != "pending":
+            continue
+        payload = parse_image_prompt(render_image_prompt(row)[4:-3])
+        require(payload["section"] in {s["id"] for s in outline["sections"]} | {"intro", "banner"}, "Prompt section not in outline")
+        ids.append(payload["id"])
+    require(len(ids) == len(set(ids)), "Duplicate image-prompt plan id")
+
+
+def validate_prompt_delivery(outline, parsed):
+    if outline.get("image_prompt_delivery", "internal") != "html_comments_v1":
+        require(not parsed.image_prompts, "HTML image prompts require an explicit outline delivery mode")
+        return
+    expected = {r["id"]: r for r in outline["visual_plan"] if r.get("asset_status") == "pending"}
+    actual = [r["payload"]["id"] for r in parsed.image_prompts]
+    require(len(actual) == len(set(actual)) and set(actual) == set(expected), "Image prompts missing, duplicated or unplanned")
+    for item in parsed.image_prompts:
+        payload = item["payload"]
+        require(payload == {k: expected[payload["id"]][k] for k in IMAGE_PROMPT_FIELDS}, "Image prompt differs from sealed plan")
+        require(item["section"] == ("intro" if payload["section"] == "banner" else payload["section"]), "Image prompt outside planned section")
 
 
 def validate_evidence(evidence, body=None, outline=None):
@@ -546,6 +609,8 @@ def check_files(run_dir, stage, profile):
     state = load(run_dir / "run.json")
     if state.get("editorial_contract_version") == 2 and outline["type"] == "technology":
         require(outline.get("editorial_protocol_version") == 2, "New Technology runs require editorial protocol 2")
+    if state.get("editorial_contract_version") == 2 and profile.get("image_prompt_delivery") == "html_comments_v1":
+        require(outline.get("image_prompt_delivery") == "html_comments_v1", "New runs must declare configured image-prompt delivery")
     evidence = load(run_dir / "evidence.json")
     if stage == "outline":
         validate_evidence(evidence, outline=outline)
@@ -555,6 +620,7 @@ def check_files(run_dir, stage, profile):
     require(not errors, "; ".join(errors))
     require(article["blog title"] == outline["title"] and article["blog"] == outline["blog"] and article["tags"] == outline["tags"], "Metadata/outline mismatch")
     parsed = parse_body(article["html代码"], profile)
+    validate_prompt_delivery(outline, parsed)
     if outline.get("editorial_protocol_version") == 2:
         validate_editorial_body(outline, parsed)
     require(parsed.h2_ids == [x["id"] for x in outline["sections"]], "Body H2 order differs from outline")

@@ -1,5 +1,13 @@
 # 验收记录
 
+## 2026-10-17：JSON 随稿交付配图 prompt
+
+- 本部署默认 `html_comments_v1`：大纲预先规划图位与自包含英文 prompt，正文用保留 HTML 注释交付，最终文章数组的顶层字段不变。没有实际素材时不输出虚构 img 或 CDN URL。
+- 58 项 Python 测试通过。其中 8 项新增回归检查覆盖注释转义、可见文本排除、计划与图位对应、prompt 改动导致指纹变化、非法注释及未声明模式拒绝。它们验证机械不变量，不替代内容或图像人工审核。
+- 使用已安装的新版四阶段 Skills 实际重写 F1 功率与低音文章，独立新 run 完成大纲→正文→链接→执行模型自检→导出；旧稿保留。新稿 7 个 H2、两组清单、一个观察/推断边界表、无重复 FAQ，含 1 张 banner 和 3 张正文图的待生成 prompt。成稿与运行证据只在本地用户交付目录，不纳入 Skills 包或仓库。
+- 对该新版 JSON 调用 `D:/divoom-publisher/src/lib/shopify-json.ts` 的实际解析器：识别为 blog_article，Technology Hub 与 Bluetooth Speakers 保留，publishable=true，issues=[]，bodyHtml 与输入 HTML（去首尾空白后）完全一致，4 个 prompt 注释全部保留。解析器 SHA256 仍为 `e5b81fbfbf18482181ee8492091e59a7cb7db212991fe5552cef06987ccddb43`。使用只读配置/翻译适配和 Custom 上传目标；未启动服务、未改发布程序、未发布。
+- package 完整性检查通过，原始 123 份快照未改动。生成图片、上传素材、替换真实 URL 及 Shopify 保存后注释回读尚未执行，不声称已完成这些步骤。
+
 ## 2026-10-17：Technology 图文编辑协议 2
 
 - 逐篇读取 F1–F13 对应的 13 个实时页面；另读 1 篇 F14 补充候选，未改写原始候选状态。适配两种正文模板，排除列表/表格单元格和商品卡的段落计数干扰。

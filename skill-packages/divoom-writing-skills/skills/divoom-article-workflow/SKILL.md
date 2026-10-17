@@ -11,6 +11,7 @@ description: Write a Divoom blog article from a supplied title and deliver one p
 
 1. 读 [contract](references/contract.md)、[routing](references/routing.md) 和 [site profile](config/site.json)。按读者的主要任务判断五类类型与 FX；分类置信度不足时研究标题语义，只有会改变承诺的歧义才询问。不得重新选题。用 `python scripts/workflow.py init --title "..." --run-dir <目录>` 建立内部工作区。
 2. 顺序读并执行兄弟阶段 Skill：[大纲](../divoom-outline/SKILL.md) → [正文](../divoom-draft/SKILL.md) → [链接](../divoom-links/SKILL.md)。阶段模块是契约化能力，不要求多 Agent、服务或看板。所有阶段使用同一 run 目录，不复制上一角色的整份 JSON。
+   按 site 配置执行 [配图 prompt 交付](references/image-prompt-handoff.md)。本部署默认把待配图的自包含英文 prompt 写入正文保留 HTML 注释，不增加 JSON 顶层字段；没有必要图位则不强行补图。
 3. 每阶段结束运行 `workflow.py seal <run目录> <outline|draft|links>`。后续依赖前序文件指纹；编辑前序产物后必须从该阶段重新封存，不能沿用旧审核。
 4. 链接完成后读 [quality](references/quality.md)，对最终 HTML、元信息和证据做统一审核。完成 `review.json`，运行 `workflow.py seal <run目录> review`，再 `workflow.py export <run目录> --out <交付目录>/articles.json`。
    Technology 新稿还须读 [编辑审核](references/editorial-review.md)，核查同 FX 案例、段落推进、条件与场景、图文关系及 FAQ 取舍。新 run 的大纲协议为 2；历史 run 不强制重写。内部规划字段不进入交付 JSON。

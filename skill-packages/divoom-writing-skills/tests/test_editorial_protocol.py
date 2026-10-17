@@ -37,6 +37,7 @@ class EditorialProtocol(unittest.TestCase):
         w.validate_outline(self.outline,self.p)
 
     def test_pending_asset_cannot_be_inserted(self):
+        self.outline['image_prompt_delivery']='internal'
         self.outline['visual_plan']=[{'id':'v1','role':'explanatory','section':'section-1','after_paragraph':1,'purpose':'Fixture map','claim_ids':['C1'],'asset_status':'pending','src':''}]
         w.validate_outline(self.outline,self.p)
         parsed=w.parse_body(body().replace('Supported example statement 1.','Supported example statement 1.<img src="https://example.org/figure.png" alt="A schematic" title="A schematic">'),self.p)

@@ -1,5 +1,7 @@
 # Divoom Writing Skills Package
 
+本部署已增加 [插图 prompt 随稿](skills/divoom-article-workflow/references/image-prompt-handoff.md)：仍只输出一份文章 JSON，待配图要求以正文保留 HTML 注释跟随图位，前台不渲染。可把原 JSON 或单个英文 prompt 交给图像会话，生成后上传媒体并用真实图片替换注释。本包不自动生图、上传或发布；不是对 Shopify 所有编辑路径保留注释的保证。
+
 给一个标题，得到一个可以交给既有发布程序的博客数组 JSON。默认英文，五类内容自动判断，网站归属为 Technology Hub、Recommend & Comparison、Support & Tips。隐藏及排期由发布程序负责；本包没有发布能力。
 
 ## 架构与流程图

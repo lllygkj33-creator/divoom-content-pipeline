@@ -16,6 +16,8 @@
 
 Technology 新 run 的 editorial_contract_version=2，outline 使用编辑协议 2：同 FX sample_review、逐节呈现与承接、scenario_plan、faq_decision、visual_plan/visual_reason。review 包含 editorial_checks。字段定义见 [编辑与配图规划](editorial-planning.md)；它们绑定在既有指纹链内，不增加新阶段、不进入文章 JSON。无版本字段的历史 run 保持可读，不能冒称已经通过新编辑审核。其他四类暂不强制迁移该协议。
 
+本部署新增 [配图 prompt 随稿模式](image-prompt-handoff.md)：site 的 image_prompt_delivery 默认 html_comments_v1，新 run 在 outline 声明同一模式。完整审核记录仍不出现在 JSON 顶层；待配图 prompt 可以作为正文保留注释交付，并纳入原指纹链。其他类型可以单独采用 visual_plan 与该模式，不因此强制迁移 Technology 专属编辑协议。
+
 ## 封存与审查
 
 outline 指纹绑定 outline；draft 绑定 outline、正文无锚语义投影、metadata、evidence；links 绑定完整 body、links、metadata、evidence；review 绑定所有最终产物、配置与 review。正文从 draft 到 links 允许插锚；换词/加事实改变语义投影会要求重新 draft。配置变化也会使检查失效。

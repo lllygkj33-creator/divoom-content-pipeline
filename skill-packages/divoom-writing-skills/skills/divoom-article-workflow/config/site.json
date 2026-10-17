@@ -22,5 +22,6 @@
   ],
   "word_count": {"min": 1200, "max": 2200},
   "max_content_revisions": 1,
+  "image_prompt_delivery": "html_comments_v1",
   "publication_owner": "existing publisher application; not this package"
 }

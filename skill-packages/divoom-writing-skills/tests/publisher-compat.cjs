@@ -29,8 +29,15 @@ const context={module:moduleObject,exports:moduleObject.exports,URL,console,requ
   return allowed[name];
 }};
 vm.runInNewContext(compiled,context,{filename:sourcePath});
-const result=moduleObject.exports.parseJsonContent(fs.readFileSync(jsonPath,'utf8'),jsonPath,'custom');
+const input=fs.readFileSync(jsonPath,'utf8');
+const result=moduleObject.exports.parseJsonContent(input,jsonPath,'custom');
+const raw=JSON.parse(input);
+const preservation=Array.isArray(raw) && raw.length===result.candidates.length
+  && raw.every((article,index)=>{
+    const body=article['html代码']??article.html??article.body_html;
+    return typeof body==='string' && result.candidates[index].bodyHtml===body.trim();
+  });
 const rows=result.candidates.map(c=>({title:c.title,blog:c.blogName,tags:c.tags,publishable:c.publishable,issues:c.issues}));
 const errors=rows.flatMap(r=>r.issues.filter(i=>i.level==='error'));
-console.log(JSON.stringify({parser:sourcePath,parserSha256:require('node:crypto').createHash('sha256').update(source).digest('hex'),mode:'actual parser; config and translation adapters; custom upload target; no service and no publishing',detected:result.detected,error:result.error,candidates:rows},null,2));
-if(result.error || !rows.length || errors.length) process.exitCode=1;
+console.log(JSON.stringify({parser:sourcePath,parserSha256:require('node:crypto').createHash('sha256').update(source).digest('hex'),mode:'actual parser; config and translation adapters; custom upload target; no service and no publishing',detected:result.detected,error:result.error,bodyPreserved:preservation,imagePromptCount:result.candidates.reduce((n,c)=>n+(c.bodyHtml.match(/<!-- DIVOOM_IMAGE_PROMPT_V1 /g)||[]).length,0),candidates:rows},null,2));
+if(result.error || !rows.length || errors.length || !preservation) process.exitCode=1;

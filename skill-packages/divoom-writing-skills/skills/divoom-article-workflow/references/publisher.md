@@ -27,6 +27,7 @@
 - a：非空 href/title。第三方 HTTP(S) 必须 `target="_blank" rel="noopener noreferrer nofollow"`，内部路径无需新窗口。协议相对路径 `//evil.example` 不能当作站内。禁止 javascript/data、变量 URL、草稿预览、未解析标记。
 - 不嵌 script/style/iframe/form，不放事件属性、不改变主题字体/CSS。允许 p、article、div、span、h2、ul、ol、li、strong、em、b、i、blockquote、table/thead/tbody/tfoot/tr/th/td、caption、figure/figcaption、img、a、br、hr、code、pre、sup、sub、s、del。所有非 void 标签正确闭合，H2 非空，id 唯一。
 - `html代码` 不重复 H1/作者/目录/免责声明/Editor's Recommendation；固定模块由 Liquid 模板输出。用户此前的 `<span>product_card</span>` 只在明确要求且 custom.product_card 已有值时使用，不能默认生成。
+- 配置的 `html_comments_v1` 模式只允许 [结构化配图注释](image-prompt-handoff.md)。prompt 在原图位随 html代码 交付，前台不渲染；不新加 JSON 顶层键。未知任意注释依然非法。注释不是 img，不能冒充已生成图片；实际 Shopify 保存后是否保留需回读核实，原 JSON 保留完整备份。
 
 ## 部署路由差异
 
