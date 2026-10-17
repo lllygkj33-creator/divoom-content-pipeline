@@ -152,6 +152,12 @@ def render_image_prompt(row):
     return "<!-- " + IMAGE_PROMPT_PREFIX + encoded + " -->"
 
 
+def render_image_slot(row):
+    """Visible replacement locator plus the existing independently usable prompt."""
+    require(re.fullmatch(r"images_[1-9][0-9]*", row.get("slot", "")), "Invalid image slot")
+    return "<p>" + row["slot"] + "：" + html.escape(row["alt"]) + "</p>\n" + render_image_prompt(row)
+
+
 class BodyParser(HTMLParser):
     def __init__(self, profile):
         super().__init__(convert_charrefs=True)
@@ -163,6 +169,8 @@ class BodyParser(HTMLParser):
         self.links = []
         self.images = []
         self.image_prompts = []
+        self.image_slots = []
+        self.paragraph_buffer = None
         self.ids = set()
         self.h2_ids = []
         self.h2_texts = []
@@ -176,6 +184,8 @@ class BodyParser(HTMLParser):
         attrs = dict(attr_list)
         if tag in BLOCK:
             self.text_parts.append(" ")
+        if tag == "p":
+            self.paragraph_buffer = {"text": [], "start": len(self.text_parts), "section": self.current_section}
         if tag not in ALLOWED:
             self.errors.append(f"HTML tag not allowed: {tag}")
         if len(attr_list) != len(attrs):
@@ -228,6 +238,15 @@ class BodyParser(HTMLParser):
     def handle_endtag(self, tag):
         if tag in VOID:
             return
+        if tag == "p" and self.paragraph_buffer is not None:
+            paragraph = self.paragraph_buffer
+            label = normalize("".join(paragraph["text"]))
+            match = re.fullmatch(r"(images_[1-9][0-9]*)：(.+)", label)
+            if match:
+                self.image_slots.append({"slot": match[1], "alt": match[2], "section": paragraph["section"]})
+                # The user can see the locator, but it is not editorial prose or evidence.
+                del self.text_parts[paragraph["start"]:]
+            self.paragraph_buffer = None
         if tag in BLOCK:
             self.text_parts.append(" ")
         if not self.stack or self.stack[-1] != tag:
@@ -250,6 +269,8 @@ class BodyParser(HTMLParser):
     def handle_data(self, data):
         self.text_parts.append(data)
         self.semantic.append(data)
+        if self.paragraph_buffer is not None:
+            self.paragraph_buffer["text"].append(data)
         if self.h2_buffer is not None:
             self.h2_buffer.append(data)
         if self.current_link is not None:
@@ -467,6 +488,13 @@ def validate_editorial_review(review, outline):
 
 
 def validate_prompt_plan(outline):
+    slot_mode = outline.get("image_slot_delivery", "none")
+    require(slot_mode in ("none", "visible_alt_v1"), "Invalid image-slot delivery mode")
+    if slot_mode == "visible_alt_v1":
+        require(outline.get("image_prompt_delivery") == "html_comments_v1", "Visible image slots require prompt delivery")
+        active = [r for r in outline.get("visual_plan", []) if r.get("asset_status") != "omitted"]
+        require(all(r.get("role") != "banner" and r.get("section") != "banner" for r in active), "Body image slots cannot include the template banner")
+        require([r.get("slot") for r in active] == [f"images_{i}" for i in range(1, len(active) + 1)], "Body image slots must be sequential")
     mode = outline.get("image_prompt_delivery", "internal")
     require(mode in ("internal", "html_comments_v1"), "Invalid image-prompt delivery mode")
     if mode == "internal":
@@ -485,6 +513,7 @@ def validate_prompt_plan(outline):
 def validate_prompt_delivery(outline, parsed):
     if outline.get("image_prompt_delivery", "internal") != "html_comments_v1":
         require(not parsed.image_prompts, "HTML image prompts require an explicit outline delivery mode")
+        require(not parsed.image_slots, "Visible image slots require an explicit delivery mode")
         return
     expected = {r["id"]: r for r in outline["visual_plan"] if r.get("asset_status") == "pending"}
     actual = [r["payload"]["id"] for r in parsed.image_prompts]
@@ -493,6 +522,12 @@ def validate_prompt_delivery(outline, parsed):
         payload = item["payload"]
         require(payload == {k: expected[payload["id"]][k] for k in IMAGE_PROMPT_FIELDS}, "Image prompt differs from sealed plan")
         require(item["section"] == ("intro" if payload["section"] == "banner" else payload["section"]), "Image prompt outside planned section")
+    if outline.get("image_slot_delivery") == "visible_alt_v1":
+        expected_slots = [{"slot": r["slot"], "alt": normalize(r["alt"]), "section": r["section"]}
+                          for r in outline["visual_plan"] if r.get("asset_status") == "pending"]
+        require(parsed.image_slots == expected_slots, "Image slot number, alt or section differs from plan")
+    else:
+        require(not parsed.image_slots, "Visible image slots require an explicit delivery mode")
 
 
 def validate_evidence(evidence, body=None, outline=None):
@@ -611,6 +646,10 @@ def check_files(run_dir, stage, profile):
         require(outline.get("editorial_protocol_version") == 2, "New Technology runs require editorial protocol 2")
     if state.get("editorial_contract_version") == 2 and profile.get("image_prompt_delivery") == "html_comments_v1":
         require(outline.get("image_prompt_delivery") == "html_comments_v1", "New runs must declare configured image-prompt delivery")
+    if state.get("editorial_contract_version") == 2 and profile.get("image_slot_delivery") == "visible_alt_v1":
+        require(outline.get("image_slot_delivery") == "visible_alt_v1", "New runs must declare configured image-slot delivery")
+    if state.get("editorial_contract_version") == 2 and profile.get("article_banner", {}).get("mode") == "template_fixed":
+        require(all(r.get("role") != "banner" and r.get("section") != "banner" for r in outline.get("visual_plan", [])), "The fixed banner belongs to the template, not article HTML")
     evidence = load(run_dir / "evidence.json")
     if stage == "outline":
         validate_evidence(evidence, outline=outline)

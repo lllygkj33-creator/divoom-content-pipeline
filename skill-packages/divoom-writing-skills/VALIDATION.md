@@ -1,5 +1,13 @@
 # 验收记录
 
+## 2026-10-17：固定模板 Banner 与可见换图定位
+
+- 通用 Banner 固定在文章 Section，不再提取或移除正文第一张图片；正文生成阶段不再安排 Banner 图片或 prompt。用户未替换线上主题，本次只交付可覆盖的 Liquid 文件。
+- 新增 visible_alt_v1：正文待配图位置输出 images_1：alt、images_2：alt 等可见定位段，紧随原结构化 prompt；保留原有语义 id 和图片文件名。换图后应同时移除定位段与其 prompt。定位段不计编辑正文词数或事实证据，且纳入指纹。
+- 63 项 Python 回归测试通过。新增检查包括编号/alt 错配、重复编号、非法 Banner 图位、部分图片补好后其余编号不重排、定位文字不能充当事实证据。
+- 完整 main-article-editorial.liquid 通过 Shopify 官方 Liquid Section 校验器。复用本机已有的同版 Shopify 校验依赖解决包内缺少依赖的问题；没有修改校验规则。
+- 原文章正文、meta 与链接保持不变，另建 run 重封存后导出固定 Banner 版 JSON：3 个正文图位、3 个 prompt、1,455 个编辑正文英文词，原文件名保留。本机实际发布程序解析器识别为 blog_article，publishable=true，issues=[]，bodyHtml 完整保留。没有上传图片、发布文章或写入 Shopify。
+
 ## 2026-10-17：JSON 随稿交付配图 prompt
 
 - 本部署默认 `html_comments_v1`：大纲预先规划图位与自包含英文 prompt，正文用保留 HTML 注释交付，最终文章数组的顶层字段不变。没有实际素材时不输出虚构 img 或 CDN URL。

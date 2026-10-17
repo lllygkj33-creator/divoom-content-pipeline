@@ -49,6 +49,8 @@ stateDiagram-v2
 
 配置 `html_comments_v1` 时，outline 拥有图位与自包含英文 prompt，draft 将 pending 图位写成受约束的 `DIVOOM_IMAGE_PROMPT_V1` HTML 注释。注释进入内容指纹，但不计入读者可见文本或词数；它们必须与大纲一一匹配且处于计划章节。生成、上传素材和替换真实图片不属于本流程；替换后应更新图位状态并重审。输出仍是同一份 `html代码`，不增加发布器未知的顶层字段。
 
+当前部署另用 `visible_alt_v1` 在 prompt 前写可见 images_N：alt 编号段，绑定图片计划，方便后台定位换图；它们不算编辑正文或证据。通用 Banner 由 Liquid 固定输出，不从正文取图；因此第一张正文场景图完整保留，正文生成阶段也不再生成 Banner 提示词。
+
 ## 质量与机械门禁分离
 
 Technology 编辑协议 2 在 outline 绑定同 FX 实际样本，并记录逐节职责、改变/保持的条件、可观察信号、FAQ 决定和图位。draft 只采用 ready 素材；review 逐项核查段落推进和图文一致性。outline 的这些字段沿用现有封存链，所以修改图位或场景会使旧审核失效；不增设生图服务或新的编排阶段。新 run 执行新契约，历史 run 可继续读取，不自动声称符合新审核。

@@ -23,5 +23,10 @@
   "word_count": {"min": 1200, "max": 2200},
   "max_content_revisions": 1,
   "image_prompt_delivery": "html_comments_v1",
+  "image_slot_delivery": "visible_alt_v1",
+  "article_banner": {
+    "mode": "template_fixed",
+    "url": "https://cdn.shopify.com/s/files/1/0082/4105/3814/files/DIVOOM-blog-banner.jpg?v=1792205040"
+  },
   "publication_owner": "existing publisher application; not this package"
 }
