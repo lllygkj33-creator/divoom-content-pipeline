@@ -12,6 +12,7 @@ description: Draft or revise the canonical English HTML body for an existing sea
    Technology 按 [编辑与配图规划](../divoom-article-workflow/references/editorial-planning.md) 执行：段落职责随问题安排，不给每节套同样四段；区分真正重复和必要限定。场景必须说明改变条件、保持条件和可观察差异；没有新增判断则合并。现有样本有无 FAQ 都不构成所有稿件的配额。
 3. 语义 HTML 仅使用共享白名单标签。H2 用大纲 section id；表格含 th scope；图片只在用户有真实素材时添加，alt/title 非空。本部署的通用 Banner 已固定在 Liquid，正文不写 Banner 图片或 Banner prompt，第一张正文图必须留在正文；封面只用于栏目卡片。作者、面包屑、目录、免责声明和底部推荐由模板负责，不写入正文。
    图片仅使用 visual_plan 中 ready 的真实素材，实际查看画面并核对图中数字、标签、外观和 alt。pending 按 [交付契约](../divoom-article-workflow/references/image-prompt-handoff.md) 用 render_image_slot 输出可见的 images_1：alt 编号段及隐藏 prompt，不输出假 img；omitted 不进入 HTML。此阶段不调用生图或上传。图位或论点改变时更新 outline/evidence 并重封存，不在正文定稿后另补未经审查的图。
+   产品外观图的英文 prompt 必须要求使用后续上传的对应型号照片，不再默认画通用黑箱/圆柱；原理图保持抽象部件并标注不代表 Divoom 实际内部。隐藏 prompt 和独立交接文件使用同一份计划，不能留两个互相矛盾的版本。
 4. 型号仅在论证必要时出现。额外推广最多一产品一处、不得在开头两段、不得单独开产品 H2，四条判据全过才写；对比文的 A/B 是论证对象。具体型号操作必须核实手册版本；危险动作前给边界，文末声明不能代替就地提示。
 5. 正文只建立真实论证，不为未来链接硬加段落。本阶段不插 `<a>`；确有原始资料引用需求时在证据表记录，交链接阶段落入自然锚文本。
 6. 生成 `metadata.json`：准确导出键名（不含 html代码）。meta description 与 summary 各≤160 UTF-16 字符；summary 是文章价值摘要而非复制开头。url 为小写英文连字符 slug，meta title 忠实且简洁（建议≤60字符，不冒充解析器硬限）。author 固定 `Divoom Professional Team`。blog/tags 必须与大纲和配置一致。不输出 template，除非用户明确指定已存在的文章模板后缀。

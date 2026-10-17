@@ -46,6 +46,8 @@ F14 原始截图的标题/URL 仍未核实。索引中的乳房按摩文章只�
 
 封面服务栏目卡片；banner 服务文章页顶部；正文图服务具体论证。本部署 Banner 已由 Liquid 固定为 DIVOOM-blog-banner.jpg，不再从正文取图，也不在 visual_plan 安排 banner。正文只规划实际需要的解释图或场景图，每项增加按顺序编号的 slot（images_1、images_2）。封面不自动塞进正文。
 
+产品参考协议 1 为每个图位记录 reference_mode 与 reference_requirement，明确“需产品实物附件”“仅通用原理部件”或“不涉及产品”。缺产品照片时把索要要求交给后续图像会话，不在写作阶段猜型号外观。独立 prompt 文件从同一封存计划导出；场景/产品外观与通用内部机理必须分开，不能用正面照片想象剖面。
+
 无素材时仍完成图位规划。internal 模式不向 HTML 输出素材要求；本部署配置的 html_comments_v1 与 visible_alt_v1 按 [配图交付契约](image-prompt-handoff.md) 在原图位写可见 images_1：alt 定位段，紧随完整英文 prompt 保留注释。不创建 pending img 或假 URL。定位文字供用户换图后移除，不是读者正文或词数填充。正文必须独立可理解；必要信息先用文字或可核实表格呈现。不自动调用生图、上传或发布。
 
 ## 5. 图片事实与可读性

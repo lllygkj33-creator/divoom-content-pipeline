@@ -1,4 +1,4 @@
 interface:
   display_name: "Divoom 标题到 JSON"
-  short_description: "Turn a Divoom title into reviewed publisher JSON"
+  short_description: "Reviewed article JSON and reference-led image prompts"
   default_prompt: "Use $divoom-article-workflow for this Divoom article request."

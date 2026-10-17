@@ -9,7 +9,7 @@
 | divoom-draft | 已封存大纲、证据、正文与产品规则 | body.html、metadata.json、完善evidence.json | 正文事实/结构/类型成立、关键主张有依据 |
 | divoom-links | 已封存正文、锚文本规则和目标页面 | 同一body.html中的锚、links.json | 实际链接与记录一致，目标内容已核对 |
 | 总控最终审核 | 最终正文、meta、证据、链接 | review.json、审核封存 | 七维及事实覆盖满足门槛，零硬伤 |
-| 确定性导出器 | 有效run与唯一正文 | 非空博客JSON数组 | 格式无误、字段准确、不带发布状态 |
+| 确定性导出器 | 有效run与唯一正文及图片计划 | 非空博客JSON数组；独立image-prompts.txt | 字段准确、不带发布状态；配图与同一封存稿匹配 |
 
 ## 失效与返工图
 
@@ -44,6 +44,8 @@ stateDiagram-v2
 ## 依赖图与唯一真源
 
 输入 → outline → draft → links → review → export。正文只在body.html中，metadata只在metadata.json中。大纲、证据、链接、审核各有属主。最终JSON是确定性输出，不由模型再次复制全文。标题、博客、标签在大纲与meta中有一致性检查。
+
+image-prompts 导出属于同一 export 阶段，读取有效 review 的 visual_plan 与固定图像会话主提示词；不复制第二份正文，不新增模型或生图服务。图位的 reference_mode/reference_requirement 与英文 prompt 绑定到 outline 指纹，修改参考策略会使下游失效。产品图由后续图像会话索要与使用；这不阻断标题到文章的执行，也不把参考照片当成内部结构证据。
 
 各封存指纹含配置。draft绑定去除锚标签但保留正文/其他结构的语义投影，允许links阶段仅包装已有文字；任何换词/新增段落使draft失效。links和review绑定完整HTML，换一个href也会让下游失效。review变化同样需重新封存；旧输出只是过去的快照，不能证明新稿通过。
 

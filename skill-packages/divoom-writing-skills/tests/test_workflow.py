@@ -27,7 +27,7 @@ def article():
 
 def add_editorial_plan(outline):
     case = next(x for x in w.load(BASE / 'references/technology-cases.json')['cases'] if x['fx'] == outline['fx'])
-    outline.update(editorial_protocol_version=2, image_prompt_delivery='html_comments_v1', image_slot_delivery='visible_alt_v1',
+    outline.update(editorial_protocol_version=2, image_prompt_delivery='html_comments_v1', image_slot_delivery='visible_alt_v1', image_reference_contract_version=1,
                    sample_review={'fx':outline['fx'], 'url':case['registered_url'], 'status':'snapshot_only',
                                   'checked_at':None, 'visual_inspection':'none', 'reason':'Contract fixture, not an actual source audit.',
                                   'adopt':['Fixture structural observation.'], 'avoid':['Do not copy product facts.']},

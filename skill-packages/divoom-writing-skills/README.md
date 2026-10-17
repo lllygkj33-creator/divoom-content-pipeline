@@ -1,6 +1,6 @@
 # Divoom Writing Skills Package
 
-本部署已增加 [插图 prompt 随稿](skills/divoom-article-workflow/references/image-prompt-handoff.md)：仍只输出一份文章 JSON。通用 Banner 固定在 Liquid，正文只保留正文图位；待配图位置写可见的 images_1：alt 编号段及隐藏 prompt。可把原 JSON 或单个英文 prompt 交给图像会话，生成后上传媒体并用真实图片替换对应编号段和注释。本包不自动生图、上传或发布；不是对 Shopify 所有编辑路径保留注释的保证。
+本部署交付 [文章 JSON＋独立配图 prompt 文件](skills/divoom-article-workflow/references/image-prompt-handoff.md)。通用 Banner 固定在 Liquid，正文只保留正文图位；待配图位置写可见 images_1：alt 编号及隐藏 prompt。用户上传 JSON 后，将取得的 HTML、独立 image-prompts.txt 与真实产品照片一起交给图像会话；缺照片先索要，出现产品时锁定对应型号外观，通用部件图不冒充品牌内部结构。本包不自动生图、上传或发布，也不保证 Shopify 所有编辑路径保留注释。
 
 给一个标题，得到一个可以交给既有发布程序的博客数组 JSON。默认英文，五类内容自动判断，网站归属为 Technology Hub、Recommend & Comparison、Support & Tips。隐藏及排期由发布程序负责；本包没有发布能力。
 
@@ -25,11 +25,16 @@ flowchart TD
     Q -->|失败且无法修订| X
     Q -->|通过并封存指纹| E[确定性JSON导出]
     E --> J[articles.json 非空数组]
+    E --> T[image-prompts.txt 独立配图文件]
     J --> P[用户现有发布程序]
     P --> H[隐藏与无定时：由发布程序处理]
+    P --> V[取得文章 HTML]
+    V --> G[图像会话：检查产品附件后生图]
+    T --> G
+    U2[用户上传对应型号产品照片] --> G
 ```
 
-用户只接触标题和最终JSON；大纲、正文、证据、链接和审核记录是内部工作产物。上图来源研究从大纲开始，最后阶段插入的是已核实链接，不是文章写完才寻找证据。常规执行不需要逐阶段批准。
+用户只提供标题，收到文章 JSON 与独立配图 prompt；大纲、正文、证据、链接和审核记录是内部工作产物。产品照片到后续图像会话上传。来源研究从大纲开始，最后阶段插入的是已核实链接，不是文章写完才寻找证据。常规执行不需要逐阶段批准。
 
 ```mermaid
 flowchart LR
@@ -52,7 +57,7 @@ flowchart LR
 
 四个Skill按共享契约串行协作，不需要多Agent服务；详细模块职责、指纹规则和返工条件见 [架构设计](ARCHITECTURE.md)。
 
-2026-10-17 更新：Technology Hub 新稿采用编辑协议 2，写之前规划条件、场景、列表/表格和配图；对应案例核验见 [案例索引](skills/divoom-article-workflow/references/technology-cases.json)，规则见 [编辑与配图规划](skills/divoom-article-workflow/references/editorial-planning.md)。F1–F13 已读，F14 另有补充候选且不冒充原始确认样本。此次只规划素材，不自动生图或上传。对用户仍只输出文章数组 JSON。
+2026-10-17 更新：Technology Hub 新稿采用编辑协议 2，写之前规划条件、场景、列表/表格和配图；对应案例核验见 [案例索引](skills/divoom-article-workflow/references/technology-cases.json)，规则见 [编辑与配图规划](skills/divoom-article-workflow/references/editorial-planning.md)。F1–F13 已读，F14 另有补充候选且不冒充原始确认样本。仅规划素材，不自动生图或上传；当前交付包括文章数组 JSON 和独立配图 prompt。
 
 逐类配图、位置、段落条件和参考项目的完整报告：[Technology 图文审计](reports/technology-editorial-visual-audit-2026-10-17.html)。
 
@@ -67,7 +72,7 @@ flowchart LR
 标题：Why Pixel Art Displays Look Different Up Close and Across a Room
 ```
 
-默认依次规划大纲、撰写、补链、复核、导出。用户最终只拿到 `articles.json`；中间记录在独立 run 目录，按需查看。不是输入标题后由 Python 自动调模型，执行 Skill 的 AI 负责研究与写作，脚本负责机械门禁。
+默认依次规划大纲、撰写、补链、复核、导出。用户拿到 `articles.json` 和 `image-prompts.txt`；中间记录在独立 run 目录，按需查看。不是输入标题后由 Python 自动调模型，执行 Skill 的 AI 负责研究与写作，脚本负责机械门禁。
 
 可选输入类型、FX、指定资料/产品或文章模板。默认不要求这些字段。中文标题会转换为忠实英文标题；不能擅自改变主题。
 

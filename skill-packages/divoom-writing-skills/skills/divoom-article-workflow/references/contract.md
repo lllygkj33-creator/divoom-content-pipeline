@@ -8,7 +8,7 @@
 
 ## 工作区
 
-`run.json` 是状态，不储存正文副本。`outline.json` 是计划；`evidence.json` 是逐主张依据；`body.html` 是唯一正文；`metadata.json` 是九个元数据键；`links.json` 是链接记录；`review.json` 是最终人工语义审核。只有导出 `articles.json` 给用户。生成目录不得混入 Skill 资源或 GitHub 提交。
+`run.json` 是状态，不储存正文副本。`outline.json` 是计划；`evidence.json` 是逐主张依据；`body.html` 是唯一正文；`metadata.json` 是九个元数据键；`links.json` 是链接记录；`review.json` 是最终人工语义审核。给用户导出 `articles.json` 与独立 `image-prompts.txt`，后者只交给图像会话，不上传发布器。生成目录不得混入 Skill 资源或 GitHub 提交。
 
 `init` 只创建 run.json，不凭标题词面伪造大纲。标题会由模型推断类型；`outline.json` 才是明确路由的权威。`status` 显示已有阶段和指纹新鲜度。源文件修改使其已封存阶段和所有后续依赖失效。
 
@@ -19,6 +19,8 @@ Technology 新 run 的 editorial_contract_version=2，outline 使用编辑协议
 本部署新增 [配图 prompt 随稿模式](image-prompt-handoff.md)：site 的 image_prompt_delivery 默认 html_comments_v1，新 run 在 outline 声明同一模式。完整审核记录仍不出现在 JSON 顶层；待配图 prompt 可以作为正文保留注释交付，并纳入原指纹链。其他类型可以单独采用 visual_plan 与该模式，不因此强制迁移 Technology 专属编辑协议。
 
 本部署的 article_banner.mode 为 template_fixed，Banner URL 固定在 Liquid，不进入文章 HTML 或配图 prompt。image_slot_delivery 默认 visible_alt_v1：正文待配图位置用 images_1：alt 编号段配合隐藏 prompt，供用户定位替换；编号和 alt 变化会使旧封存失效。这些可见工作定位段不作为正文事实或词数。
+
+新稿使用 image_reference_contract_version=1，每个图位明确产品照片必需、纯概念部件或无需产品的策略及具体附件要求；同一计划同时生成 HTML 注释和独立 prompt 文件。参考照片由后续图像会话接收：缺图先索要，型号/颜色不明先确认。实物外观不能凭空补，内部结构不能由外观反推。照片缺失不阻断文章编写；实际图片制作和回填继续由用户控制。
 
 ## 封存与审查
 

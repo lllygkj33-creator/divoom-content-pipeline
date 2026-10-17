@@ -1,12 +1,20 @@
 # 配图 prompt 随文章 JSON 交付
 
-本部署已选择 `image_prompt_delivery: html_comments_v1` 与 `image_slot_delivery: visible_alt_v1`。用户仍只给标题、只收一份文章数组 JSON。通用 Banner 由 Liquid 固定输出 `https://cdn.shopify.com/s/files/1/0082/4105/3814/files/DIVOOM-blog-banner.jpg?v=1792205040`，文章 HTML 不再含 Banner 或 Banner prompt，也不从正文第一张图提取。没有必要图位就不强行配图。
+本部署已选择 `image_prompt_delivery: html_comments_v1` 与 `image_slot_delivery: visible_alt_v1`。用户仍只给标题，收文章数组 JSON 和独立 image-prompts.txt。通用 Banner 由 Liquid 固定输出 `https://cdn.shopify.com/s/files/1/0082/4105/3814/files/DIVOOM-blog-banner.jpg?v=1792205040`，文章 HTML 不再含 Banner 或 Banner prompt，也不从正文第一张图提取。没有必要图位就不强行配图。
 
 ## 写作前与写作时
 
 大纲声明两个交付模式；visual_plan 中正文图按出现顺序增加 slot：images_1、images_2。pending 项同时带 aspect_ratio、filename、prompt、alt、title，语义 id 与实际文件名保持对应，不能因为增加编号随意改掉已生成图片的文件名。其他四类也可使用 visual_plan，不要求采用 Technology 专属整套 FX 编辑协议。每个 prompt 要独立可用：说明任务、具体画面、构图、风格、准确标签和不能虚构的内容；不能写“如上文”而不给另一个会话必要上下文。
 
 目标比例和建议文件名是制作要求，不是某个图像 API 保证接受的参数。精确文字和图表需要核对，不能承诺生成器一次产生正确小字、数量、标签和型号外观。设计参照 [OpenAI 图像提示词指南](https://developers.openai.com/api/docs/guides/image-prompting)。
+
+新稿声明 image_reference_contract_version=1。每个未省略图位增加 reference_mode 和 reference_requirement，供独立文件导出：
+
+- product_photos_required：场景、摆位或图中出现具体产品外观；要求后续上传对应型号/颜色的真实产品照片，说明必要角度，不凭名称猜外观。多面板使用同一产品身份。写作时没有附件仍可完成计划，生成时缺图必须先索要。
+- generic_concept_only：通用声学/电气原理部件，不采用品牌外壳或暗示实际型号剖面。外观照片不能证明内部结构，标签明确不代表 Divoom 实际内部。
+- no_product_required：没有产品主体的流程/图表等，不为装饰硬加产品或要求无关照片。
+
+主 prompt 必须与所选策略一致，不能一边要求参考实物、一边要求画任意通用黑色音箱。文件名、slot、alt 与 HTML 同源。参考图仅提供外观身份，不能替代型号能力、测量或安全事实的证据。
 
 正文阶段用 `workflow.render_image_slot(row)` 在相应图位生成可见编号段和隐藏注释，不能手工夹入危险 HTML 或任意评论：
 
@@ -19,7 +27,9 @@
 
 ## 给另一个图像会话
 
-用户可以交付整份 JSON，并要求：“只读取 html代码 中 DIVOOM_IMAGE_PROMPT_V1 注释，按 id 逐张使用 prompt 生成图片，目标比例参考 aspect_ratio，并保留 id 与建议 filename 对应关系；不要改写文章或编造测量数据。”也可以只复制其中一个 prompt。此处仅交付提示词，不自动调用图像工具、上传媒体或发布。
+最终审核封存后运行 `workflow.py image-prompts <run目录> --out <交付目录>/image-prompts.txt`。脚本从同一封存计划与 [图像会话主提示词](image-session-prompt.txt) 生成完整独立文件，不能从过期或未审稿件导出。JSON 顶层字段不变，新增文件只给图像会话，不给发布程序。
+
+用户按“JSON 上传发布程序 → 取得正文 HTML → HTML＋独立 prompt 文件＋产品照片交给图像会话”操作；也可直接从 JSON 提取 html代码。独立文件包含上传产品附件的明确前置要求及逐图位英文 prompt，缺参考图先等待，不能立即画通用产品。其他会话的附件不自动继承，需要实际再次上传。HTML 注释即使被编辑器删除，只要 images_N 及对应正文还在，独立文件仍可匹配；同一图位身份的旧通用外观指令由最新独立文件覆盖，编号或正文版本不一致则先确认。此处不自动生图、上传或发布。
 
 图生成后检查画面与文字、数值及 alt 是否一致，必要时修改或重做；上传媒体库获得实际 URL，再将对应 images_N 编号段及紧随的 prompt 注释一起替换为 `<p><img src="真实图片 URL" alt="对应 alt" title="对应 title"></p>`。正文图留在原图位；不要在正文插入通用 Banner。编号是人工换图定位，不会自动从媒体库猜 URL。完成后更新该项 ready/src，重新按大纲→正文→链接→审核封存；旧审核不能覆盖新图片。
 

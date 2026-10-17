@@ -488,6 +488,15 @@ def validate_editorial_review(review, outline):
 
 
 def validate_prompt_plan(outline):
+    if "image_reference_contract_version" in outline:
+        require(type(outline["image_reference_contract_version"]) is int and outline["image_reference_contract_version"] == 1,
+                "Unsupported image-reference contract")
+        for row in outline.get("visual_plan", []):
+            if row.get("asset_status") == "omitted":
+                continue
+            require(row.get("reference_mode") in ("product_photos_required", "generic_concept_only", "no_product_required"),
+                    "Visual needs a product-reference decision")
+            require(nonempty(row.get("reference_requirement")), "Visual needs a concrete reference requirement")
     slot_mode = outline.get("image_slot_delivery", "none")
     require(slot_mode in ("none", "visible_alt_v1"), "Invalid image-slot delivery mode")
     if slot_mode == "visible_alt_v1":
@@ -650,6 +659,8 @@ def check_files(run_dir, stage, profile):
         require(outline.get("image_slot_delivery") == "visible_alt_v1", "New runs must declare configured image-slot delivery")
     if state.get("editorial_contract_version") == 2 and profile.get("article_banner", {}).get("mode") == "template_fixed":
         require(all(r.get("role") != "banner" and r.get("section") != "banner" for r in outline.get("visual_plan", [])), "The fixed banner belongs to the template, not article HTML")
+    if state.get("editorial_contract_version") == 2 and profile.get("image_reference_contract_version") == 1:
+        require(outline.get("image_reference_contract_version") == 1, "New runs must declare product-reference planning")
     evidence = load(run_dir / "evidence.json")
     if stage == "outline":
         validate_evidence(evidence, outline=outline)
@@ -716,6 +727,32 @@ def export_run(run_dir, out, profile):
     return destination
 
 
+def export_image_handoff(run_dir, out, profile):
+    """Second user deliverable, derived only from the same sealed article plan."""
+    run_dir, state = read_run(run_dir)
+    require(all(fresh(run_dir, state, s, profile) for s in STAGES), "Cannot export image prompts from stale/unreviewed content")
+    check_files(run_dir, "review", profile)
+    outline = load(run_dir / "outline.json")
+    require(outline.get("image_reference_contract_version") == 1, "Image handoff requires product-reference planning")
+    destination = Path(out).resolve()
+    require(destination.suffix.lower() == ".txt", "Image handoff must be a separate .txt file, never article JSON or HTML")
+    rows = [r for r in outline.get("visual_plan", []) if r.get("asset_status") == "pending"]
+    lines = [(ROOT / "references/image-session-prompt.txt").read_text(encoding="utf-8-sig").strip(),
+             "", "ARTICLE TITLE: " + outline["title"], "ARTICLE SLUG: " + load(run_dir / "metadata.json")["url"],
+             "BODY IMAGE SLOTS: " + str(len(rows)), "BANNER: Already provided by the website template. Do not generate a banner."]
+    for row in rows:
+        lines.extend(["", "===== " + row["slot"] + " =====", "ID: " + row["id"],
+                      "SECTION ID: " + row["section"], "FILENAME: " + row["filename"],
+                      "TARGET ASPECT RATIO: " + row["aspect_ratio"], "ALT: " + row["alt"], "TITLE: " + row["title"],
+                      "REFERENCE MODE: " + row["reference_mode"], "REFERENCE REQUIREMENT: " + row["reference_requirement"],
+                      "ENGLISH IMAGE PROMPT:", row["prompt"]])
+    if not rows:
+        lines.extend(["", "No pending body image is planned. Do not invent extra illustrations or request irrelevant product attachments."])
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return destination
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--profile", type=Path, default=CONFIG)
@@ -731,6 +768,9 @@ def main(argv=None):
     exporter = sub.add_parser("export")
     exporter.add_argument("run_dir", type=Path)
     exporter.add_argument("--out", type=Path, required=True)
+    image_exporter = sub.add_parser("image-prompts")
+    image_exporter.add_argument("run_dir", type=Path)
+    image_exporter.add_argument("--out", type=Path, required=True)
     validator = sub.add_parser("validate")
     validator.add_argument("json_file", type=Path)
     args = parser.parse_args(argv)
@@ -745,6 +785,8 @@ def main(argv=None):
             print(json.dumps({s: fresh(directory, state, s, profile) for s in STAGES}))
         elif args.command == "export":
             print(str(export_run(args.run_dir, args.out, profile)))
+        elif args.command == "image-prompts":
+            print(str(export_image_handoff(args.run_dir, args.out, profile)))
         else:
             data = load(args.json_file)
             require(isinstance(data, list) and data, "Publisher output must be a nonempty array")

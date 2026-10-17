@@ -39,7 +39,7 @@ class EditorialProtocol(unittest.TestCase):
     def test_pending_asset_cannot_be_inserted(self):
         self.outline['image_prompt_delivery']='internal'
         self.outline['image_slot_delivery']='none'
-        self.outline['visual_plan']=[{'id':'v1','role':'explanatory','section':'section-1','after_paragraph':1,'purpose':'Fixture map','claim_ids':['C1'],'asset_status':'pending','src':''}]
+        self.outline['visual_plan']=[{'id':'v1','role':'explanatory','section':'section-1','after_paragraph':1,'purpose':'Fixture map','claim_ids':['C1'],'asset_status':'pending','src':'','reference_mode':'generic_concept_only','reference_requirement':'Abstract fixture, not model-specific construction.'}]
         w.validate_outline(self.outline,self.p)
         parsed=w.parse_body(body().replace('Supported example statement 1.','Supported example statement 1.<img src="https://example.org/figure.png" alt="A schematic" title="A schematic">'),self.p)
         with self.assertRaisesRegex(w.ContractError,'ready visual plan'):
